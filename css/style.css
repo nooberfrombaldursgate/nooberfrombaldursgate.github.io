@@ -1,0 +1,420 @@
+/* Global
+-----------------------------------------------------------------------------*/
+
+html {
+  height: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+body {
+  font: 12px/18px Arial, sans-serif;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figcaption {
+  font-family: "georgia", verdana, sans-serif;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Top section
+-----------------------------------------------------------------------------*/
+
+#header-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  background-color: #000;
+  color: #000;
+}
+
+#desktop-header-menu {
+  display: none;
+  list-style-type: none;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  background: #000000;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#header-logo {
+  margin: 0.4rem;
+}
+
+#header-logo {
+  display: none;
+}
+
+#mobile-header-menu {
+  background-color: red;
+  padding: 1rem 3em 1rem;
+}
+
+nav li {
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+/* Middle section
+-----------------------------------------------------------------------------*/
+main {
+  padding: 1rem;
+}
+
+main a {
+  font-weight: bold;
+  color: blue;
+}
+
+main header,
+.body-text-container,
+.quote-container {
+  display: grid;
+  justify-content: center;
+}
+
+main header *,
+.body-text-container *,
+.about {
+  max-width: 20rem;
+}
+
+main article:not(:first-child) {
+  margin: 2rem 0 2rem;
+}
+
+.headline a {
+  font-family: "Georgia", garamond, "times new roman", serif;
+  text-transform: uppercase;
+}
+
+.headline h1 {
+  font-family: "Palatino Linotype", garamond, "times new roman", serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.byline p {
+  font-size: 1.2rem;
+}
+
+.author {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.author p {
+  font-size: 0.7rem;
+  padding-right: 1rem;
+}
+
+.author p:not(:first-child) {
+  color: #767676;
+}
+
+.author p:nth-child(2) {
+  display: none;
+}
+
+figure {
+  display: table;
+  padding-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-bottom: 1rem;
+}
+
+.about {
+  display: grid;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.about p {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #767676;
+}
+
+.about a {
+  color: #767676;
+  font-weight: normal;
+}
+
+.about hr {
+  border-top: 0.5rem;
+  width: 100%;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.quote-container {
+  margin: 1rem 0 2rem 0;
+}
+
+.quote-item {
+  font-family: "Palatino Linotype", garamond, "times new roman", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+  max-width: 15rem;
+}
+
+.quote-container :first-of-type,
+.quote-container :last-of-type {
+  color: red;
+  font-size: 2rem;
+}
+
+.quote-container :last-of-type {
+  display: none;
+}
+
+/* Bottom section
+-----------------------------------------------------------------------------*/
+#desktop-footer-nav {
+  display: none;
+  color: white;
+  padding: 2rem 0 2rem 0;
+  background: #000;
+  position: relative;
+}
+
+#desktop-footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#desktop-footer-nav img {
+  display: block;
+  margin: 1rem auto 1rem;
+}
+
+#desktop-footer-nav small {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+}
+
+.company-name {
+  font-variant: small-caps;
+}
+
+.footer {
+  background-color: #000;
+  font-size: 1.1em;
+}
+
+#mobile-footer-nav {
+  display: block;
+}
+
+#mobile-footer-nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#mobile-footer-nav ul li {
+  list-style: none;
+  text-align: center;
+}
+
+#mobile-footer-nav ul li a {
+  display: block;
+  padding: 20px 10px;
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+}
+
+#mobile-footer-nav ul li a:hover {
+  background-color: red;
+  color: #fff;
+}
+
+@media only screen and (min-width: 320px) {
+  #header-nav {
+    justify-content: space-between;
+  }
+
+  #header-logo {
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  main header *,
+  .body-text-container p,
+  .quote-item,
+  .about {
+    max-width: 23.5rem;
+  }
+
+  main article:first-child {
+    margin-top: 2rem;
+  }
+
+  .quote-container :first-of-type,
+  .quote-container :last-of-type {
+    font-size: 3rem;
+    line-height: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  p.quote-item:nth-child(2) {
+    font-size: 1.5rem;
+  }
+
+  .quote-container {
+    margin: 2rem 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main header *,
+  .body-text-container p,
+  .about {
+    max-width: 30rem;
+  }
+
+  figure {
+    padding-top: 2rem;
+  }
+
+  figcaption {
+    padding-bottom: 2rem;
+  }
+
+  .quote-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .quote-container {
+    text-align: center;
+  }
+
+  .quote-item:first-child {
+    padding-right: 1rem;
+  }
+
+  .quote-item:nth-child(2) {
+    width: 30rem;
+  }
+
+  .quote-item:last-child {
+    display: unset;
+    justify-content: end;
+    align-self: flex-end;
+    padding-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main header *,
+  .body-text-container p,
+  .about {
+    max-width: 48rem;
+  }
+
+  .headline h1 {
+    font-size: 2.3rem;
+    line-height: 3rem;
+  }
+
+  .byline p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+  .author p {
+    padding-right: 2.5rem;
+  }
+
+  .author p:nth-child(2) {
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  #mobile-header-menu {
+    display: none;
+  }
+
+  #desktop-header-menu {
+    display: flex;
+  }
+
+  #mobile-footer-nav {
+    display: none;
+  }
+
+  #desktop-footer-nav {
+    display: unset;
+  }
+
+  #desktop-footer-nav ul {
+    padding: 2rem 0 1rem 0;
+  }
+
+  #desktop-footer-nav img {
+    margin: 2rem auto 2rem;
+  }
+}
