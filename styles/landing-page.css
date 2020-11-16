@@ -1,0 +1,36 @@
+:root {
+    --green: #628183;
+    --salmon: #c0988b;
+    --coffee: #af9576;
+    --red: #804e4e;
+    --white: #fffdf4;
+  }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
+	width: 100%;
+	height: 50%;
+}
+
+#business-to-consumer { 
+    background: url('../images/landing-page/girl-in-the-woods-landing-page-background-image-768w.png') center center / cover no-repeat;
+  }
+
+#business-to-consumer div {
+    /* display: flex; */
+    /* align-self: flex-end; */
+    width: 3wh;
+    height: 100px;
+    margin-bottom: 3vh;
+    
+    background-color: rgb(98,129,131, 0.8)
+}
+
+#business-to-business { 
+    background: url('../images/landing-page/girl-with-arms-raised-landing-page-background-image-768w.jpg') center center / cover no-repeat;
+  }
+
+  
