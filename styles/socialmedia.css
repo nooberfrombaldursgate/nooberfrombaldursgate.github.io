@@ -1,0 +1,85 @@
+
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+header {
+	
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+main {
+   background-color: #c0988b; 
+}
+   
+    #image-socialmedia img {
+    width: 85%;
+    height: auto;
+    max-width: 350px;
+        margin: 7%;
+         
+       
+        
+        
+   
+}
+    
+    .flex-socialmedia {
+    
+    display: flex;   
+}
+
+
+h1 {
+    color: white;
+    text-align: center;
+     font-family: 'times new roman', serif;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+
+h5 a {
+    
+    color: #628183;
+     margin: 7%;
+    font-family: 'Open Sans', sans-serif;
+   
+    
+      
+}
+
+h6 {
+     margin: 7%;
+    font-family: 'Open Sans', sans-serif;
+ 
+    
+}
+
+
+
+
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+footer {
+
+}
+
+
+
+
+
+@media only screen and (min-width: 320px) {
+    
+
+    
+    }
