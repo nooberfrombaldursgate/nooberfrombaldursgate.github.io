@@ -19,14 +19,22 @@ section {
     background: url('../images/landing-page/girl-in-the-woods-landing-page-background-image-768w.png') center center / cover no-repeat;
   }
 
-#business-to-consumer div {
-    /* display: flex; */
-    /* align-self: flex-end; */
-    width: 3wh;
-    height: 100px;
+#business-to-consumer div, #business-to-business div {
+    height: 15vh;
+    width: 30vw;
+    min-height: 5rem;
+    max-height: 10rem;
+    min-width: 10rem;
+    max-width: 25rem;
     margin-bottom: 3vh;
-    
-    background-color: rgb(98,129,131, 0.8)
+}
+
+#business-to-consumer div {
+background-color: rgb(98,129,131, 0.8)
+}
+
+#business-to-business div {
+  background-color: rgb(128,78,78, 0.8);
 }
 
 #business-to-business { 
