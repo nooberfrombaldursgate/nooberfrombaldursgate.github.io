@@ -161,7 +161,7 @@ nav li {
   background-color: var(--coffee);
 }
 
-#main-footer a, h3, hr, small {  
+#main-footer a, #main-footer h3, #main-footer hr, #main-footer small {  
   color: white;
 }
 
@@ -204,14 +204,11 @@ nav li {
   font-size: 0.625rem;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1000px) {
   .footer-item,
   .footer-divider {
     display: unset;
   }
-}
-
-@media only screen and (min-width: 1000px) {
   .nav ul {
     display: block;
   }

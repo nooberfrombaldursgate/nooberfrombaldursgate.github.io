@@ -1,0 +1,125 @@
+.hero-container {
+  display: flex;
+  background: url("../images/home/girl-standing-behind-large-window-panel-home-background-image-768w.jpg")
+    top center / cover no-repeat;
+  height: calc(100vh - 4.5rem);
+}
+
+.slogan-container {
+  position: absolute;
+  align-self: flex-end;
+  padding: 1rem;
+}
+
+.slogan-container p {
+  color: white;
+  line-height: 1.2em;
+}
+
+.hero-container p:nth-child(1) {
+  font-size: 2.4rem;
+}
+
+.hero-container p:nth-child(2),
+.hero-container p:nth-child(3),
+.hero-container p:nth-child(6),
+.hero-container p:nth-child(7) {
+  font-size: 1rem;
+}
+
+.hero-container p:nth-child(4),
+.hero-container p:nth-child(8) {
+  font-size: 1.8rem;
+}
+
+.hero-container p:nth-child(5) {
+  font-size: 1.6rem;
+}
+
+.hero-container p:nth-child(6),
+.hero-container p:nth-child(7),
+.hero-container p:nth-child(8) {
+  color: #766657;
+}
+
+#main-content {
+  background-color: #fffdf4;
+}
+
+section.collections,
+section.social-media {
+  text-align: center;
+}
+
+section.collections {
+  font-size: 18px;
+}
+
+section.collections h2,
+h3 {
+  font-weight: normal;
+}
+section.collections h2 {
+  font-weight: 18px;
+}
+
+div.banner-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 0.5px solid black;
+  height: 2rem;
+  width: 30rem;
+}
+section.collections h3 {
+  line-height: 2rem;
+  padding-top: 2rem;
+}
+
+@media only screen and (min-width: 560px) {
+  .slogan-container p {
+    color: #766657;
+  }
+  .slogan-container p:nth-child(4),
+  .hero-container p:nth-child(5) {
+    color: #d2ceba;
+  }
+  .hero-container {
+    background: url("../images/home/girl-standing-behind-large-window-panel-home-background-image-1024w.jpg")
+      top center / cover no-repeat;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero-container {
+    background: url("../images/home/girl-standing-behind-large-window-panel-home-background-image-wide-1380w.jpg")
+      top center / cover no-repeat;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .hero-container p:nth-child(1) {
+    font-size: 3.6rem;
+  }
+
+  .hero-container p:nth-child(2),
+  .hero-container p:nth-child(3),
+  .hero-container p:nth-child(6),
+  .hero-container p:nth-child(7) {
+    font-size: 1.5rem;
+  }
+
+  .hero-container p:nth-child(4),
+  .hero-container p:nth-child(8) {
+    font-size: 2.7rem;
+  }
+
+  .hero-container p:nth-child(5) {
+    font-size: 2.4rem;
+  }
+
+  .slogan-container {
+    padding: 2rem;
+  }
+}
