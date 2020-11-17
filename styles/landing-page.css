@@ -3,6 +3,10 @@
     flex-wrap: wrap;
 }
 
+#main-content a {
+  color: white;
+}
+
 section {
   display: flex;
   flex-wrap: wrap;

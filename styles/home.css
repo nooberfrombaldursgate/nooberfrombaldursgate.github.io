@@ -54,10 +54,7 @@
 .collections .banner-container, .social-media .banner-container {
   margin: 4rem auto 0;
 }
-.collections h2, section.collections
-h3 {
-  font-weight: normal;
-}
+
 .collections h2 {
   font-size: 1.3rem;
 }
