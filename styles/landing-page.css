@@ -1,0 +1,89 @@
+#main-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+  text-align: center;
+}
+
+#business-to-consumer,
+#business-to-business {
+  width: 100%;
+  height: 50%;
+}
+
+#business-to-consumer h2, #business-to-business h2 {
+    font-size: 1.25rem;
+    color: white;
+    line-height: 2rem;
+}
+
+#business-to-consumer span, #business-to-business span {
+    text-decoration: underline;
+}
+
+
+#business-to-consumer {
+  background: url("../images/landing-page/girl-in-the-woods-landing-page-background-image-768w.png")
+    center center / cover no-repeat;
+}
+
+#business-to-consumer div,
+#business-to-business div {
+  max-height: 7rem;
+  max-width: 15rem;
+  margin-bottom: 2.5vh;
+  padding: 1rem;
+}
+
+#business-to-consumer div {
+  background-color: rgb(98, 129, 131, 0.8);
+}
+
+#business-to-business div {
+  background-color: rgb(128, 78, 78, 0.8);
+}
+
+#business-to-business {
+  background: url("../images/landing-page/girl-with-arms-raised-landing-page-background-image-768w.jpg")
+    top center / cover no-repeat;
+}
+
+@media only screen and (min-width: 600px) {
+  #business-to-consumer,
+  #business-to-business {
+    width: 50%;
+    height: 100%;
+    background-position: top;
+  }
+}
+#main-content {
+  display: flex;
+}
+
+@media only screen and (min-width: 1024px) {
+  #business-to-consumer {
+    background: url("../images/landing-page/girl-in-the-woods-landing-page-background-image-1024w.png")
+      top center / cover no-repeat;
+  }
+
+  #business-to-business {
+    background: url("../images/landing-page/girl-with-arms-raised-landing-page-background-image-1024w.jpg")
+      top center / cover no-repeat;
+  }
+
+  #business-to-consumer div,
+  #business-to-business div {
+      padding: 3.8rem;
+  }
+  
+  #business-to-consumer h2, #business-to-business h2 {
+      font-size: 1.29rem;
+  }  
+
+}

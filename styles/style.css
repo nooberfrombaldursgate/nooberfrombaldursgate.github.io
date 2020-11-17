@@ -39,12 +39,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: white;
-}
-
 hr {
-  border: 0.5px solid black;
+  border: 0;
+  height: 1px;
+  background: rgb(221, 220, 220);
 }
 
 /* HEADER */
@@ -62,7 +60,6 @@ hr {
 nav li {
   padding: 0 0.5rem 0 0.5rem;
 }
-
 
 /* Logo */
 
@@ -85,22 +82,20 @@ nav li {
   width: 2.5rem;
 }
 .burger-item {
-height: 0.25rem;
-background-color: black;
+  height: 0.25rem;
+  background-color: black;
 }
 
 .burger-item:nth-child(2) {
   background-color: var(--coffee);
 }
 
-.burger-item:nth-child(1), .burger-item:nth-child(2) {  
+.burger-item:nth-child(1),
+.burger-item:nth-child(2) {
   margin-bottom: 0.5rem;
 }
 
 /* Mobile navigation */
-
-#main-content {
-}
 
 #bottom-nav {
   display: flex;
@@ -109,10 +104,7 @@ background-color: black;
 }
 
 #bottom-nav ul hr {
-    border: 0;
-    height: 1px;
-    max-width: 12rem;
-    background: rgb(221, 220, 220);
+  max-width: 12rem;
 }
 
 #bottom-nav ul li {
@@ -125,7 +117,7 @@ background-color: black;
 
 #bottom-nav ul li a {
   display: block;
-  padding: .75rem;
+  padding: 0.75rem;
 }
 
 #bottom-nav ul li a:hover {
@@ -150,9 +142,8 @@ background-color: black;
 }
 
 .desktop-nav-container ul li :last-child {
-  padding: 0 .5rem 0 0;
+  padding: 0 0.5rem 0 0;
 }
-
 
 /* MAIN */
 
@@ -160,16 +151,27 @@ background-color: black;
   flex: 1 0 auto;
 }
 
-
 /* FOOTER */
 
 #main-footer {
   display: flex;
   justify-content: center;
-  padding: 1rem .5rem 1rem;
+  padding: 1rem 0.5rem 1rem;
   flex-shrink: 0;
-  color: white;
   background-color: var(--coffee);
+}
+
+#main-footer a, h3, hr, small {  
+  color: white;
+}
+
+#main-footer h3 {
+  line-height: 4rem;
+}
+
+#main-footer li {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
 }
 
 #footer-wrapper {
@@ -179,13 +181,18 @@ background-color: black;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
 }
 
-/* .footer-divider {
-  grid-column: 1 / -1 ;
-} */
+.footer-divider {
+  display: none;
+  justify-self: center;
+  width: 95%;
+  grid-column: 1 / -1;
+  color: white;
+}
 
 .footer-item {
   display: none;
   justify-self: center;
+  padding-bottom: 1rem;
 }
 
 #copyright-container {
@@ -198,20 +205,21 @@ background-color: black;
 }
 
 @media only screen and (min-width: 700px) {
-  .footer-item {
+  .footer-item,
+  .footer-divider {
     display: unset;
   }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1000px) {
   .nav ul {
     display: block;
   }
-  .burger-container, #bottom-nav {
+  .burger-container,
+  #bottom-nav {
     display: none;
   }
   .desktop-nav-container {
     display: unset;
   }
 }
-
