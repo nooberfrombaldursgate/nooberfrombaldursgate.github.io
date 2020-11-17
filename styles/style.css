@@ -45,6 +45,14 @@ hr {
   background: rgb(221, 220, 220);
 }
 
+div.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid black;
+  height: 1.4rem;
+}
+
 /* HEADER */
 
 #main-header {
@@ -201,7 +209,7 @@ nav li {
 }
 
 #main-footer small {
-  font-size: 0.625rem;
+  font-size: 0.8rem;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -218,5 +226,9 @@ nav li {
   }
   .desktop-nav-container {
     display: unset;
+  }
+
+  #main-footer small {
+    font-size: 0.625rem;
   }
 }
