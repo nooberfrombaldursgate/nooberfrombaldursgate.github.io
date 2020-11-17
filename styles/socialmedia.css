@@ -4,6 +4,8 @@
 /* Header
 -----------------------------------------------------------------------------*/
 header {
+    
+ 
 	
 }
 
@@ -18,50 +20,79 @@ main {
     width: 85%;
     height: auto;
     max-width: 350px;
-        margin: 7%;
-         
-       
-        
-        
-   
+    position: relative;
+        left: 12px;  
+        border-radius: 20px;
 }
     
-    .flex-socialmedia {
+    .flex-mobile1 {
+    
+    display: flex;
+        background-color: #e2b4a5;
+}
+
+    .flex-mobile2 {
     
     display: flex;   
 }
 
+    .flex-mobile3 {
+    
+    display: flex; 
+        background-color: #e2b4a5;
+}
 
 h1 {
     color: white;
     text-align: center;
      font-family: 'times new roman', serif;
+    font-size: 30px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 h2 {
     color: white;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 30px;
+    padding-bottom: 1em;
+}
+
+h3 {
+     text-indent: -9999px;
+    
 }
 
 
 h5 a {
     
     color: #628183;
-     margin: 7%;
     font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    text-align: start;
+     position: relative;
+        left: 12px;
    
     
       
 }
 
 h6 {
-     margin: 7%;
+
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    font-size: 10px;
+      text-align: start;
+     position: relative;
+        left: 12px;
+    padding-bottom: 10%;
  
     
 }
+
+
 
 
 
@@ -76,10 +107,92 @@ footer {
 
 
 
-
-
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 400px) {
     
+       #image-socialmedia img {
+
+    position: relative;
+        left:15px;  
+    
+}
+
+@media only screen and (min-width: 480px) {
+    
+h5 a {
+    
+    font-size: 13px;
+    position: relative;
+        left: 20px;
+    
+}
+
+h6 {
+    font-size: 13px; 
+    position: relative;
+        left: 20px;
+}
+    
+    
+       #image-socialmedia img {
+
+    position: relative;
+        left:20px;  
+        
+}
+    
+    }
 
     
+    @media only screen and (min-width: 950px) {
+        
+        main {
+        background-color: #cdae89;
+    }
+        
+            .flex-mobile1 {
+    
+    display: block;
+    
+}
+
+    .flex-mobile2 {
+    
+    display: block;
+}
+
+    .flex-mobile3 {
+    
+    display: block;
+}
+        
+        
+        .desktop1 {
+            float: left;
+            background-color: aqua;
+        }
+        
+         .desktop2 {
+            float: right;
+             
+            background-color: aqua
+        }
+        
+              .desktop3 {
+            float: right;
+        }
+        
+        
+              .desktop4 {
+            float: right;
+        }
+        
+            #main-header{
+background-image: url(../images/socialmedia/socialmedia-header-1200w.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    height: auto;
+        max-width:1600px;
+                height: 649px;
+        
+    }
     }
