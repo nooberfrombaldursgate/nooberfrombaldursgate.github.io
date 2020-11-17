@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Times New Roman", Times, serif;
+background-color: #fffdf4;
 }
 
 h1,
@@ -51,6 +52,7 @@ hr {
 
 #main-header {
   background-color: var(--white);
+    
 }
 
 #top-nav {
@@ -218,8 +220,63 @@ background-color: black;
 /*----------------------------------------------------*/ 
  
 #img-container{
+    position: relative;
+}
+
+#img-container img{
     max-width: 100%;
     height: auto;
 }
+
+#team-img{
+    position: relative;
+}
+
+#team-img img{
+    max-width: 100%;
+    height: auto;
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.flex-container{
+    position: relative;
+    display: flex;
+}
+.flex-img{
+    flex: auto;
+    align-content: center;
+    justify-content: space-between;
+    
+}
+.flex-container .flex-img img{
+    max-width: 100%;
+    height: auto;
+    max-width: 400px;
+    
+    
+}
+
+#bottom-img{
+    position: relative;
+    
+}
+#bottom-img img{
+    max-width: 100%;
+    height: auto;
+}
+/*----------------------------------------------------*/ 
+
+ h4,p{
+
+    text-align: center;
+     padding-top: 2%;
+}
+
+
+
+
 
 
