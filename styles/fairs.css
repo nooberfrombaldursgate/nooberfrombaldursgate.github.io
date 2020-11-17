@@ -245,7 +245,7 @@ header {
 /* Middle
 -----------------------------------------------------------------------------*/
 main {}
-
+/* 
 #top_background {
     background-image: url(../images/promo/gustavgirl-on-couch-1800w.png);
     background-color: #fffdf4;
@@ -255,13 +255,26 @@ main {}
     background-size: cover;
     position: relative;
     padding-top: 250px;
+    padding-bottom: 200px;
 }
+*/ 
+#top_background{
+    position: relative;
+} 
 
+#top_background, img{ 
+max-width: 100%;
+height: auto;}
 
 div.transbox {
-    margin: 30px;
     background-color: #c0988b;
     opacity: 0.7;
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
     margin-top: 10px;
 
 }
@@ -272,6 +285,7 @@ div.transbox h2 {
     padding-left: 5px;
     padding-right: 5px;
     font-size: 2.0em;
+    opacity: 1.0;
 
 
     font-weight: bold;
@@ -308,8 +322,6 @@ div.transbox h2 {
 
     margin-bottom: 10px;
     font-size: 0.8em;
-
-
 
 }
 
