@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .hero-container {
   display: flex;
   background: url("../images/home/girl-standing-behind-large-window-panel-home-background-image-768w.jpg")
@@ -46,15 +50,15 @@
   background-color: #fffdf4;
 }
 
-section.collections, section.social-media {
+section#collections, section#social-media {
   padding: 4rem 0 4rem;
 }
 
-.collections h2, .social-media h2 {
+#collections h2, #social-media h2 {
   font-size: 1.3rem;
 }
 
-.collections h3, .social-media h3 {
+#collections h3, #social-media h3 {
   text-align: center;
   font-size: 1.1rem;
 }
@@ -86,7 +90,7 @@ div.banner-container, h3.section-subheading,
   margin: 0 auto;
 }
 
-.social-media div.banner-container, .social-media div.button {
+#social-media div.banner-container, #social-media div.button {
   background-color: rgb(156, 175, 177);
 }
 
@@ -94,7 +98,7 @@ div.button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-section.social-media {
+section#social-media {
   background-color: rgb(98, 129, 131, 0.7)
 }
 
@@ -119,12 +123,12 @@ section.social-media {
   justify-content: center;
 }
 
-.collections .image-wrapper {
+#collections .image-wrapper {
   grid-template-columns: repeat(2, minmax(50px, 250px));
   grid-template-rows: repeat(3, 1fr);
 }
 
-.social-media .image-wrapper {
+#social-media .image-wrapper {
   grid-template-columns: repeat(2, minmax(50px, 250px));
   grid-template-rows: repeat(3, 1fr);
 }
@@ -183,7 +187,7 @@ section div.button {
   }
 }
 @media only screen and (min-width: 2560px) {
-  .collections .image-wrapper, .social-media .image-wrapper {
+  #collections .image-wrapper, #social-media .image-wrapper {
     grid-template-columns: repeat(2, minmax(100px, 400px));
   }
 }
