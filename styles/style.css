@@ -72,6 +72,10 @@ p {
   font-family: 'Open Sans', sans-serif;
 }
 
+span.bold {
+  font-weight: bold;
+}
+
 /* HEADER */
 
 #main-header {

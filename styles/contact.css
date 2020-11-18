@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+#main-content {
+  background-color: #fffdf4;
+}
+
+#contact-header div.banner-container {
+  margin-top: 2rem;
+}
+
+#contact-header h3 {
+  padding-top: 2rem;
+}
+
+#contact-header h2,
+#contact-header h3 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+#contact-header p {
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+}
+
+div.banner-container,
+#contact-header h2,
+#contact-header h3,
+#contact-header p {
+  width: 60vw;
+  max-width: 20rem;
+  min-width: 7rem;
+}
+
+#contact-header p {
+  width: 100%;
+  padding: 2rem;
+}
+
+#contact-header h3,
+#contact-header p {
+  margin: 0 auto;
+}
+
+div.banner-container,
+h3.section-subheading,
+.section-description,
+div.button {
+  margin: 0 auto;
+}
+
+div.banner-container {
+  background-color: #804e4e;
+  color: white;
+}
+
+#contact-header .background-image-container {
+  margin: 2rem auto 0;
+  height: calc(100px + 10vh);
+  width: calc(100% - 2rem);
+  max-width: 60rem;
+  background: url("../images/home/girl-standing-behind-large-window-panel-home-background-image-wide-1380w.jpg")
+    center center / cover no-repeat;
+}
+
+
+section.contact-form {
+
+}
+.form-item {
+  padding: 1rem 1rem 0;
+}
+
+.form-item input {
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-item input {
+  width: 100%;
+  max-width: 30rem;
+  color: black;
+  background-color: #fffdf4;
+}
+
+:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: black;
+}
+
+input.input-text {
+  border: 0;
+  padding: 0 0 5px;
+  border-bottom: 1px solid black;
+}
+
+.form-container .form-item:last-child {
+  margin-top: 1rem;
+  float: right;
+}
+
+input.input-button {
+  border: 0;
+  padding: 0.4rem 0.75rem;
+  background-color: #804e4e;
+  border-color: #804e4e;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  color: white;
+}
+
+section.contact-info {
+  background-color: #804e4e;
+}
+
+section.contact-info p {
+    color: white;
+  }
+
+p.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
