@@ -18,39 +18,47 @@ main {
 }
 
 #image-socialmedia img {
-    width: 85%;
+    width: 100%;
     height: auto;
     max-width: 350px;
-    border-radius: 20px;
-    margin-left: 10%;
-     margin-right: 10%;
     justify-content: center;
+    padding-right: 1em;
+    padding-left: 1em;
    
 }
 
-#image-socialmedia h5,h6 {
-    margin-left: 10%;
-     margin-right: 10%;
+#image-socialmedia h5 {
+      
+   padding-right: 1em;
+    padding-left: 1em;
+   
+   
+}
+
+#image-socialmedia h6 {
+     padding-right: 1em;
+    padding-left: 1em;
 }
 
 #wrapper {
-    justify-content: center;
-    
+    justify-content: center;   
 }
 
-
-  #flex-box1 {
-            display: flex; 
+    #flex-box1 {
+              display: flex;
+      flex-wrap: wrap;
             justify-content: center;
             
       
         }
         
-      
-    #flex-box2 {
-            display: flex; 
-            justify-content: center;
-        }
+.flex-mobile {
+    display: flex
+}
+
+
+
+
         
 
 h1 {
@@ -60,6 +68,7 @@ h1 {
     font-size: 30px;
     padding-top: 1em;
     padding-bottom: 1em;
+     background-color: #deb0a1;
 }
 
 h2 {
@@ -69,7 +78,9 @@ h2 {
     font-size: 13px;
     line-height: 30px;
     padding-bottom: 1em;
+    background-color: #deb0a1;
 }
+
 
 h4 {
     text-indent: -9999px;
@@ -115,7 +126,7 @@ footer {}
 
 
 
-@media only screen and (min-width: 400px) {
+
 
   
 
@@ -141,7 +152,6 @@ footer {}
         h1 {
 
             font-size: 40px;
-
         }
 
         h2 {
@@ -149,6 +159,8 @@ footer {}
             font-size: 20px;
 
         }
+        
+        
 
     }
 
@@ -159,20 +171,17 @@ footer {}
 
         }
         
-      
-        
-        
            h1 {
 
            color: black;
-
+               background-color: #d6c3ad;
         }
 
         h2 {
 
             color: black;
-            padding-bottom: 5%
-
+            padding-bottom: 5%;
+            background-color: #d6c3ad;
         }
 
     
@@ -186,7 +195,7 @@ footer {}
            -moz-background-size:cover;
            -o-background-size: cover;
            background-size: cover;
-            height: 33%;
+            height: 40%;
             width: 100%;
 
         }

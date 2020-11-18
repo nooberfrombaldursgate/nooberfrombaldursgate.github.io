@@ -9,6 +9,7 @@ header {
 /* Middle
 -----------------------------------------------------------------------------*/
 main {
+   
 }
 
 #collection-season a:hover {
@@ -51,26 +52,49 @@ font-size: 15px;
     font-family: 'Open Sans', sans-serif;
 }
 
-img {
-    width: 100%;
-    max-width: 293px;
-    height: auto;
-}
 
-.collection-fall h3,h4 {
+
+ h3,h4 {
     color: lightgray;
     font-family:'Open Sans Condensed', sans-serif;
     font-size: 20px;
     
 }
 
-.collection-fall {
-    display: flex;
-    
+img {
+    width: 100%;
+    height: auto;
 }
 
 
+.collection-fall {
+    display: flex;
+    max-width: 293px;
+    float: left;
+    margin: 10px;
+    height: auto;
+    justify-content: center;
+   
+    
+}
 
+.flex-box {
+    display: flex;
+}
+
+.collection-fall-bigimage {
+ max-width: 586px;
+    float: left;
+    margin: 10px;
+    height: auto;
+    justify-content: center;
+    background-color: #fcf1e3;
+    padding: 5%;
+    position: 
+   
+    
+
+}
 
 /* Footer
 -----------------------------------------------------------------------------*/
