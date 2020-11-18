@@ -183,7 +183,7 @@ section div.button {
   }
 }
 @media only screen and (min-width: 2560px) {
-  .collections .image-wrapper {
+  .collections .image-wrapper, .social-media .image-wrapper {
     grid-template-columns: repeat(2, minmax(100px, 400px));
   }
 }
