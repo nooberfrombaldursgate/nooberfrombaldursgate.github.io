@@ -1,0 +1,8 @@
+# Allow everything
+User-agent: *
+Disallow: .gitignore
+Disallow: /images/socialmedia
+Disallow: /images/landing-page/src/
+Disallow: /images/home/src/
+Disallow: /images/contact/src/
+Allow: /
