@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 #main-content {
-  background-color: #fffdf4;
+  background-color: var(--white);
 }
 
 #contact-header div.banner-container {
@@ -28,13 +26,13 @@ div.banner-container,
 #contact-header h3,
 #contact-header p {
   width: 60vw;
-  max-width: 20rem;
+  max-width: 25rem;
   min-width: 7rem;
 }
 
 #contact-header p {
   width: 100%;
-  padding: 2rem;
+  padding-top: 2rem;
 }
 
 #contact-header h3,
@@ -50,7 +48,7 @@ div.button {
 }
 
 div.banner-container {
-  background-color: #804e4e;
+  background-color: var(--red);
   color: white;
 }
 
@@ -63,10 +61,17 @@ div.banner-container {
     center center / cover no-repeat;
 }
 
-
-section.contact-form {
-
+.form-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
 }
+
+#desktop-form-container {
+    width: 100%;
+}
+
 .form-item {
   padding: 1rem 1rem 0;
 }
@@ -75,20 +80,49 @@ section.contact-form {
   font-family: "Open Sans", sans-serif;
 }
 
-.form-item input {
+.form-item input.input-text {
   width: 100%;
-  max-width: 30rem;
+}
+
+#mobile-form-container {
+    max-width: 27rem;
+}
+
+#mobile-form-container input.input-text {
   color: black;
-  background-color: #fffdf4;
+  background-color: var(--white);
+}
+
+#desktop-form-container {
+  margin-right: 4rem;
+}
+
+#desktop-form-container,
+.contact-info-content-wrapper p:last-of-type, div.contact-info-content-wrapper hr:last-of-type {
+  display: none;
+}
+
+#desktop-form-container input.input-text {
+  color: white;
+  background-color: var(--red);
+}
+
+div.form-item:last-child {
+  align-self: end;
 }
 
 :focus {
   outline: none;
 }
 
-::placeholder {
+#mobile-form-container ::placeholder {
   color: black;
   opacity: 1; /* Firefox */
+}
+
+#desktop-form-container ::placeholder {
+  color: white;
+  opacity: 1; 
 }
 
 :-ms-input-placeholder {
@@ -104,33 +138,111 @@ section.contact-form {
 input.input-text {
   border: 0;
   padding: 0 0 5px;
+}
+
+#mobile-form-container input.input-text {
   border-bottom: 1px solid black;
 }
 
-.form-container .form-item:last-child {
-  margin-top: 1rem;
-  float: right;
+#desktop-form-container input.input-text {
+  border-bottom: 1px solid white;
 }
 
 input.input-button {
+  margin-top: 1rem;
   border: 0;
   padding: 0.4rem 0.75rem;
-  background-color: #804e4e;
-  border-color: #804e4e;
   font-size: 0.8rem;
   border-radius: 4px;
+}
+
+#mobile-form-container input.input-button {
+  background-color: var(--red);
+  border-color: var(--red);
   color: white;
 }
 
-section.contact-info {
-  background-color: #804e4e;
+#desktop-form-container input.input-button {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: black;
 }
 
-section.contact-info p {
-    color: white;
-  }
+div.contact-info-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  margin-top: 2rem;
+  padding: 2rem 1rem 2rem;
+  background-color: var(--red);
+}
+
+div.contact-info-content-wrapper * {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: white;
+}
+
+div.contact-info-content-wrapper hr {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-style: inset;
+  border-width: 1px;
+  height: auto;
+}
+
+.contact-info-content-wrapper :nth-child(3) ul:not(:first-child) {
+  padding-top: 1rem;
+}
 
 p.vertical-text {
-  writing-mode: vertical-rl;
+  align-self: center;
+  font-family: "Times New Roman", serif;
+  letter-spacing: 0.5rem;
+  font-variant: small-caps;
+  writing-mode: sideways-lr;
   text-orientation: mixed;
+}
+
+.google-maps iframe {
+  width: 100%;
+  height: calc(100px + 10vh);
+  border: 0;
+}
+
+#main-footer {
+  background-color: var(--red);
+}
+
+@media only screen and (min-width: 600px) {
+  .form-container {
+    margin: 0;
+  }
+
+  #desktop-form-container {
+    display: unset;
+  }
+
+  div.contact-info-content-wrapper {
+    justify-content: center;
+  }
+
+  #mobile-form-container, .contact-info-content-wrapper p:first-of-type, div.contact-info-content-wrapper hr:first-of-type {
+    display: none;
+}
+
+  #desktop-form-container,
+  .contact-info-content-wrapper p:last-of-type, div.contact-info-content-wrapper hr:last-of-type {
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+#desktop-form-container {
+    margin-right: 8rem;
+  }
 }
