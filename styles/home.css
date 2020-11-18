@@ -146,6 +146,7 @@ section#social-media {
 
 section div.button {
   display: table;
+  font-size: 1.1rem;
   margin: 3rem auto 0;
   padding: .4rem; 
 }
