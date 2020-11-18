@@ -21,27 +21,37 @@ main {
     width: 85%;
     height: auto;
     max-width: 350px;
-    position: relative;
-    left: 12px;
     border-radius: 20px;
+    margin-left: 10%;
+     margin-right: 10%;
+    justify-content: center;
+   
 }
 
-.flex-mobile1 {
-
-    display: flex;
-    background-color: #e2b4a5;
+#image-socialmedia h5,h6 {
+    margin-left: 10%;
+     margin-right: 10%;
 }
 
-.flex-mobile2 {
-
-    display: flex;
+#wrapper {
+    justify-content: center;
+    
 }
 
-.flex-mobile3 {
 
-    display: flex;
-    background-color: #e2b4a5;
-}
+  #flex-box1 {
+            display: flex; 
+            justify-content: center;
+            
+      
+        }
+        
+      
+    #flex-box2 {
+            display: flex; 
+            justify-content: center;
+        }
+        
 
 h1 {
     color: white;
@@ -73,8 +83,6 @@ h5 a {
     font-family: 'Open Sans', sans-serif;
     font-size: 10px;
     text-align: start;
-    position: relative;
-    left: 12px;
 
 
 
@@ -86,8 +94,6 @@ h6 {
     line-height: 1.5em;
     font-size: 10px;
     text-align: start;
-    position: relative;
-    left: 12px;
     padding-bottom: 10%;
 
 
@@ -111,36 +117,22 @@ footer {}
 
 @media only screen and (min-width: 400px) {
 
-    #image-socialmedia img {
-
-        position: relative;
-        left: 15px;
-
-    }
+  
 
     @media only screen and (min-width: 480px) {
 
         h5 a {
 
             font-size: 13px;
-            position: relative;
-            left: 20px;
+            
 
         }
 
         h6 {
             font-size: 13px;
-            position: relative;
-            left: 20px;
+           
         }
 
-
-        #image-socialmedia img {
-
-            position: relative;
-            left: 20px;
-
-        }
 
     }
 
@@ -168,28 +160,6 @@ footer {}
         }
         
       
-  #image-socialmedia img {
-
-            position: relative;
-            left: 250px;
-
-        }
-        
-        
-        
-           h5 a {
-
-        
-            position: relative;
-            left: 250px;
-
-        }
-
-        h6 {
-            
-            position: relative;
-            left: 250px;
-        }
         
         
            h1 {
