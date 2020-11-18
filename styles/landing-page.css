@@ -1,3 +1,7 @@
+* {
+  box-sizing: content-box;
+}
+
 #main-content {
     display: flex;
     flex-wrap: wrap;

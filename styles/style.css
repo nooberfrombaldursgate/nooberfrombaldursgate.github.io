@@ -10,7 +10,7 @@
 
 /* GLOBAL */
 
-html {
+* {
   box-sizing: border-box;
 }
 
@@ -41,7 +41,25 @@ div.banner-container {
   justify-content: center;
   align-items: center;
   border: 0.5px solid black;
-  height: 1.4rem;
+}
+
+div.button {
+  -webkit-border-radius: 3px;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+div.button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+div.banner-container, div.button {
+border: 0.5px solid black;
+padding: 0.3rem;
+background-color: #e4dfdb;
 }
 
 /* HEADER */
@@ -160,7 +178,10 @@ nav li {
   background-color: var(--coffee);
 }
 
-#main-footer a, #main-footer h3, #main-footer hr, #main-footer small {  
+#main-footer a,
+#main-footer h3,
+#main-footer hr,
+#main-footer small {
   color: white;
 }
 
