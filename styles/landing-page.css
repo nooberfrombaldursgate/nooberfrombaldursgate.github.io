@@ -1,6 +1,14 @@
+* {
+  box-sizing: content-box;
+}
+
 #main-content {
     display: flex;
     flex-wrap: wrap;
+}
+
+#main-content a {
+  color: white;
 }
 
 section {
