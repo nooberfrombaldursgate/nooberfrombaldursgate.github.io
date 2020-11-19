@@ -56,7 +56,6 @@ section#collections, section#social-media {
 
 #collections h2, #social-media h2 {
   text-transform: lowercase;
-  line-height: 0;
   font-variant: small-caps;
   font-size: 1.3rem;
 }
