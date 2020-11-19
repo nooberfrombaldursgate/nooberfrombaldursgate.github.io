@@ -1,12 +1,15 @@
 
-/*------mit eget---------------------------------------------------*/
+
 body{
     background-color: #fffdf4;
 }
 
 
 
-
+#wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+}
 
 
 /* Header
