@@ -43,6 +43,8 @@ div.button {
 }
 
 div.middle-banner-container {
+  text-transform: lowercase;
+  font-variant: small-caps;
   background-color: var(--red);
   color: white;
 }
