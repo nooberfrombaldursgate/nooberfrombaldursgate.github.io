@@ -21,7 +21,7 @@ section {
 
 #business-to-consumer,
 #business-to-business {
-  height: 50vh;
+  height: 50%;
   width: 100%;
 }
 
@@ -45,7 +45,7 @@ section {
 #business-to-business div {
   max-height: 7rem;
   max-width: 15rem;
-  margin-bottom: 2.5vh;
+  margin-bottom: 2.5%;
   padding: 1rem;
 }
 
@@ -65,7 +65,7 @@ section {
 @media only screen and (min-width: 600px) {
   #business-to-consumer,
   #business-to-business {
-    width: 50vw;
+    width: 50%;
     height: 100%;
     background-position: top;
   }
