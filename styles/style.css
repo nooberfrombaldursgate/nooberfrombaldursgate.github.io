@@ -38,7 +38,23 @@ hr {
   background: rgb(221, 220, 220);
 }
 
-div.banner-container {
+.banner-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-wrapper div {
+  height: 30px;
+  padding: 0;
+}
+
+.banner-wrapper div img {
+  height: 30px;
+}
+
+div.middle-banner-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +74,7 @@ div.button:hover {
 }
 
 
-div.banner-container, div.button {
+div.middle-banner-container, div.button {
 border: 0.5px solid black;
 padding: 0.3rem;
 background-color: #e4dfdb;

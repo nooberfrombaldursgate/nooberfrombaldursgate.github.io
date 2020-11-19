@@ -2,7 +2,7 @@
   background-color: var(--white);
 }
 
-#contact-header div.banner-container {
+#contact-header div.banner-wrapper {
   margin-top: 2rem;
 }
 
@@ -21,7 +21,7 @@
   line-height: 2.2rem;
 }
 
-div.banner-container,
+div.middle-banner-container,
 #contact-header h2,
 #contact-header h3,
 #contact-header p {
@@ -36,18 +36,13 @@ div.banner-container,
 }
 
 #contact-header h3,
-#contact-header p {
-  margin: 0 auto;
-}
-
-div.banner-container,
-h3.section-subheading,
+#contact-header p, h3.section-subheading,
 .section-description,
 div.button {
   margin: 0 auto;
 }
 
-div.banner-container {
+div.middle-banner-container {
   background-color: var(--red);
   color: white;
 }
