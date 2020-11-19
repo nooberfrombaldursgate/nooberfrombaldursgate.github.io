@@ -57,8 +57,8 @@ div.banner-container {
   height: calc(100px + 10vh);
   width: calc(100% - 2rem);
   max-width: 60rem;
-  background: url("../images/home/girl-standing-behind-large-window-panel-home-background-image-wide-1380w.jpg")
-    center center / cover no-repeat;
+  background: url("../images/contact/gustav-girl-laying-on-couch-768w.jpg") top
+    center / cover no-repeat;
 }
 
 .form-container {
@@ -69,7 +69,7 @@ div.banner-container {
 }
 
 #desktop-form-container {
-    width: 100%;
+  width: 100%;
 }
 
 .form-item {
@@ -85,7 +85,7 @@ div.banner-container {
 }
 
 #mobile-form-container {
-    max-width: 27rem;
+  max-width: 27rem;
 }
 
 #mobile-form-container input.input-text {
@@ -98,7 +98,8 @@ div.banner-container {
 }
 
 #desktop-form-container,
-.contact-info-content-wrapper p:last-of-type, div.contact-info-content-wrapper hr:last-of-type {
+.contact-info-content-wrapper p:last-of-type,
+div.contact-info-content-wrapper hr:last-of-type {
   display: none;
 }
 
@@ -122,7 +123,7 @@ div.form-item:last-child {
 
 #desktop-form-container ::placeholder {
   color: white;
-  opacity: 1; 
+  opacity: 1;
 }
 
 :-ms-input-placeholder {
@@ -231,18 +232,28 @@ p.vertical-text {
     justify-content: center;
   }
 
-  #mobile-form-container, .contact-info-content-wrapper p:first-of-type, div.contact-info-content-wrapper hr:first-of-type {
+  #mobile-form-container,
+  .contact-info-content-wrapper p:first-of-type,
+  div.contact-info-content-wrapper hr:first-of-type {
     display: none;
-}
+  }
 
   #desktop-form-container,
-  .contact-info-content-wrapper p:last-of-type, div.contact-info-content-wrapper hr:last-of-type {
+  .contact-info-content-wrapper p:last-of-type,
+  div.contact-info-content-wrapper hr:last-of-type {
     display: unset;
   }
 }
 
 @media only screen and (min-width: 800px) {
-#desktop-form-container {
+  #desktop-form-container {
     margin-right: 8rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  #contact-header .background-image-container {
+    background: url("../images/contact/gustav-girl-laying-on-couch-1366w.jpg")
+      top center / cover no-repeat;
   }
 }

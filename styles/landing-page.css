@@ -37,7 +37,7 @@ section {
 
 
 #business-to-consumer {
-  background: url("../images/landing-page/girl-in-the-woods-landing-page-background-image-768w.png")
+  background: url("../images/landing-page/girl-in-the-woods-landing-page-background-image-320w.jpg")
     center center / cover no-repeat;
 }
 
@@ -58,7 +58,7 @@ section {
 }
 
 #business-to-business {
-  background: url("../images/landing-page/girl-with-arms-raised-landing-page-background-image-768w.jpg")
+  background: url("../images/landing-page/girl-with-arms-raised-landing-page-background-image-320w.jpg")
     top center / cover no-repeat;
 }
 
@@ -76,12 +76,12 @@ section {
 
 @media only screen and (min-width: 1024px) {
   #business-to-consumer {
-    background: url("../images/landing-page/girl-in-the-woods-landing-page-background-image-1024w.png")
+    background: url("../images/landing-page/girl-in-the-woods-landing-page-background-image-768w.jpg")
       top center / cover no-repeat;
   }
 
   #business-to-business {
-    background: url("../images/landing-page/girl-with-arms-raised-landing-page-background-image-1024w.jpg")
+    background: url("../images/landing-page/girl-with-arms-raised-landing-page-background-image-768w.jpg")
       top center / cover no-repeat;
   }
 
@@ -93,5 +93,4 @@ section {
   #business-to-consumer h2, #business-to-business h2 {
       font-size: 1.29rem;
   }  
-
 }
