@@ -68,10 +68,6 @@ section#collections, section#social-media {
   padding-top: 2rem;
 }
 
-span.bold {
-  font-weight: bold;
-}
-
 .section-description {
   font-size: 0.9rem;
   line-height: 1.5rem;
@@ -94,12 +90,12 @@ div.banner-container, h3.section-subheading,
   background-color: rgb(156, 175, 177);
 }
 
-div.button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
 section#social-media {
   background-color: rgb(98, 129, 131, 0.7)
+}
+
+div.button:hover, #social-media div.button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 @media only screen and (min-width: 560px) {
