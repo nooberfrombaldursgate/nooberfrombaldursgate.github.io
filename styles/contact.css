@@ -31,7 +31,7 @@ div.banner-container,
 }
 
 #contact-header p {
-  width: 100%;
+  width: 100vw;
   padding-top: 2rem;
 }
 
@@ -55,7 +55,7 @@ div.banner-container {
 #contact-header .background-image-container {
   margin: 2rem auto 0;
   height: calc(100px + 10vh);
-  width: calc(100% - 2rem);
+  width: calc(100vw - 2rem);
   max-width: 60rem;
   background: url("../images/contact/gustav-girl-laying-on-couch-768w.jpg") top
     center / cover no-repeat;
@@ -69,7 +69,7 @@ div.banner-container {
 }
 
 #desktop-form-container {
-  width: 100%;
+  width: 100vw;
 }
 
 .form-item {
@@ -210,7 +210,7 @@ p.vertical-text {
 }
 
 .google-maps iframe {
-  width: 100%;
+  width: 100vw;
   height: calc(100px + 10vh);
   border: 0;
 }
