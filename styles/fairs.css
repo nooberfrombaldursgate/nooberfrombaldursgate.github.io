@@ -1,13 +1,13 @@
 
-/*------mit eget---------------------------------------------------*/
+
 body{
     background-color: #fffdf4;
 }
 
-}
+
 
 #wrapper {
-    max-width: 1024px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -75,13 +75,15 @@ div.transbox h2 {
 }
 
 h2{ 
+    font-weight: bold;
+    opacity: 1.0;
 
 }
 .fairs-list {
     max-width: 100%;
     justify-content: center;
     text-align: center;
-    border: 10%;
+    
 }
 
 .fairs-list h2 {
