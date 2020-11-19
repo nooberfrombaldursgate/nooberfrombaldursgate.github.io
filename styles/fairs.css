@@ -4,7 +4,7 @@ body{
     background-color: #fffdf4;
 }
 
-}
+
 
 #wrapper {
     max-width: 1024px;
@@ -83,7 +83,7 @@ h2{
     max-width: 100%;
     justify-content: center;
     text-align: center;
-    border: 10%;
+    
 }
 
 .fairs-list h2 {

@@ -2,6 +2,8 @@
 body{
     background-color: #fffdf4;
 }
+
+
 #img-container{
     position: relative;
 }
@@ -27,7 +29,7 @@ body{
 .flex-container{
    text-align: center;
     display: flex;
-    flex-flow: row wrap row;
+    flex-flow: row wrap;
     justify-content: space-between;
     
 }
@@ -38,6 +40,8 @@ body{
 
     
 }
+
+
 
 
 /*----------------------------------------------------*/ 
@@ -92,13 +96,9 @@ p{
 
 }
 
-@media only screen and (min-width: 1400px) {
-    #bottom-img{
-        justify-self: center;
-    }
+
     
     
-}
 
 
 
