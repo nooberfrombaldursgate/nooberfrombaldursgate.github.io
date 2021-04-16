@@ -1,0 +1,59 @@
+:root {
+  --antonio: 'Antonio', sans-serif;
+  --montserrat: 'Montserrat', sans-serif;
+  --permanent-marker: 'Permanent Marker', cursive;
+  --handwritten: 'Reenie Beanie', cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.notebook {
+  display: grid;
+  gap: 0;
+  grid-template: repeat(auto-fit, minmax(calc(100vh / 2), 1fr)) / repeat(2, calc(100% / 2));
+}
+
+.page {
+  min-width: 100%;
+  min-height: 100vh;
+  padding-top: 2.5rem;
+}
+
+.left-page {
+  background-image: url('../images/notebook-top-left.png'), url('../images/notebook-middle-left.png'), url('../images/notebook-bottom-left.png');
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: top left, top left, bottom left;
+  background-size: contain;
+  padding-left: 1.5rem;
+  padding-right: 7.5rem;
+}
+
+.right-page {
+  background-image: url('../images/notebook-top-right.png'),  url('../images/notebook-middle-right.png'), url('../images/notebook-bottom-right.png');
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: top left, top left, bottom left;
+  background-size: contain;
+  padding-left: 8.75rem;
+  padding-right: 0 1.875rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.notebook h1,
+.notebook h2,
+.notebook h3,
+.notebook h4,
+.notebook h5,
+.notebook h6 {
+    font-family: var(--permanent-marker);
+}
+
+.notebook p {
+    font-family: var(--handwritten);
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
