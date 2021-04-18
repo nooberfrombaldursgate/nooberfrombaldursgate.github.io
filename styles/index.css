@@ -203,8 +203,12 @@ p {
   }
 }
 
-.hidden {
+.no-render {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .heading-overlay, .button-overlay, .title-tag-overlay {

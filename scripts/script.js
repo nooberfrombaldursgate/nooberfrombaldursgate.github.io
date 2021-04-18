@@ -14,28 +14,32 @@ let muted = true;
 //Sound selection
 
 async function onSoundSelection() {
-  hideElement(SOUND_ON);
-  hideElement(SOUND_OFF);
-  showElement(TYPING_TEXT);
+  noRenderElement(SOUND_ON);
+  noRenderElement(SOUND_OFF);
+  renderElement(TYPING_TEXT);
   setTyper(text, WORDS);
   await sleep(3000);
-  hideElement(TYPING_TEXT);
+  noRenderElement(TYPING_TEXT);
   await sleep(500);
-  if (this.classList.value === 'sound-on hidden') {
+  if (this.classList.value === 'sound-on no-render') {
     muted = false;
     VIBRATION_SOUND.loop = true;
     VIBRATION_SOUND.play();
   }
-  showElement(PHONE);
-  showElement(TOGGLE_SWITCH);
+  renderElement(PHONE);
+  renderElement(TOGGLE_SWITCH);
   setFlexDirection(CONTAINER_1, 'column');
 }
 
 SOUND_ON.addEventListener('click', onSoundSelection);
 SOUND_OFF.addEventListener('click', onSoundSelection);
 
-function hideElement(element) {
-  element.classList.add('hidden');
+function noRenderElement(element) {
+  element.classList.add('no-render');
+}
+
+function renderElement(element) {
+  element.classList.remove('no-render');
 }
 
 function showElement(element) {
@@ -57,7 +61,7 @@ async function onToggleSwitchClicked() {
   PHONE.classList.remove('vibrate');
   CONTAINER_1.classList.add('slide-out-top');
   await sleep(800);
-  hideElement(CONTAINER_1);
+  noRenderElement(CONTAINER_1);
   showElement(CONTAINER_2);
   if (muted) {
     VIDEO.volume = 0;
