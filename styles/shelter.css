@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+}
+
+.container:nth-of-type(1) {
+    justify-content: space-around;
+}
+
+.container:nth-of-type(1) :nth-child(1) {
+    align-self: center;
+    width: 13vw;
+}
+
+.container:nth-of-type(1) :nth-child(2) {
+    width: 25vw;
+}
+
+.container:nth-of-type(2) {
+    justify-content: space-between;
+}
+
+.container:nth-of-type(2) :nth-child(1) p {
+    max-width: 23vw;
+}
+
+.container:nth-of-type(2) :nth-child(2) {
+    align-self: center;
+    min-width: 15vw;
+}
