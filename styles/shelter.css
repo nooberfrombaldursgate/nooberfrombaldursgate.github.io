@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.container > * {
+.left-page > *, .right-page > * {
     padding: 1rem;
 }
 
@@ -20,17 +20,11 @@
     width:50%;
 }
 
-.container:nth-of-type(2) {
-    justify-content: space-between;
-}
-
-.container:nth-of-type(2) :nth-child(1) p {
-    max-width: 23vw;
-}
-
-.container:nth-of-type(2) :nth-child(2) {
-    align-self: center;
-    min-width: 17vw;
+.container:nth-of-type(2) img {
+    width: 45%;
+    padding-right: 2rem;
+    float: left;
+    shape-outside: border-box;
 }
 
 .right-page :nth-child(1) {
@@ -41,4 +35,3 @@
     align-self: end;
     width: 100%;
 }
-

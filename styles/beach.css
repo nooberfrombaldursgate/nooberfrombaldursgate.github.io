@@ -1,0 +1,15 @@
+.left-page > *, .right-page > * {
+    padding: 1rem;
+}
+
+.container:nth-of-type(1) img {
+    width: 50%;
+    float: right;
+    shape-outside: url('../images/beach/creek-video.png');
+    shape-image-threshold: 0.2;
+    shape-margin: 6px;
+}
+
+.container:nth-of-type(2) img {
+    width: 40%;
+}

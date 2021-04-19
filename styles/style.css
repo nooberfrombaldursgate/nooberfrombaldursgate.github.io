@@ -80,12 +80,13 @@ svg {
 }
 
 h1 {
+  line-height: 5rem;
   margin: 0;
 }
 
 .notebook p, .handwritten {
     font-family: var(--handwritten);
     font-size: 2rem;
-    line-height: 2.3rem;
+    line-height: 3rem;
 }
 
