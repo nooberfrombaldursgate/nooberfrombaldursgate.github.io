@@ -22,7 +22,7 @@ function playAudioFile1() {
     activeSound = 'birds';
     BIRDS_CIRCLE.style.fill = 'black';
     BIRDS_TEXT.style.fill = 'white';
-    audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/forrest/birds.mp3`);
+    audioElement = new Audio(`audio/forrest/birds.mp3`);
     audioElement.volume = 1;
     audioElement.loop = true;
     audioElement.play();
@@ -41,7 +41,7 @@ function playAudioFile2() {
       activeSound = 'campfire';
       RAIN_CIRCLE.style.fill = 'black';
       RAIN_TEXT.style.fill = 'white';
-      audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/forrest/rain.wav`);
+      audioElement = new Audio(`audio/forrest/rain.wav`);
       audioElement.volume = 1;
       audioElement.loop = true;
       audioElement.play();
@@ -61,7 +61,7 @@ function playAudioFile3() {
       activeSound = 'thunder';
       THUNDER_CIRCLE.style.fill = 'black';
       THUNDER_TEXT.style.fill = 'white';
-      audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/forrest/thunder.wav`);
+      audioElement = new Audio(`audio/forrest/thunder.wav`);
       audioElement.volume = 1;
       audioElement.loop = true;
       audioElement.play();

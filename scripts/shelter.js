@@ -22,7 +22,7 @@ function playAudioFile1() {
     activeSound = 'birds';
     BIRDS_CIRCLE.style.fill = 'black';
     BIRDS_TEXT.style.fill = 'white';
-    audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/shelter/birds.mp3`);
+    audioElement = new Audio(`audio/shelter/birds.mp3`);
     audioElement.volume = 1;
     audioElement.loop = true;
     audioElement.play();
@@ -41,7 +41,7 @@ function playAudioFile2() {
       activeSound = 'campfire';
       CAMPFIRE_CIRCLE.style.fill = 'black';
       CAMPFIRE_TEXT.style.fill = 'white';
-      audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/shelter/campfire.mp3`);
+      audioElement = new Audio(`audio/shelter/campfire.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
       audioElement.play();
@@ -61,7 +61,7 @@ function playAudioFile3() {
       activeSound = 'rain';
       RAIN_CIRCLE.style.fill = 'black';
       RAIN_TEXT.style.fill = 'white';
-      audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/shelter/rain.wav`);
+      audioElement = new Audio(`audio/shelter/rain.wav`);
       audioElement.volume = 1;
       audioElement.loop = true;
       audioElement.play();

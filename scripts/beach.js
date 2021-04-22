@@ -32,7 +32,7 @@ function playAudioFile1() {
     activeSound = 'birds';
     BIRDS_CIRCLE.style.fill = 'black';
     BIRDS_TEXT.style.fill = 'white';
-    audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/beach/birds.mp3`);
+    audioElement = new Audio(`audio/beach/birds.mp3`);
     audioElement.volume = 1;
     audioElement.loop = true;
     audioElement.play();
@@ -51,7 +51,7 @@ function playAudioFile2() {
       activeSound = 'water';
       WATER_CIRCLE.style.fill = 'black';
       WATER_TEXT.style.fill = 'white';
-      audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/beach/water.mp3`);
+      audioElement = new Audio(`audio/beach/water.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
       audioElement.play();
@@ -71,7 +71,7 @@ function playAudioFile3() {
       activeSound = 'waves';
       WAVES_CIRCLE.style.fill = 'black';
       WAVES_TEXT.style.fill = 'white';
-      audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/beach/waves.mp3`);
+      audioElement = new Audio(`audio/beach/waves.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
       audioElement.play();
@@ -90,7 +90,7 @@ function playAudioFile4() {
     if (activeSound !== 'meditation1') {
       activeSound = 'meditation1';
       MEDITATION1_ICON.src = "images/beach/sound.png";
-      audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/beach/meditation1.mp3`);
+      audioElement = new Audio(`audio/beach/meditation1.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
       audioElement.play();
@@ -109,7 +109,7 @@ function playAudioFile4() {
     if (activeSound !== 'meditation2') {
       activeSound = 'meditation2';
       MEDITATION2_ICON.src = "images/beach/sound.png";
-      audioElement = new Audio(`http://127.0.0.1:5500/nooberfrombaldursgate.github.io/audio/beach/meditation2.mp3`);
+      audioElement = new Audio(`audio/beach/meditation2.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
       audioElement.play();
