@@ -27,6 +27,20 @@
     shape-outside: border-box;
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    transform: rotate(-2deg);
+  }
+
+  .video-container video {
+    margin: 3rem 0 3rem;
+    width: 60vh;
+    max-width: 100%;
+    border: 1rem solid white;
+    filter: drop-shadow(0.2px 4px 4px black);
+  }
+
 .right-page :nth-child(1) {
     width: 90%;
 }
@@ -35,3 +49,7 @@
     align-self: end;
     width: 100%;
 }
+
+#birds-text, #campfire-text, #rain-text {
+    cursor: pointer;
+  }

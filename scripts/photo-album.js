@@ -1,0 +1,1 @@
+const MAIN_CONTENT = document.getElementsByClassName('main')[0];

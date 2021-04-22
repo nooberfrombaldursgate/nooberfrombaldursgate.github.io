@@ -90,3 +90,6 @@ h1 {
     line-height: 3rem;
 }
 
+#mapid {
+  height: 100vh;
+}
