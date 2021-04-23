@@ -9,11 +9,17 @@ TOGGLE_SWITCH.checked = false;
 const CONTAINER_1 = document.getElementsByClassName('container')[0];
 const CONTAINER_2 = document.getElementsByClassName('container')[1];
 const VIDEO = document.getElementsByClassName('video')[0];
+const BUTTON = document.getElementsByClassName('button-overlay')[0];
+const text = document.querySelector('.typing-text');
 let muted = true;
 
-//Sound selection
+SOUND_ON.addEventListener('click', soundSelectionEvent);
+SOUND_OFF.addEventListener('click', soundSelectionEvent);
+TOGGLE_SWITCH.addEventListener('mousedown', toggleSwitchEvent);
+TOGGLE_SWITCH.addEventListener('click', toggleSwitchEvent);
+BUTTON.addEventListener('click', buttonEvent);
 
-async function onSoundSelection() {
+async function soundSelectionEvent() {
   noRenderElement(SOUND_ON);
   noRenderElement(SOUND_OFF);
   renderElement(TYPING_TEXT);
@@ -31,9 +37,6 @@ async function onSoundSelection() {
   setFlexDirection(CONTAINER_1, 'column');
 }
 
-SOUND_ON.addEventListener('click', onSoundSelection);
-SOUND_OFF.addEventListener('click', onSoundSelection);
-
 function noRenderElement(element) {
   element.classList.add('no-render');
 }
@@ -43,26 +46,21 @@ function renderElement(element) {
 }
 
 function showElement(element) {
-  element.classList.remove('hidden');
+  element.classList.remove('no-render');
 }
 
 function setFlexDirection(element, direction) {
   element.style = `flex-direction: ${direction}`;
 }
 
-//Toggle switch clicked
-
-TOGGLE_SWITCH.addEventListener('mousedown', onToggleSwitchClicked);
-TOGGLE_SWITCH.addEventListener('click', onToggleSwitchClicked);
-
-async function onToggleSwitchClicked() {
+async function toggleSwitchEvent() {
   TOGGLE_SWITCH.checked = true;
   VIBRATION_SOUND.pause();
   PHONE.classList.remove('vibrate');
   CONTAINER_1.classList.add('slide-out-top');
   await sleep(800);
   noRenderElement(CONTAINER_1);
-  showElement(CONTAINER_2);
+  renderElement(CONTAINER_2);
   if (muted) {
     VIDEO.volume = 0;
   }
@@ -72,10 +70,6 @@ async function onToggleSwitchClicked() {
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-//Typing-text
-
-const text = document.querySelector('.typing-text');
 
 function setTyper(element, words) {
   const LETTER_TYPE_DELAY = 30;
@@ -114,4 +108,8 @@ function setTyper(element, words) {
 
     element.textContent = textToType;
   }
+}
+
+function buttonEvent() {
+  location.href = 'overview.html';
 }

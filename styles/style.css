@@ -29,7 +29,8 @@ h6 {
 
 .notebook {
   display: grid;
-  overflow-y: hidden;
+  overflow: hidden;
+  width: 100%;
   gap: 0;
   grid-template: repeat(auto-fit, minmax(calc(100vh / 2), 1fr)) / repeat(2, calc(100% / 2));
 }
@@ -91,5 +92,17 @@ h1 {
 }
 
 #mapid {
+  z-index: -1;
   height: 100vh;
+}
+
+.back-arrow-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.back-arrow {
+  min-width: 50px;
+  width: 8vh;
 }

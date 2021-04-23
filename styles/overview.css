@@ -2,12 +2,17 @@ main {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: bottom;
+  align-items: end;
   background: url('../images/overview/bg.jpg') center center / cover no-repeat;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-img {
+object {
+  height: 100vh;
+  align-self: end;
+} 
+
+#image {
   align-self: end;
 }
 

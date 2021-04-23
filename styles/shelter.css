@@ -12,7 +12,7 @@
 
 .container:nth-of-type(1) :nth-child(1) {
     align-self: center;
-    width: 100%;
+    width: 50%;
 }
 
 .container:nth-of-type(1) :nth-child(2) {
@@ -38,6 +38,7 @@
     width: 60vh;
     max-width: 100%;
     border: 1rem solid white;
+    border-bottom-width: 6rem;
     filter: drop-shadow(0.2px 4px 4px black);
   }
 
@@ -45,7 +46,7 @@
     width: 90%;
 }
 
-.right-page :last-child {
+.right-page img:last-child {
     align-self: end;
     width: 100%;
 }

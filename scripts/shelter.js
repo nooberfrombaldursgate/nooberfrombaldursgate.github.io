@@ -6,12 +6,17 @@ const BIRDS_CIRCLE = document.getElementById('birds-circle');
 const CAMPFIRE_CIRCLE = document.getElementById('campfire-circle');
 const RAIN_CIRCLE = document.getElementById('rain-circle');
 
+const BACK_ARROW_FALLBACK = document.getElementsByClassName('back-arrow')[1];
+
+let audioElement = null;
 let activeSound = null;
 
 BIRDS_TEXT.addEventListener('click', playAudioFile1);
 CAMPFIRE_TEXT.addEventListener('click', playAudioFile2);
 RAIN_TEXT.addEventListener('click', playAudioFile3);
-let audioElement = null;
+
+BACK_ARROW_FALLBACK.addEventListener('click', goBack);
+
 
 function playAudioFile1() {
   if (activeSound !== null) {
@@ -95,4 +100,8 @@ function clearActiveStyles() {
   BIRDS_TEXT.style.fill = 'black';
   CAMPFIRE_TEXT.style.fill = 'black';
   RAIN_TEXT.style.fill = 'black';
+}
+
+function goBack() { 
+  window.location.href = "overview.html";
 }

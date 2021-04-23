@@ -11,6 +11,8 @@ const MEDITATION1_TEXT = document.getElementsByClassName('meditation1')[1];
 const MEDITATION2_ICON = document.getElementsByClassName('meditation2')[0];
 const MEDITATION2_TEXT = document.getElementsByClassName('meditation2')[1];
 
+const BACK_ARROW_FALLBACK = document.getElementsByClassName('back-arrow')[1];
+
 BIRDS_TEXT.addEventListener('click', playAudioFile1);
 WATER_TEXT.addEventListener('click', playAudioFile2);
 WAVES_TEXT.addEventListener('click', playAudioFile3);
@@ -19,6 +21,8 @@ MEDITATION1_ICON.addEventListener('click', playAudioFile4);
 MEDITATION1_TEXT.addEventListener('click', playAudioFile4);
 MEDITATION2_ICON.addEventListener('click', playAudioFile5);
 MEDITATION2_TEXT.addEventListener('click', playAudioFile5);
+
+BACK_ARROW_FALLBACK.addEventListener('click', goBack);
 
 let audioElement = null;
 let activeSound = null;
@@ -145,4 +149,8 @@ function clearActiveStyles() {
   WAVES_TEXT.style.fill = 'black';
   MEDITATION1_ICON.src = "images/beach/no-sound.png";
   MEDITATION2_ICON.src = "images/beach/no-sound.png";
+}
+
+function goBack() { 
+  window.location.href = "overview.html";
 }
