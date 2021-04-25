@@ -1,19 +1,19 @@
-const BIRDS_TEXT = document.getElementById('birds-text');
-const RAIN_TEXT = document.getElementById('rain-text');
-const THUNDER_TEXT = document.getElementById('thunder-text');
+const BIRDS_TEXT = document.querySelectorAll('.birds-text');
+const RAIN_TEXT = document.querySelectorAll('.rain-text');
+const THUNDER_TEXT = document.querySelectorAll('.thunder-text');
 
-const BIRDS_CIRCLE = document.getElementById('birds-circle');
-const RAIN_CIRCLE = document.getElementById('rain-circle');
-const THUNDER_CIRCLE = document.getElementById('thunder-circle');
+const BIRDS_CIRCLES = document.querySelectorAll('.birds-circle');
+const RAIN_CIRCLES = document.querySelectorAll('.rain-circle');
+const THUNDER_CIRCLES = document.querySelectorAll('.thunder-circle');
 
 const BACK_ARROW_FALLBACK = document.getElementsByClassName('back-arrow')[1];
 
-let activeSound = null;
 let audioElement = null;
+let activeSound = null;
 
-BIRDS_TEXT.addEventListener('click', playAudioFile1);
-RAIN_TEXT.addEventListener('click', playAudioFile2);
-THUNDER_TEXT.addEventListener('click', playAudioFile3);
+BIRDS_TEXT.forEach(element => element.addEventListener('click', playAudioFile1));
+RAIN_TEXT.forEach(element => element.addEventListener('click', playAudioFile2));
+THUNDER_TEXT.forEach(element => element.addEventListener('click', playAudioFile3));
 
 BACK_ARROW_FALLBACK.addEventListener('click', goBack);
 
@@ -24,8 +24,8 @@ function playAudioFile1() {
   }
   if (activeSound !== 'birds') {
     activeSound = 'birds';
-    BIRDS_CIRCLE.style.fill = 'black';
-    BIRDS_TEXT.style.fill = 'white';
+    BIRDS_CIRCLES.forEach(element => element.style.fill = 'black');
+    BIRDS_TEXT.forEach(element => element.style.fill = 'white');
     audioElement = new Audio(`audio/forrest/birds.mp3`);
     audioElement.volume = 1;
     audioElement.loop = true;
@@ -41,10 +41,10 @@ function playAudioFile2() {
       clearActiveStyles();
       stopActivePlayback();
     }
-    if (activeSound !== 'campfire') {
-      activeSound = 'campfire';
-      RAIN_CIRCLE.style.fill = 'black';
-      RAIN_TEXT.style.fill = 'white';
+    if (activeSound !== 'rain') {
+      activeSound = 'rain';
+      RAIN_CIRCLES.forEach(element => element.style.fill = 'black');
+      RAIN_TEXT.forEach(element => element.style.fill = 'white');
       audioElement = new Audio(`audio/forrest/rain.wav`);
       audioElement.volume = 1;
       audioElement.loop = true;
@@ -63,8 +63,8 @@ function playAudioFile3() {
     }
     if (activeSound !== 'thunder') {
       activeSound = 'thunder';
-      THUNDER_CIRCLE.style.fill = 'black';
-      THUNDER_TEXT.style.fill = 'white';
+      THUNDER_CIRCLES.forEach(element => element.style.fill = 'black');
+      THUNDER_TEXT.forEach(element => element.style.fill = 'white');
       audioElement = new Audio(`audio/forrest/thunder.wav`);
       audioElement.volume = 1;
       audioElement.loop = true;
@@ -76,7 +76,6 @@ function playAudioFile3() {
 }
 
 function isPlaying(element) {
-  console.log(element.paused);
   if (element.paused) {
     return false;
   }
@@ -93,12 +92,12 @@ function stopActivePlayback() {
 }
 
 function clearActiveStyles() {
-  BIRDS_CIRCLE.style.fill = 'none';
-  RAIN_CIRCLE.style.fill = 'none';
-  THUNDER_CIRCLE.style.fill = 'none';
-  BIRDS_TEXT.style.fill = 'black';
-  RAIN_TEXT.style.fill = 'black';
-  THUNDER_TEXT.style.fill = 'black';
+  BIRDS_CIRCLES.forEach(element => element.style.fill = 'none');
+  RAIN_CIRCLES.forEach(element => element.style.fill = 'none');
+  THUNDER_CIRCLES.forEach(element => element.style.fill = 'none');
+  BIRDS_TEXT.forEach(element => element.style.fill = 'black');
+  RAIN_TEXT.forEach(element => element.style.fill = 'black');
+  THUNDER_TEXT.forEach(element => element.style.fill = 'black');
 }
 
 function goBack() { 

@@ -1,26 +1,28 @@
-const BIRDS_TEXT = document.getElementById('birds-text');
-const WATER_TEXT = document.getElementById('water-text');
-const WAVES_TEXT = document.getElementById('waves-text');
+const BIRDS_TEXT = document.querySelectorAll('.birds-text');
+const WATER_TEXT = document.querySelectorAll('.water-text');
+const WAVES_TEXT = document.querySelectorAll('.waves-text');
 
-const BIRDS_CIRCLE = document.getElementById('birds-circle');
-const WATER_CIRCLE = document.getElementById('water-circle');
-const WAVES_CIRCLE = document.getElementById('waves-circle');
+const BIRDS_CIRCLES = document.querySelectorAll('.birds-circle');
+const WATER_CIRCLES = document.querySelectorAll('.water-circle');
+const WAVES_CIRCLES = document.querySelectorAll('.waves-circle');
 
-const MEDITATION1_ICON = document.getElementsByClassName('meditation1')[0];
-const MEDITATION1_TEXT = document.getElementsByClassName('meditation1')[1];
-const MEDITATION2_ICON = document.getElementsByClassName('meditation2')[0];
-const MEDITATION2_TEXT = document.getElementsByClassName('meditation2')[1];
+const MEDITATION_1_ICONS = document.querySelectorAll('.meditation-1-icon');
+const MEDITATION_1_TEXT = document.querySelectorAll('.meditation-1-text');
+
+const MEDITATION_2_ICONS = document.querySelectorAll('.meditation-2-icon');
+const MEDITATION_2_TEXT = document.querySelectorAll('.meditation-2-text');
 
 const BACK_ARROW_FALLBACK = document.getElementsByClassName('back-arrow')[1];
 
-BIRDS_TEXT.addEventListener('click', playAudioFile1);
-WATER_TEXT.addEventListener('click', playAudioFile2);
-WAVES_TEXT.addEventListener('click', playAudioFile3);
+BIRDS_TEXT.forEach(element => element.addEventListener('click', playAudioFile1));
+WATER_TEXT.forEach(element => element.addEventListener('click', playAudioFile2));
+WAVES_TEXT.forEach(element => element.addEventListener('click', playAudioFile3));
 
-MEDITATION1_ICON.addEventListener('click', playAudioFile4);
-MEDITATION1_TEXT.addEventListener('click', playAudioFile4);
-MEDITATION2_ICON.addEventListener('click', playAudioFile5);
-MEDITATION2_TEXT.addEventListener('click', playAudioFile5);
+MEDITATION_1_ICONS.forEach(element => element.addEventListener('click', playAudioFile4));
+MEDITATION_1_TEXT.forEach(element => element.addEventListener('click', playAudioFile4));
+
+MEDITATION_2_ICONS.forEach(element => element.addEventListener('click', playAudioFile5));
+MEDITATION_2_TEXT.forEach(element => element.addEventListener('click', playAudioFile5));
 
 BACK_ARROW_FALLBACK.addEventListener('click', goBack);
 
@@ -34,8 +36,8 @@ function playAudioFile1() {
   }
   if (activeSound !== 'birds') {
     activeSound = 'birds';
-    BIRDS_CIRCLE.style.fill = 'black';
-    BIRDS_TEXT.style.fill = 'white';
+    BIRDS_CIRCLES.forEach(element => element.style.fill = 'black');
+    BIRDS_TEXT.forEach(element => element.style.fill = 'white');
     audioElement = new Audio(`audio/beach/birds.mp3`);
     audioElement.volume = 1;
     audioElement.loop = true;
@@ -53,8 +55,8 @@ function playAudioFile2() {
     }
     if (activeSound !== 'water') {
       activeSound = 'water';
-      WATER_CIRCLE.style.fill = 'black';
-      WATER_TEXT.style.fill = 'white';
+      WATER_CIRCLES.forEach(element => element.style.fill = 'black');
+      WATER_TEXT.forEach(element => element.style.fill = 'white');
       audioElement = new Audio(`audio/beach/water.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
@@ -73,8 +75,8 @@ function playAudioFile3() {
     }
     if (activeSound !== 'waves') {
       activeSound = 'waves';
-      WAVES_CIRCLE.style.fill = 'black';
-      WAVES_TEXT.style.fill = 'white';
+      WAVES_CIRCLES.forEach(element => element.style.fill = 'black');
+      WAVES_TEXT.forEach(element => element.style.fill = 'white');
       audioElement = new Audio(`audio/beach/waves.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
@@ -93,7 +95,7 @@ function playAudioFile4() {
     }
     if (activeSound !== 'meditation1') {
       activeSound = 'meditation1';
-      MEDITATION1_ICON.src = "images/beach/sound.png";
+      MEDITATION_1_ICONS.forEach(element => element.src = "images/beach/sound.png");
       audioElement = new Audio(`audio/beach/meditation1.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
@@ -112,7 +114,7 @@ function playAudioFile4() {
     }
     if (activeSound !== 'meditation2') {
       activeSound = 'meditation2';
-      MEDITATION2_ICON.src = "images/beach/sound.png";
+      MEDITATION_2_ICONS.forEach(element => element.src = "images/beach/sound.png");
       audioElement = new Audio(`audio/beach/meditation2.mp3`);
       audioElement.volume = 1;
       audioElement.loop = true;
@@ -124,7 +126,6 @@ function playAudioFile4() {
 }
 
 function isPlaying(element) {
-  console.log(element.paused);
   if (element.paused) {
     return false;
   }
@@ -141,14 +142,15 @@ function stopActivePlayback() {
 }
 
 function clearActiveStyles() {
-  BIRDS_CIRCLE.style.fill = 'none';
-  WATER_CIRCLE.style.fill = 'none';
-  WAVES_CIRCLE.style.fill = 'none';
-  BIRDS_TEXT.style.fill = 'black';
-  WATER_TEXT.style.fill = 'black';
-  WAVES_TEXT.style.fill = 'black';
-  MEDITATION1_ICON.src = "images/beach/no-sound.png";
-  MEDITATION2_ICON.src = "images/beach/no-sound.png";
+  BIRDS_CIRCLES.forEach(element => element.style.fill = 'none');
+  WATER_CIRCLES.forEach(element => element.style.fill = 'none');
+  WAVES_CIRCLES.forEach(element => element.style.fill = 'none');
+  BIRDS_TEXT.forEach(element => element.style.fill = 'black');
+  WATER_TEXT.forEach(element => element.style.fill = 'black');
+  WAVES_TEXT.forEach(element => element.style.fill = 'black');
+  
+  MEDITATION_1_ICONS.forEach(element => element.src = "images/beach/no-sound.png");
+  MEDITATION_2_ICONS.forEach(element => element.src = "images/beach/no-sound.png");
 }
 
 function goBack() { 

@@ -1,19 +1,16 @@
-main {
+.main {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
   background: url('../images/overview/bg.jpg') center center / cover no-repeat;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-object {
-  height: 100vh;
-  align-self: end;
-} 
-
-#image {
-  align-self: end;
+.svg-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .slide-in-bottom {

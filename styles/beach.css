@@ -1,3 +1,7 @@
+.main {
+  background: url('../images/overview/bg.jpg') center center / cover no-repeat;
+}
+
 .container h2 {
   padding-left: 0;
 }
@@ -7,25 +11,14 @@
   padding: 1rem;
 }
 
-.left-page .container:nth-of-type(1) img {
+#container-1 div img {
   width: 50%;
+  min-width: 250px;
   max-width: 500px;
   float: right;
   shape-outside: url('../images/beach/creek-video.png');
-  shape-image-threshold: 0.2;
-  shape-margin: 6px;
-}
-
-.left-page .container:nth-of-type(1) h2 {
-  margin-top: 4rem;
-}
-
-.left-page .container:nth-of-type(2) {
-  display: flex;
-}
-
-svg {
-  padding: 0;
+  shape-image-threshold: 0;
+  shape-margin: 20px;
 }
 
 .video-container {
@@ -43,67 +36,88 @@ svg {
   filter: drop-shadow(0.2px 4px 4px black);
 }
 
-.right-page .container:nth-of-type(1) {
-  display: flex;
-  justify-content: space-around;
-}
-
-.right-page .container:nth-of-type(1) div {
-  margin-top: 6rem;
-  max-width: 70%;
-}
-
-.right-page .container:nth-of-type(1) img {
+#container-2 img {
   width: 30%;
-  max-width: 300px;
-  justify-self: end;
-  align-self: start;
-  padding: 1rem;
+  min-width: 200px;
+  shape-outside: url('../images/beach/sea-shells.png');
+  shape-margin: 25px;
 }
 
-.right-page .container:nth-of-type(2) {
-  background: url('../images/beach/brown-tape.png') top left / contain no-repeat;
-  width: 100%;
+#container-3 {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
 }
 
-.right-page .container:nth-of-type(2) div {
+#container-3 div {
   display: grid;
   grid-template: 60px 60px / 80px 1fr;
   column-gap: 2rem;
+  background: url('../images/beach/brown-tape.png') center center / contain no-repeat;
+  width: 60%;
+  min-width: 440px;
 }
 
-.right-page .container:nth-of-type(2) img {
+#container-3 img {
   width: 2rem;
   justify-self: end;
 }
 
-.right-page .container:nth-of-type(2) div p {
+#container-3 div p {
   margin: 0;
   align-self: center;
 }
 
-.right-page .container:nth-of-type(3) {
-    display: flex;
-    justify-content: end;
-    padding-right: 5rem;
+#container-4 {
+  display: flex;
+  justify-content: end;
+  padding-right: 5rem;
 }
 
-.right-page .container:nth-of-type(3) img {
-    display: flex;
-    justify-content: end;
+#container-4 img {
+  display: flex;
+  justify-content: end;
   width: 60%;
+  min-width: 300px;
 }
 
-.right-page .container:nth-of-type(4) {
-    display: flex;
-    padding-left: 5rem;
+#container-5 {
+  display: flex;
+  padding-left: 5rem;
 }
 
-.right-page .container:nth-of-type(4) img {
-    width: 30%;
+#container-5 img {
+  width: 30%;
+  min-width: 200px;
+}
+
+.meditation-1-icon,
+.meditation-1-text,
+.meditation-2-icon,
+.meditation-2-text,
+.birds-text,
+.water-text,
+.waves-text {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+  #container-2 img {
+    float: left;
   }
+}
 
-.meditation1, .meditation2, #birds-text, #water-text, #waves-text {
-    cursor: pointer;
+@media only screen and (min-width: 1100px) {
+  #container-3 div {
+    background: url('../images/beach/brown-tape.png') center center / cover no-repeat;
+    max-width: 447px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #container-3 div {
+    background: url('../images/beach/brown-tape.png') center center / cover no-repeat;
+    max-width: 577px;
+  }
 }

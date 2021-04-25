@@ -61,6 +61,7 @@ async function toggleSwitchEvent() {
   await sleep(800);
   noRenderElement(CONTAINER_1);
   renderElement(CONTAINER_2);
+  CONTAINER_2.style = 'flex-direction: row'
   if (muted) {
     VIDEO.volume = 0;
   }

@@ -1,4 +1,4 @@
-if (sessionStorage.getItem('firstSessionLoad')) {
-    document.querySelector('img').classList.remove('slide-in-bottom'); 
-  }
-  sessionStorage.setItem('firstSessionLoad', false);
+// if (!sessionStorage.getItem('isNewSession')) {
+//   document.querySelector('object').classList.add('slide-in-bottom');
+//   sessionStorage.setItem('isNewSession', true);
+// }
