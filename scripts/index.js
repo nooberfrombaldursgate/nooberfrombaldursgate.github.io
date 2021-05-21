@@ -1,5 +1,5 @@
 // get the element
-const text = document.querySelector('.typing-text');
+const text = document.querySelector('.video-overlay-text');
 
 // make a words array
 const words = ['Find spor', 'Løs gåder', 'Knæk koder', 'Opklar mysterier', 'CITY ESCAPE'];
@@ -25,14 +25,14 @@ function setTyper(element, words) {
   function typeLetter() {
     if (letterIndex == 0 && wordIndex == 0) {
       text.style.color = 'white';
-      text.style.fontFamily = 'Arial';
+      text.style.fontFamily = 'var(--main-font)';
       letterTypeDelay = 35;
       wordStayDelay = 1000;
     }
 
     if (letterIndex == 0 && wordIndex == words.length - 1) {
       text.style.color = 'var(--gold)';
-      text.style.fontFamily = 'font';
+      text.style.fontFamily = 'City Escape';
       text.textTransform = 'capitalize';
       wordStayDelay = 2000;
     }
