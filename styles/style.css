@@ -52,9 +52,25 @@ body {
 }
 
 body {
+  margin: 11.82px 15px 15px;
+  background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
 }
+
+#main-content {
+  flex: 1 0 auto;
+}
+
+#main-footer {
+  flex-shrink: 0;
+}
+
+/* header logo */
+
+.pictorial-logo {
+  display: block;
+  width: 27px;
+  color: var(--gold); 
+}
+
