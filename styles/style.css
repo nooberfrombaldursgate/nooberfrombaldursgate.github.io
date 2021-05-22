@@ -29,11 +29,12 @@
 
 :root {
   --gold: #c99d2b;
+  --dark-grey: #1C1C1C;
   --main-font: 'Poppins', sans-serif;
 }
 
 * {
-    font-family: var(--main-font);
+  font-family: var(--main-font);
 }
 
 /* 
@@ -47,7 +48,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -63,7 +66,7 @@ body {
 }
 
 body {
-  margin: 11.82px 15px 15px;
+  margin: 11.82px 0 15px;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -83,23 +86,25 @@ body {
 
 /* desktop navigationen renders som udgangspunkt ikke (først ved media queries), da vi arbejder efter 'mobile first'-tankegangen */
 
-#desktop-top-nav, #desktop-bottom-nav {
+#desktop-top-nav,
+#desktop-bottom-nav {
   display: none;
 }
 
 #main-header {
   height: 50px;
   /* overflow: hidden; */
-  background-color: darkslategrey;
+  background-color: black;
 }
 
-#mobil-top-nav {
+#mobile-top-nav {
   display: flex;
   justify-content: space-between;
   margin: 0 15px 0;
 }
 
-.burger-menu-wrapper, .logo-container {
+.burger-menu-wrapper,
+.logo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,17 +125,89 @@ body {
 
 #main-footer {
   height: 100%;
-  background: lightgreen;
+  background: black;
 }
+
+/* MOBIL NAV START */
+
+#mobile-bottom-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  text-align: center;
+  gap: 30px;
+}
+
+#mobile-bottom-nav li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px 0 15px;
+  width: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/*
+* pseudo selectorene :not() og :first-child anvendes for ikke at give escape game list item'et en højde 
+* på 43 px (rummer flere nestede links og ville derfor resultere i overflow)
+*/
+
+.outer-nav-ul > li:not(:first-child) {
+  height: 43px;
+}
+
+.parent-anchor {
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-item-group {
+  margin-top: 60px;
+  width: 100%;
+  background-color: black;
+}
+
+.outer-nav-ul > li, .parent-anchor {
+  background-color: var(--dark-grey);
+}
+
+.inner-nav-ul > li {
+  height: 43px;
+  background-color: black;
+}
+
+.inner-nav-ul :first-child {
+  margin-top: 15px;
+}
+
+#mobile-bottom-nav ul {
+  line-height: 24px;
+  letter-spacing: .05em;
+  margin-bottom: 38px;
+}
+
+#mobile-bottom-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* MOBIL NAV SLUT */
 
 /* FOOTER SEKTION SLUT */
 
 @media only screen and (min-width: 768px) {
-  #mobile-top-nav, #mobile-bottom-nav {
+  #mobile-top-nav,
+  #mobile-bottom-nav {
     display: none;
   }
 
-  #desktop-top-nav, #desktop-top-nav {
+  #desktop-top-nav,
+  #desktop-top-nav {
     display: unset;
   }
 }

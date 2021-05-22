@@ -136,7 +136,7 @@ function setTyper(element, WORDS) {
 
 let message = `Beklager 😢
 
-Linket peger på tomt indhold, som vi har valgt ikke at inkludere i vores scope.`
+Linket peger på tomt indhold, som vi har fravalgt i vores scope 🎯`
 
 document.querySelectorAll('.out-of-scope').forEach(element => {
   element.addEventListener('click', event => {
