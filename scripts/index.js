@@ -134,12 +134,20 @@ function setTyper(element, WORDS) {
 * Beskeden er gemt i en template literal (muliggør multiline og interpolation (sidstnævnte ikke brugt her)).  
 */
 
-let message = `Beklager 😢
+const OUT_OF_SCOPE_MESSAGE = `Beklager 😢
 
-Linket peger på tomt indhold, som vi har fravalgt i vores scope 🎯`
+Linket peger på tomt indhold, som vi har fravalgt i vores scope 🎯`;
+const OUT_OF_TIME_MESSAGE = `Beklager 😢
 
-document.querySelectorAll('.out-of-scope').forEach(element => {
+Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, 
+men som vi desværre måtte udelade pga. tidsmæssige udfordringer 🕒`;
+
+addConfirmationDialogs('out-of-scope', OUT_OF_SCOPE_MESSAGE);
+
+function addConfirmationDialogs(className, message) {
+document.querySelectorAll(`.${className}`).forEach(element => {
   element.addEventListener('click', event => {
     confirm(message);
   })
 });
+}
