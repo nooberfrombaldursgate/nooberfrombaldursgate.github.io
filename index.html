@@ -20,30 +20,30 @@
 </head>
 
 <body>
-    <!-- main header -->
+    <!-- main header start -->
     <header id="main-header">
         <nav id="top-nav">
-            <div class="mobil-nav">
-
+            <div id="mobile-top-nav">
                 <div class="logo-container">
-                    <!-- <a href="index.html"> -->
-                        <object class="pictorial-logo" type="image/svg+xml" data="images/header/logo/cityescape-logo-pictorial-mark.svg">
+                    <!-- vi bruger svg med fallback. der findes forskellige strategier, men vi har brugt object med img fallback som beskrevet her: https://css-tricks.com/a-complete-guide-to-svg-fallbacks/ -->
+                    <object class="pictorial-logo" type="image/svg+xml" data="images/header/logo/cityescape-logo-pictorial-mark.svg">
+                        <a href="/index.html">
                             <img class="pictorial-logo" src="images/header/logo/cityescape-logo-pictorial-mark@2x.png" alt="No SVG support">
+                        </a>
+                    </object>
+                </div>
+                <div class="burger-menu-wrapper">
+                    <a href="#bottom-nav">
+                        <object class="burger-icon" type="image/svg+xml" data="images/header/burger-menu/burger-menu.svg">
+                            <img class="burger-icon" src="images/header/burger-menu/burger-menu@2x.png" alt="No SVG support">
                         </object>
-                    <!-- </a> -->
+                    </a>
                 </div>
             </div>
 
-
-            <div class="burger">
-                <a href="#bottom-nav">
-                    <img src="images/icons/navigation/burger-menu-33w.png" alt="Burger menu">
-                </a>
-            </div>
-
-            <div class="desktop-nav">
+            <div id="desktop-top-nav">
                 <ul>
-                    <li><a id="dropdown-anchor" href="index.html">julebryg</a>
+                    <li><a id="dropdown-anchor" href="index.html">link</a>
                         <ul class="dropdown">
                             <li><a href="link.html">link</a></li>
                             <li><a href="link.html">link</a></li>
@@ -56,23 +56,36 @@
             </div>
         </nav>
     </header>
-
-
-    <header id="main-header">
-
-        <h1 class="video-overlay-text"></h1>
-    </header>
     <!-- main header slut -->
 
     <!-- main content start -->
     <main id="main-content">
+        <header class="hero-video-container">
+            <h1 class="video-overlay-text"></h1>
+
+        </header>
         <article>
-            <p id="test">Test</p>
         </article>
     </main>
     <!-- main content slut -->
 
     <!-- main footer start -->
+    <footer id="main-footer">
+        <div id="mobile-bottom-nav">
+            <ul>
+                <li><a href="#escape-games-section.html">Escape games</a></li>
+                <li><a class="out-of-scope" href="javascript:void(0);">The Last Secret</a></li>
+                <li><a class="out-of-scope" href="javascript:void(0);">Operation Mindfall</a></li>
+                <li><a class="out-of-scope" href="javascript:void(0);">Hunt a Killer</a></li>
+                <li><a class="out-of-scope" href="javascript:void(0);">Pirate Escape</a></li>
+                <li><a class="out-of-scope" href="javascript:void(0);">The Murder at Grand Hotel</a></li>
+                <li><a href="#koncept-section">Koncept</a></li>
+                <li><a href="#priser-section.html">Priser</a></li>
+                <li><a href="#byer-section.html">Byer</a></li>
+                <li><a href="#booking-section.html">Booking</a></li>
+            </ul>
+        </div>
+    </footer>
     <!-- main footer slut -->
 
     <script src="scripts/index.js"></script>

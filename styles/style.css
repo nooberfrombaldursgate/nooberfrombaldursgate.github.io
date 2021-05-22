@@ -1,4 +1,6 @@
-/* globalt stylesheet */
+/* GLOBALT STYLESHEET */
+
+/* GLOBAL SEKTION START */
 
 /*
 * vi har fundet frem til city escapes logo font gennem billedanalyse via whatfontis.com
@@ -21,7 +23,8 @@
 * :root kan bruges til deklaration af globale css variabler
 * css variabler gør det bl.a. lettere at håndtere maskinedata som f.eks. hexadecimaler
 * understøttet i alle moderne browsere pånær internet explorer
-* fallback ikke inkluderet, da vi har valgt ikke at understøtte internet explorer
+* fallback ikke inkluderet, da vi har valgt ikke at understøtte internet explorer (har efterhånden meget lille markedsandel):
+* 2.15% iflg. https://kinsta.com/browser-market-share/
 */
 
 :root {
@@ -33,10 +36,12 @@
     font-family: var(--main-font);
 }
 
-/* vi bruger box-sizing: border-box fordi det gør det nemmere at give skalere elementer
-størrelsesmæssigt. css-reglen fortæller browseren, at den skal trække border og padding
-fra den angivne værdi. vi bruger 'universal box sizing with inheritance' implementationen
-som er beskrevet her: https://css-tricks.com/box-sizing/ */
+/* 
+* box-sizing: border-box anvendes fordi det gør det nemmere at give skalere elementer
+* størrelsesmæssigt. css-reglen fortæller browseren, at den skal trække border og padding
+* fra den angivne værdi. vi bruger 'universal box sizing with inheritance' implementationen
+* som er beskrevet her: https://css-tricks.com/box-sizing/ 
+*/
 
 html {
   box-sizing: border-box;
@@ -45,6 +50,12 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+/*
+* vi bruger flexbox til at lave en sticky footer. der findes forskellige strategier, men vi
+* har valgt at bruge en flexbox implementation, som er nærmere beskrevet her: 
+* https://css-tricks.com/couple-takes-sticky-footer/
+*/
 
 html,
 body {
@@ -66,11 +77,60 @@ body {
   flex-shrink: 0;
 }
 
-/* header logo */
+/* GLOBAL SEKTION SLUT */
+
+/* HEADER SEKTION START */
+
+/* desktop navigationen renders som udgangspunkt ikke (først ved media queries), da vi arbejder efter 'mobile first'-tankegangen */
+
+#desktop-top-nav, #desktop-bottom-nav {
+  display: none;
+}
+
+#main-header {
+  height: 50px;
+  /* overflow: hidden; */
+  background-color: darkslategrey;
+}
+
+#mobil-top-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px 0;
+}
+
+.burger-menu-wrapper, .logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+}
 
 .pictorial-logo {
   display: block;
   width: 27px;
-  color: var(--gold); 
 }
 
+/* HEADER SEKTION SLUT */
+
+/* MAIN SEKTION START */
+/* MAIN SEKTION SLUT */
+
+/* FOOTER SEKTION START */
+
+#main-footer {
+  height: 100%;
+  background: lightgreen;
+}
+
+/* FOOTER SEKTION SLUT */
+
+@media only screen and (min-width: 768px) {
+  #mobile-top-nav, #mobile-bottom-nav {
+    display: none;
+  }
+
+  #desktop-top-nav, #desktop-top-nav {
+    display: unset;
+  }
+}
