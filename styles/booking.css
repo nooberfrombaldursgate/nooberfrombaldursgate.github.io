@@ -7,12 +7,12 @@
 
 .heading h2 {
     font-size: 2em;
-    color: black;
+    color:white;
     font-family: var(--main-font);
 }
 
 .heading h4 {
-    color: black;
+    color: white;
     font-family: var(--main-font);
 }
 /*------------------https://gist.github.com/WeiChiaChang/abe92ca2e8da86ef69560b63903e8764------------*/
@@ -41,6 +41,7 @@
 }
 
 .byer_container {
+    margin: 0 auto;
     margin-top: 2%;
     width: 60%;
 }
@@ -48,15 +49,16 @@
 .byer_container a {
     text-decoration: none;
     font-size: 1.3em;
-    color: black;
+    color: white;
     font-family: var(--main-font);
 }
+
 .by {
     text-align: center;
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 10px;
-    color: black;
+    color: white;
 }
 
 .videre_knap {
@@ -70,3 +72,4 @@
     position: absolute;
     left: -9999px;
 }
+

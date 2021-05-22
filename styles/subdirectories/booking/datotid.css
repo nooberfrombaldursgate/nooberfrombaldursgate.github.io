@@ -7,12 +7,12 @@
 
 .heading h2 {
     font-size: 2em;
-    color: black;
+    color: white;
     font-family: var(--main-font);
 }
 
 .heading h4 {
-    color: black;
+    color: white;
     font-family: var(--main-font);
 }
 
@@ -46,7 +46,8 @@
 
 
 .container {
-    margin-top: 1.5%;
+    margin: 0 auto;
+    margin-top: 2%;
     width: 60%;
 }
 
