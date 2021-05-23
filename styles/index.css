@@ -12,10 +12,6 @@ body {
   height: initial;
 }
 
-article {
-  padding: 0 20px;
-}
-
 /* GLOBAL SEKTION SLUT */
 
 /* MAIN SEKTION START */
@@ -32,7 +28,9 @@ article {
   background-color: var(--dark-grey);
 }
 
-.top-hero, .bottom-hero, .cta-container {
+.top-hero,
+.bottom-hero,
+.cta-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +41,7 @@ article {
 }
 
 .top-hero h1 {
-  letter-spacing: .5px; 
+  letter-spacing: 0.5px;
 }
 
 .video-overlay-text {
@@ -79,14 +77,6 @@ article {
   width: 290px;
 }
 
-/* 
-* selectoren > * + * kaldes for the lobotimized owl selector (uglen med det hvide snit), 
-* og bruges ofte til flex/grid i stedet for 'gap', når der skal ydes support til safari ios, 
-* når man bruger den på parent elementet, vil øverste child element ikke blive ramt af reglen 
-* (man vil gerne undgå at der kommer margin/padding på første element)
-* se: https://www.youtube.com/watch?v=VvqyUUROmJw 
-*/
-
 .video-overlay-button {
   height: 35px;
   margin-left: 15px;
@@ -97,18 +87,23 @@ article {
 
 /* HERO SEKTION SLUT */
 
+/* HVORFOR VÆLGE OS SEKTION START */
 
-
-.why-choose-us-article {
+#why-choose-us-article {
+  padding: 0 20px;
   margin-top: 51px;
 }
 
-.why-choose-us-article hr {
+#why-choose-us-article hr {
   margin-bottom: 60px;
 }
 
+#why-choose-us-article p {
+  padding: 22px 0 31px;
+}
+
 .why-choose-us-icon {
-  height: 43px;
+  height: 60px;
 }
 
 .heading-and-icon-wrapper * {
@@ -118,14 +113,124 @@ article {
 .heading-and-icon-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.entertaintment-section, .props-section {
+.entertaintment-section,
+.props-section {
   padding-bottom: 80px;
 }
 
 .teamwork-section {
   padding-bottom: 40px;
 }
+
+/* HVORFOR VÆLGE OS SEKTION SLUT */
+
+.aarhus-silouhette,
+.copenhagen-silouhette {
+  height: 354px;
+}
+
+.aarhus-silouhette {
+  background-position: top right;
+  background-image: url('../images/index/aarhus-sillouhette.svg');
+}
+
+/* ESCAPE GAMES SEKTION START */
+
+#escape-games-article {
+  background-color: black;
+}
+
+#escape-games-article header {
+  color: white;
+}
+
+#escape-games-article header h2 {
+  padding: 43px 20px 10px;
+}
+
+#escape-games-article p {
+  padding: 22px 20px 55px;
+}
+
+#escape-games-article hr {
+  margin: 0 20px 0;
+}
+
+#escape-games-article h3 {
+  padding: 0 0 0 20px;
+}
+
+#escape-games-article .heading-and-icon-wrapper {
+  padding-top: 49px;
+}
+
+#escape-games-article .icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0;
+}
+
+#escape-games-article
+  .heading-and-icon-wrapper
+  .icon {
+  padding-right: 20px;
+  height: 44px;
+}
+
+/* baggrund er fra https://www.toptal.com/designers/subtlepatterns/ */
+.outdoor-escape-game-section {
+  background: url('../images/index/bg-textures/prism.png') repeat;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 0;
+}
+
+/* 
+* selectoren > * + * kaldes for the lobotimized owl selector (uglen med det hvide snit), 
+* og bruges ofte til flex/grid i stedet for 'gap', når der skal ydes support til safari ios, 
+* når man bruger den på parent elementet, vil øverste child element ikke blive ramt af reglen 
+* (man vil gerne undgå at der kommer margin/padding på første element)
+* se: https://www.youtube.com/watch?v=VvqyUUROmJw 
+*/
+
+.card-wrapper > * + * {
+  padding-top: 40px;
+}
+
+.operation-mindfall-card {
+  padding-top: 54px;
+}
+
+.hunt-a-killer-card {
+  padding-bottom: 60px;
+}
+
+/* baggrund er fra: https://www.toptal.com/designers/subtlepatterns/ */
+.mobile-escape-room-section {
+  background: url('../images/index/bg-textures/stardust.png') repeat;
+}
+
+.mobile-escape-room-section {
+  color: white;
+}
+
+.pirate-escape-card, .the-murderer-at-grand-hotel-card {
+  padding-top: 53px;
+  padding-bottom: 60px;
+}
+
+/* baggrund er fra: https://www.toptal.com/designers/subtlepatterns/ */
+.murder-mystery-section {
+  background: url('../images/index/bg-textures/brickwall.png') repeat;
+}
+
+/* ESCAPE GAMES SEKTION SLUT */
 
 /* MAIN SEKTION SLUT */
