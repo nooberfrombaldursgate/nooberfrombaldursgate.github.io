@@ -55,6 +55,8 @@ function setTyper(element, WORDS) {
     if (letterIndex == 0 && wordIndex == 0) {
       TEXT.style.color = 'white';
       TEXT.style.fontFamily = 'var(--main-font)';
+      TEXT.style.fontSize = '30px';
+      TEXT.style.paddingTop = '0';
       letterTypeDelay = 35;
       wordStayDelay = 1000;
     }
@@ -64,6 +66,8 @@ function setTyper(element, WORDS) {
       TEXT.style.color = 'var(--gold)';
       TEXT.style.fontFamily = 'City Escape';
       TEXT.textTransform = 'capitalize';
+      TEXT.style.fontSize = '24px';
+      TEXT.style.paddingTop = '10px';
       wordStayDelay = 2000;
     }
 
@@ -139,10 +143,10 @@ const OUT_OF_SCOPE_MESSAGE = `Beklager 😢
 Linket peger på tomt indhold, som vi har fravalgt i vores scope 🎯`;
 const OUT_OF_TIME_MESSAGE = `Beklager 😢
 
-Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, 
-men som vi desværre måtte udelade pga. tidsmæssige udfordringer 🕒`;
+Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, men som vi desværre måtte udelade pga. tidsmæssige udfordringer 🕒`;
 
 addConfirmationDialogs('out-of-scope', OUT_OF_SCOPE_MESSAGE);
+addConfirmationDialogs('out-of-time', OUT_OF_TIME_MESSAGE);
 
 function addConfirmationDialogs(className, message) {
 document.querySelectorAll(`.${className}`).forEach(element => {

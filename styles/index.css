@@ -1,6 +1,6 @@
 /* STYLESHEET TIL INDEX.HTML */
 
-/* GLOBAL SEKTION */
+/* GLOBAL SEKTION START */
 
 /* 
 * height resettes til initial for at hero video + header kan tage 100vh. 
@@ -12,16 +12,89 @@ body {
   height: initial;
 }
 
+/* GLOBAL SEKTION SLUT */
+
+/* HEADER SEKTION START */
+
+/* HEADER SEKTION SLUT */
+
+/* MAIN SEKTION START */
+
 /* 
-* fratrækker 65px i beregningen af height af hero video containeren, for at tage højde for headerens højde + top margin på 15 px
+* fratrækker 65px i beregningen af height af hero video containeren, for at tage højde 
+* for headerens højde + top margin på 15 px
 */
 
-.hero-video-container {
-  height: calc(100vh - 65px);
-  background-color: lightblue;
+/* HERO SEKTION START */
+
+.hero-wrapper {
+  /* height: calc(100vh - 50px); */
+  background-color: var(--dark-grey);
+}
+
+.top-hero, .bottom-hero, .cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-hero {
+  height: 86px;
+}
+
+.top-hero h1 {
+  letter-spacing: .5px; 
 }
 
 .video-overlay-text {
   margin: 0;
 }
 
+.video {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  /* object-fit: fill;
+  z-index: 1; */
+}
+
+.middle-hero-inner-container {
+  background: var(--dark-grey);
+}
+
+.cta-container {
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  height: 0;
+}
+
+.bottom-hero {
+  padding: 30px 0;
+}
+
+.review-slider-placeholder {
+  width: 290px;
+}
+
+/* 
+* selectoren > * + * kaldes for the lobotimized owl selector (uglen med det hvide snit), 
+* og bruges ofte til flex/grid i stedet for 'gap', når der skal ydes support til safari ios, 
+* når man bruger den på parent elementet, vil øverste child element ikke blive ramt af reglen 
+* (man vil gerne undgå at der kommer margin/padding på første element)
+* se: https://www.youtube.com/watch?v=VvqyUUROmJw 
+*/
+
+.video-overlay-button {
+  height: 35px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 130px;
+  letter-spacing: 0;
+}
+
+/* HERO SEKTION SLUT */
+
+/* MAIN SEKTION SLUT */

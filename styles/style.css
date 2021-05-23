@@ -3,9 +3,10 @@
 /* GLOBAL SEKTION START */
 
 /*
-* vi har fundet frem til city escapes logo font gennem billedanalyse via whatfontis.com
-* fonten 321perfect findes ikke på adobe eller google font, så vi har downloadet desktop fonten
-* og konverteret den til webfont via fontsquirrel.com. vi har derefter hostet den på vores egen
+* vi har fundet frem til city escapes logo font gennem billedanalyse via 
+* whatfontis.com.fonten 321perfect findes ikke på adobe eller google font, 
+* så vi har downloadet desktop fonten og konverteret den til webfont via 
+* fontsquirrel.com. vi har derefter hostet den på vores egen
 * server. @font-face bruges til at specificere de forskellige webfontformater.
 */
 
@@ -21,9 +22,10 @@
 
 /*
 * :root kan bruges til deklaration af globale css variabler
-* css variabler gør det bl.a. lettere at håndtere maskinedata som f.eks. hexadecimaler
-* understøttet i alle moderne browsere pånær internet explorer
-* fallback ikke inkluderet, da vi har valgt ikke at understøtte internet explorer (har efterhånden meget lille markedsandel):
+* css variabler gør det bl.a. lettere at håndtere maskinedata som 
+* f.eks. hexadecimaler understøttet i alle moderne browsere pånær 
+* internet explorer. fallback ikke inkluderet, da vi har valgt ikke 
+* at understøtte internet explorer (har efterhånden meget lille markedsandel):
 * 2.15% iflg. https://kinsta.com/browser-market-share/
 */
 
@@ -38,10 +40,11 @@
 }
 
 /* 
-* box-sizing: border-box anvendes fordi det gør det nemmere at give skalere elementer
-* størrelsesmæssigt. css-reglen fortæller browseren, at den skal trække border og padding
-* fra den angivne værdi. vi bruger 'universal box sizing with inheritance' implementationen
-* som er beskrevet her: https://css-tricks.com/box-sizing/ 
+* box-sizing: border-box anvendes fordi det gør det nemmere at give 
+* skalere elementer størrelsesmæssigt. css-reglen fortæller browseren, 
+* at den skal trække border og padding fra den angivne værdi. vi bruger
+* 'universal box sizing with inheritance' implementationen, som er beskrevet 
+* her: https://css-tricks.com/box-sizing/ 
 */
 
 html {
@@ -55,8 +58,9 @@ html {
 }
 
 /*
-* vi bruger flexbox til at lave en sticky footer. der findes forskellige strategier, men vi
-* har valgt at bruge en flexbox implementation, som er nærmere beskrevet her: 
+* vi bruger flexbox til at lave en sticky footer. der findes 
+* forskellige strategier, men vi har valgt at bruge en flexbox 
+* implementation, som er nærmere beskrevet her: 
 * https://css-tricks.com/couple-takes-sticky-footer/
 */
 
@@ -79,6 +83,30 @@ body {
   flex-shrink: 0;
 }
 
+.gold-button, .white-button {
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: .7px;
+  font-size: 14px;
+}
+
+.gold-button {
+  border: none;
+  background: var(--gold);
+  font-weight: bold;
+}
+
+.white-button {
+  
+  background: none;
+  border: 1px solid white;
+}
+
 li, a {
   text-decoration: none;
 }
@@ -98,7 +126,10 @@ hr {
 
 /* HEADER SEKTION START */
 
-/* desktop navigationen renders som udgangspunkt ikke (først ved media queries), da vi arbejder efter 'mobile first'-tankegangen */
+/* 
+* desktop navigationen renders som udgangspunkt ikke (først ved media queries), 
+* da vi arbejder efter 'mobile first'-tankegangen 
+*/
 
 #desktop-top-nav,
 #desktop-bottom-nav {
@@ -171,8 +202,10 @@ hr {
 }
 
 /* 
-* selectoren kaldes for the lobotimized owl (uglen med det hvide snit), og bruges ofte til flex/grid i stedet for 'gap', når der skal ydes support til safari ios, 
-* når man bruger den på parent elementet, vil øverste child element ikke blive ramt af reglen (man vil gerne undgå at der kommer margin på første element)
+* selectoren > * + * kaldes for the lobotimized owl selector (uglen med det hvide snit), 
+* og bruges ofte til flex/grid i stedet for 'gap', når der skal ydes support til safari ios, 
+* når man bruger den på parent elementet, vil øverste child element ikke blive ramt af reglen 
+* (man vil gerne undgå at der kommer margin/padding på første element)
 * se: https://www.youtube.com/watch?v=VvqyUUROmJw 
 */
 
@@ -189,8 +222,9 @@ hr {
 }
 
 /*
-* pseudo selectorene :not() og :first-child anvendes for ikke at give escape game list item'et en højde 
-* på 43 px (rummer flere nestede links og ville derfor resultere i overflow)
+* pseudo selectorene :not() og :first-child anvendes for ikke at give escape 
+* game list item'et en højde på 43 px (rummer flere nestede links og ville derfor 
+* resultere i overflow)
 */
 
 .outer-nav-ul > li:not(:first-child) {
@@ -282,8 +316,6 @@ hr {
 .lang-icon {
   height: 25px;
 }
-
-
 
 /* MOBIL NAV SLUT */
 
