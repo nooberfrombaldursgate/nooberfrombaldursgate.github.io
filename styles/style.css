@@ -31,7 +31,7 @@
 
 :root {
   --gold: #c99d2b;
-  --dark-grey: #1C1C1C;
+  --dark-grey: #1c1c1c;
   --main-font: 'Poppins', sans-serif;
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 body {
-  background-color: black;
+  background-color: white;
   display: flex;
   flex-direction: column;
 }
@@ -83,31 +83,40 @@ body {
   flex-shrink: 0;
 }
 
-.gold-button, .white-button {
-  border-radius: 5px;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  text-align: center;
-  padding: 7px 10px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  font-style: normal;
   text-transform: uppercase;
-  color: white;
-  letter-spacing: .7px;
-  font-size: 14px;
 }
 
-.gold-button {
-  border: none;
-  background: var(--gold);
-  font-weight: bold;
+h2 {
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
 }
 
-.white-button {
-  
-  background: none;
-  border: 1px solid white;
+h3 {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.075em;
 }
 
-li, a {
+p {
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 170%;
+letter-spacing: 0.05em;
+}
+
+li,
+a {
   text-decoration: none;
 }
 
@@ -120,6 +129,35 @@ hr {
   height: 1px;
   color: var(--gold);
   background-color: var(--gold);
+  margin: 0;
+}
+
+.gold-button,
+.white-button {
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.7px;
+  font-size: 14px;
+}
+
+.gold-button {
+  border: none;
+  background: var(--gold);
+  font-weight: bold;
+}
+
+.white-button {
+  background: none;
+  border: 1px solid white;
+}
+
+.golden {
+  color: var(--gold);
 }
 
 /* GLOBAL SEKTION SLUT */
@@ -244,7 +282,8 @@ hr {
   background-color: black;
 }
 
-.outer-nav-ul > li, .parent-anchor {
+.outer-nav-ul > li,
+.parent-anchor {
   background-color: var(--dark-grey);
 }
 
@@ -262,8 +301,8 @@ hr {
 
 #mobile-bottom-nav ul {
   line-height: 24px;
-  letter-spacing: .05em;
- }
+  letter-spacing: 0.05em;
+}
 
 .mobile-additional-info-wrapper {
   display: flex;
@@ -281,7 +320,7 @@ hr {
 .mobile-additional-info-wrapper h4 {
   font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .mobile-additional-info-wrapper a {
@@ -292,7 +331,6 @@ hr {
   display: flex;
   justify-content: space-between;
   align-content: flex-end;
-  
 }
 
 .mobile-lang-switcher {
@@ -310,7 +348,6 @@ hr {
   flex-direction: column;
   justify-content: center;
   line-height: 0;
- 
 }
 
 .lang-icon {

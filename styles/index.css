@@ -12,11 +12,11 @@ body {
   height: initial;
 }
 
+article {
+  padding: 0 20px;
+}
+
 /* GLOBAL SEKTION SLUT */
-
-/* HEADER SEKTION START */
-
-/* HEADER SEKTION SLUT */
 
 /* MAIN SEKTION START */
 
@@ -96,5 +96,36 @@ body {
 }
 
 /* HERO SEKTION SLUT */
+
+
+
+.why-choose-us-article {
+  margin-top: 51px;
+}
+
+.why-choose-us-article hr {
+  margin-bottom: 60px;
+}
+
+.why-choose-us-icon {
+  height: 43px;
+}
+
+.heading-and-icon-wrapper * {
+  max-width: 200px;
+}
+
+.heading-and-icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.entertaintment-section, .props-section {
+  padding-bottom: 80px;
+}
+
+.teamwork-section {
+  padding-bottom: 40px;
+}
 
 /* MAIN SEKTION SLUT */
