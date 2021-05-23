@@ -66,7 +66,6 @@ body {
 }
 
 body {
-  margin: 11.82px 0 15px;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -78,6 +77,21 @@ body {
 
 #main-footer {
   flex-shrink: 0;
+}
+
+li, a {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: var(--gold);
+  background-color: var(--gold);
 }
 
 /* GLOBAL SEKTION SLUT */
@@ -126,9 +140,21 @@ body {
 #main-footer {
   height: 100%;
   background: black;
+  color: white;
 }
 
-/* MOBIL NAV START */
+/* MOBILE FOOTER START */
+
+#mobile-footer {
+  margin: 0 20px 15px;
+}
+
+#mobile-footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 2rem;
+}
 
 #mobile-bottom-nav ul {
   display: flex;
@@ -138,7 +164,20 @@ body {
   margin: 0;
   padding-left: 0;
   text-align: center;
-  gap: 30px;
+}
+
+#mobile-footer hr {
+  margin: 42px 0 10px;
+}
+
+/* 
+* selectoren kaldes for the lobotimized owl (uglen med det hvide snit), og bruges ofte til flex/grid i stedet for 'gap', når der skal ydes support til safari ios, 
+* når man bruger den på parent elementet, vil øverste child element ikke blive ramt af reglen (man vil gerne undgå at der kommer margin på første element)
+* se: https://www.youtube.com/watch?v=VvqyUUROmJw 
+*/
+
+#mobile-bottom-nav ul > * + * {
+  margin-top: 30px;
 }
 
 #mobile-bottom-nav li {
@@ -147,7 +186,6 @@ body {
   justify-content: center;
   width: 100%;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
 /*
@@ -188,18 +226,61 @@ body {
   margin-bottom: 38px;
 }
 
-#mobile-bottom-nav a {
-  color: white;
-  text-decoration: none;
-}
-
 #mobile-bottom-nav ul {
   line-height: 24px;
   letter-spacing: .05em;
  }
 
-#main-footer {
-  margin: 0 20px 0;
+.mobile-additional-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  line-height: 0;
+}
+
+.mobile-additional-info-wrapper p,
+.mobile-additional-info-wrapper address {
+  margin: 0;
+  line-height: 2rem;
+  font-size: 12px;
+}
+
+.mobile-additional-info-wrapper h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.mobile-additional-info-wrapper a {
+  text-decoration: underline;
+}
+
+.mobile-lang-switcher {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  
+}
+
+.mobile-lang-switcher {
+  align-self: end;
+}
+
+.mobile-lang-switcher ul {
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
+.lang {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0;
+ 
+}
+
+.lang-icon {
+  height: 25px;
 }
 
 

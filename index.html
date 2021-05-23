@@ -26,16 +26,16 @@
             <div id="mobile-top-nav">
                 <div class="logo-container">
                     <!-- vi bruger svg med fallback. der findes forskellige strategier, men vi har brugt object med img fallback som beskrevet her: https://css-tricks.com/a-complete-guide-to-svg-fallbacks/ -->
-                    <object class="pictorial-logo" type="image/svg+xml" data="images/header/logo/cityescape-logo-pictorial-mark.svg">
+                    <object class="pictorial-logo" type="image/svg+xml" data="images/header/logo/cityescape-logo-pictorial-mark.svg" alt="City Escape Logo">
                         <a href="/index.html">
-                            <img class="pictorial-logo" src="images/header/logo/cityescape-logo-pictorial-mark@2x.png" alt="No SVG support">
+                            <img class="pictorial-logo" src="images/header/logo/cityescape-logo-pictorial-mark@2x.png" alt="City Escape Logo">
                         </a>
                     </object>
                 </div>
                 <div class="burger-menu-wrapper">
                     <a href="#bottom-nav">
-                        <object class="burger-icon" type="image/svg+xml" data="images/header/burger-menu/burger-menu.svg">
-                            <img class="burger-icon" src="images/header/burger-menu/burger-menu@2x.png" alt="No SVG support">
+                        <object class="burger-icon" type="image/svg+xml" data="images/header/burger-menu/burger-menu.svg" alt="Burger menu">
+                            <img class="burger-icon" src="images/header/burger-menu/burger-menu@2x.png" alt="Burger menu">
                         </object>
                     </a>
                 </div>
@@ -71,26 +71,70 @@
 
     <!-- main footer start -->
     <footer id="main-footer">
-        <div id="mobile-bottom-nav">
-            <ul class="outer-nav-ul">
-                <div class="list-item-group">
-                    <li>
-                        <a class="parent-anchor" href="#escape-games-section.html">Escape games</a>
-                        <ul class="inner-nav-ul">
-                            <li><a class="out-of-scope" href="javascript:void(0);">The Last Secret</a></li>
-                            <li><a href="operation-mindfall.html">Operation Mindfall</a></li>
-                            <li><a class="out-of-scope" href="javascript:void(0);">Hunt a Killer</a></li>
-                            <li><a class="out-of-scope" href="javascript:void(0);">Pirate Escape</a></li>
-                            <li><a class="out-of-scope" href="javascript:void(0);">The Murder at Grand Hotel</a></li>
-                        </ul>
-
-                    </li>
+        <div id="mobile-footer">
+            <nav id="mobile-bottom-nav">
+                <ul class="outer-nav-ul">
+                    <div class="list-item-group">
+                        <li>
+                            <a class="parent-anchor" href="#escape-games-section.html">Escape games</a>
+                            <ul class="inner-nav-ul">
+                                <li><a class="out-of-scope" href="javascript:void(0);">The Last Secret</a></li>
+                                <li><a href="operation-mindfall.html">Operation Mindfall</a></li>
+                                <li><a class="out-of-scope" href="javascript:void(0);">Hunt a Killer</a></li>
+                                <li><a class="out-of-scope" href="javascript:void(0);">Pirate Escape</a></li>
+                                <li><a class="out-of-scope" href="javascript:void(0);">The Murder at Grand Hotel</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <li><a href="#koncept-section">Koncept</a></li>
+                    <li><a href="#priser-section.html">Priser</a></li>
+                    <li><a href="#byer-section.html">Byer</a></li>
+                    <li><a href="#booking-section.html">Booking</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-additional-info-wrapper">
+                <!-- semantisk tag 'address' bruges for kontaktinfo, se: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address -->
+                <div class="mobile-contact-info">
+                    <h4>Kontakt</h4>
+                    <ul class="mobile-contact-info-list">
+                        <li><address><a href="mailto:info@cityescape.dk">info@cityescape.dk</a></address></li>
+                        <li><address><a href="tel:+4571961687">+45 71 96 16 87</a></address></li>
+                    </ul>
                 </div>
-                <li><a href="#koncept-section">Koncept</a></li>
-                <li><a href="#priser-section.html">Priser</a></li>
-                <li><a href="#byer-section.html">Byer</a></li>
-                <li><a href="#booking-section.html">Booking</a></li>
-            </ul>
+                <div class="mobile-opening-hours">
+                    <h4>Åbningstider</h4>
+                    <p>Alle hverdage</p>
+                    <p>10.00 - 21.00</p>
+                </div>
+            </div>
+            <hr>
+            <!-- lang bruges som attribut for at angive sprog (alt attribaut), se: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang -->
+            <!-- flag ikoner kommer fra https://github.com/lipis/flag-icon-css  -->
+                <ul class="mobile-lang-switcher">
+                    <li class="lang lang-da">
+                        <a class="out-of-scope" href="javascript:void(0);" lang="da">
+                            <object class="lang-icon" type="image/svg+xml" data="images/flags/dk.svg" lang="da" alt="Dansk">
+                                <img class="lang-icon" src="images/flags/dk@2x.png" alt="Dansk">
+                            </object>
+                        </a>
+                    </li>
+                    <li class="lang lang-en">
+                        <a class="out-of-scope" href="javascript:void(0);" lang="en">
+                            <object class="lang-icon" type="image/svg+xml" data="images/flags/gb.svg" lang="en" alt="English">
+                                <img class="lang-icon" src="images/flags/gb@2x.png" alt="English">
+                            </object>
+                        </a>
+                    </li>
+                    <li class="lang lang-de">
+                        <a class="out-of-scope" href="javascript:void(0);" lang="de">
+                            <object class="lang-icon" type="image/svg+xml" data="images/flags/de.svg" lang="de" alt="Deutsche">
+                                <img class="lang-icon" src="images/flags/de@2x.png" alt="Deutsche">
+                            </object>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+
     </footer>
     <!-- main footer slut -->
 
