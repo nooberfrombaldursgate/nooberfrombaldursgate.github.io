@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="City Escape er danmarks førende udbyder af udendørs escape rooms i byens centrum. Prøv danmarks bedste city escape game.">
     <meta name="author" content="Emma Dalsgaard Nielsen, Line Bech Sørensen, Jakob Valentin og Joachim Danielsen">
-    <!-- normalize.css anvendes for at imødekomme indbyggede browser variationer. fordelen ved normalize.css fremfor f.eks.
-    eric meyers reset, er at den er mere skånsom, og f.eks. ikke trimmer alle headings til samme størrelse.-->
+    <!-- 
+    * normalize.css anvendes for at imødekomme indbyggede browser variationer. 
+    * fordelen ved normalize.css fremfor f.eks. eric meyers reset, er at den er 
+    * mere skånsom, og f.eks. ikke trimmer alle headings til samme størrelse.-->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/index.css">
-    <!-- web- (google) og selfhostede fonts anvendes -->
+    <!-- web- (google) og selfhostede fonts anvendes med preload og preconnect for ikke at optimere loadtime -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="preload" href="fonts/321perfect/321perfect-webfont.woff2" as="cityescape" crossorigin>
     <title>City Escape - escape games i byen</title>
 </head>
@@ -25,7 +27,10 @@
         <nav id="top-nav">
             <div id="mobile-top-nav">
                 <div class="logo-container">
-                    <!-- vi bruger svg med fallback. der findes forskellige strategier, men vi har brugt object med img fallback som beskrevet her: https://css-tricks.com/a-complete-guide-to-svg-fallbacks/ -->
+                    <!-- 
+                    * vi bruger svg med fallback. der findes forskellige strategier, men vi har brugt object med 
+                    * img fallback som beskrevet her: https://css-tricks.com/a-complete-guide-to-svg-fallbacks/ 
+                    -->
                     <object class="pictorial-logo" type="image/svg+xml" data="images/header/logo/cityescape-logo-pictorial-mark.svg" alt="City Escape Logo">
                         <a href="/index.html">
                             <img class="pictorial-logo" src="images/header/logo/cityescape-logo-pictorial-mark@2x.png" alt="City Escape Logo">
@@ -81,7 +86,9 @@
                         <img class="review-slider-placeholder out-of-time" src="images/index/hero/review-slider/review-slider-placeholder@2x.png" alt="Placeholder til anmeldelser">
                     </object>
                 </div>
-                <!-- TODO: Opbyg i js og fjern placeholder-->
+                <!-- TODO: 
+                * Opbyg i js og fjern placeholder
+                -->
             </div>
         </header>
 
@@ -100,17 +107,21 @@
                         </object>
                     </class>
                 </div>
-                <!-- TODO: Lav definitionskort overlay
-                https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
-                https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
-                https://stackoverflow.com/questions/1232793/javascript-set-img-src
+                <!-- 
+                * TODO: Lav definitionskort overlay
+                * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+                * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
+                * https://stackoverflow.com/questions/1232793/javascript-set-img-src
                 -->
                 <p>
                     Vi tilbyder underholdende og udfordrende <a class="golden out-of-time" href="javascript:void(0);">escape games</a>. Vores spiloplevelser er designet af passionerede entusiaster, og
                     byder på originale gåder, fængslende fortællinger og et
                     medrivende univers.
                 </p>
-                <!-- resolution switching anvendes for at få responsive billeder, se https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images -->
+                <!-- 
+                * resolution switching anvendes for at få responsive billeder, 
+                * se https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images 
+                -->
                 <img class="why-choose-us-photo photo" srcset="images/index/photos/line-uv-light@1.jpg 335w, images/index/photos/line-uv-light@1.5.jpg 503w" sizes="(max-width: 600px) 335px, 503px"
                     src="images/index/photos/line-uv-light@1.5.jpg" alt="Kvinde som lyser med UV lys bag en container">
             </section>
@@ -159,6 +170,7 @@
                     Vi har et bredt udvalg af forskellige escape games med tre forskellige spiltyper. Uanset hvad valget falder på, garanterer vi, at det vil blive en sjov og uforglemmelig oplevelse.
                 </p>
             </header>
+            
             <section class="outdoor-escape-game-section">
                 <div class="heading-and-icon-wrapper">
                     <div class="heading-container">
@@ -166,7 +178,7 @@
                     </div>
                     <class class="icon-container">
                         <object class="outdoor-escape-game-icon icon" type="image/svg+xml" data="images/index/icons/1-icon.svg" alt="Et-tal">
-                            <img class="outdoor-escape-game-icon icon" src="images/index/icons/1-icon.png" alt="Et-tal">
+                            <img class="outdoor-escape-game-icon icon" src="images/index/icons/1-icon@2x.png" alt="Et-tal">
                         </object>
                     </class>
                 </div>
@@ -186,7 +198,8 @@
                     <object class="operation-mindfall-card card" type="image/svg+xml" data="images/index/cards/mobile/operation-mindfall/operation-mindfall-card.svg" alt="Card for Operation Mindfall">
                         <img class="operation-mindfall-card card" src="images/index/cards/mobile/operation-mindfall/operation-mindfall-card@2x.png" alt="Card for Operation Mindfall">
                     </object>
-                    <object class="the-last-secret-card card" type="image/svg+xml" data="images/index/cards/mobile/the-last-secret/the-last-secret-card.svg" alt="Card for The Last Secret of Albert Einstein">
+                    <object class="the-last-secret-card card" type="image/svg+xml" data="images/index/cards/mobile/the-last-secret/the-last-secret-card.svg"
+                        alt="Card for The Last Secret of Albert Einstein">
                         <img class="the-last-secret-card card" src="images/index/cards/mobile/the-last-secret/the-last-secret-card@2x.png" alt="Card for The Last Secret of Albert Einstein">
                     </object>
                     <object class="hunt-a-killer-card card" type="image/svg+xml" data="images/index/cards/mobile/hunt-a-killer/hunt-a-killer-card.svg" alt="Card for The Hunt a Killer">
@@ -194,6 +207,7 @@
                     </object>
                 </div>
             </section>
+            
             <section class="mobile-escape-room-section">
                 <div class="heading-and-icon-wrapper">
                     <div class="heading-container">
@@ -201,14 +215,14 @@
                     </div>
                     <class class="icon-container">
                         <object class="mobile-escape-room-icon icon" type="image/svg+xml" data="images/index/icons/2-icon.svg" alt="To-tal">
-                            <img class="mobile-escape-room-icon icon" src="images/index/icons/2-icon.png" alt="To-tal">
+                            <img class="mobile-escape-room-icon icon" src="images/index/icons/2-icon@2x.png" alt="To-tal">
                         </object>
                     </class>
                 </div>
                 <p>Vi kommer ud til jer, og sætter alt op. I har to timer til at undslippe det aflåste rum.</p>
                 <div class="icon-wrapper">
                     <object class="mobile-escape-room-icon icon" type="image/svg+xml" data="images/index/icons/you-call-we-deliver-gold-icon.svg" alt="Lastbil med teksten 'I ringer, vi bringer'">
-                        <img class="mobile-escape-room-icon icon" src="images/index/icons/you" alt="Lastbil med teksten 'I ringer, vi bringer'">
+                        <img class="mobile-escape-room-icon icon" src="images/index/icons/you-call-we-deliver-gold-icon@2x.png" alt="Lastbil med teksten 'I ringer, vi bringer'">
                     </object>
                     <object class="mobile-escape-room-icon icon" type="image/svg+xml" data="images/index/icons/escape-the-room-icon.svg" alt="Åben dør med teksten 'Undslip rummet'">
                         <img class="mobile-escape-room-icon icon" src="images/index/icons/escape-the-room-icon@2x.png" alt="Åben dør med teksten 'Undslip rummet'">
@@ -223,6 +237,7 @@
                     </object>
                 </div>
             </section>
+            
             <section class="murder-mystery-section">
                 <div class="heading-and-icon-wrapper">
                     <div class="heading-container">
@@ -230,7 +245,7 @@
                     </div>
                     <class class="icon-container">
                         <object class="murder-mystery-icon icon" type="image/svg+xml" data="images/index/icons/3-icon.svg" alt="Tre-tal">
-                            <img class="murder-mystery-icon icon" src="images/index/icons/3-icon.png" alt="Tre-tal">
+                            <img class="murder-mystery-icon icon" src="images/index/icons/3-icon@2x.png" alt="Tre-tal">
                         </object>
                     </class>
                 </div>
@@ -242,17 +257,177 @@
                     <object class="murder-mystery-icon icon" type="image/svg+xml" data="images/index/icons/find-the-killer-icon.svg" alt="Forstørrelsesglas med teksten 'Find morderen'">
                         <img class="murder-mystery-icon icon" src="images/index/icons/find-the-killer-icon@2x.png" alt="Forstørrelsesglas med teksten 'Find morderen'">
                     </object>
-                    <object class="murder-mystery-icon icon" type="image/svg+xml" data="images/index/icons/roleplay-and-whodunnit-icon.svg" alt="Mand med undervandshjelm med teksten 'Rollespil & whodunnit'">
+                    <object class="murder-mystery-icon icon" type="image/svg+xml" data="images/index/icons/roleplay-and-whodunnit-icon.svg"
+                        alt="Mand med undervandshjelm med teksten 'Rollespil & whodunnit'">
                         <img class="murder-mystery-icon icon" src="images/index/icons/roleplay-and-whodunnit-icon@2x.png" alt="Mand med undervandshjelm med teksten 'Rollespil & whodunnit'">
                     </object>
                 </div>
                 <div class="card-wrapper">
-                    <object class="the-murderer-at-grand-hotel-card card" type="image/svg+xml" data="images/index/cards/mobile/the-murderer-at-grand-hotel/the-murderer-at-grand-hotel-card.svg" alt="Card for The Murderer at Grand Hotel">
-                        <img class="the-murderer-at-grand-hotel-card card" src="images/index/cards/mobile/the-murderer-at-grand-hotel/the-murderer-at-grand-hotel-card@2x.png" alt="Card for The Murderer at Grand Hotel">
+                    <object class="the-murderer-at-grand-hotel-card card" type="image/svg+xml" data="images/index/cards/mobile/the-murderer-at-grand-hotel/the-murderer-at-grand-hotel-card.svg"
+                        alt="Card for The Murderer at Grand Hotel">
+                        <img class="the-murderer-at-grand-hotel-card card" src="images/index/cards/mobile/the-murderer-at-grand-hotel/the-murderer-at-grand-hotel-card@2x.png"
+                            alt="Card for The Murderer at Grand Hotel">
                     </object>
                 </div>
             </section>
+        
         </article>
+        <div class="copenhagen-silouhette"></div>
+        <article id="concept-article">
+            <h2>Hvordan fungerer udendørs escape game?</h2>
+            <hr>
+            
+            <section class="concept-step-1">
+                <div class="step-heading">
+                    <h3>Step <br />
+                        <span class="second-line">01</span>
+                    </h3>
+                </div>
+                <object class="concept-icon icon" type="image/svg+xml" data="images/index/icons/team-icon.svg" alt="Et hold på 4 personer">
+                    <img class="concept-icon icon" src="images/index/icons/team-icon@2x.png" alt="Et hold på 4 personer">
+                </object>
+                <h4>Lav et team</h4>
+                <p>Tag dine allerbedste meddedektiver under armen, og opfind et team navn, der passer lige til jer.</p>
+                <!--
+                * først anvendte vi en <div> til at lave hvide prikkede linjer, (i stedet for <hr> da det er et
+                * semantisk element, som denoterer en tematisk pause mellem paragrafelementer). problemet med den
+                * løsning var, at det var svært at få linjen til at optage plads og ikke overflow'e ind i andet
+                * indhold (div fik en tranform: rotate() property til at rendere den skrå pil). vi forsøgte med wrapper 
+                * med fixed height, men største problem med den løsning var manglende responsivitet. transform: 
+                * translateY() blev også brugt men virkede som en suboptimal løsning at rykke alt indhold. til sidst
+                * gik vi med en svg, som fik property'en 'vector-effect="non-scaling-stroke', så prikkerne ikke 
+                * scaler ved større width.
+                -->
+                <div class="dashed-line-wrapper">
+                    <svg class="dashed-line-right" viewBox="0 0 100 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.79298" y1="3.11418" x2="336.793" y2="125.114" stroke="white" stroke-width="5" stroke-dasharray="4 5" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="concept-step-2">
+                <div class="step-heading">
+                    <h3>Step <br />
+                        <span class="second-line">02</span>
+                    </h3>
+                </div>
+                <object class="concept-icon icon" type="image/svg+xml" data="images/index/icons/detective-icon.svg" alt="Detektiv">
+                    <img class="concept-icon icon" src="images/index/icons/detective-icon@2x.png" alt="Detektiv">
+                </object>
+                <h4 class="align-right">Vælg en mission</h4>
+                <p class="align-right">Tag dine allerbedste meddedektiver under armen, og opfind et team navn, der passer lige til jer.</p>
+                <div class="dashed-line-wrapper">
+                    <svg class="dashed-line-left" viewBox="100 52 100 38" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="336.793"  y1="2.81245" x2="1.79299" y2="124.812" stroke="white" stroke-width="5" stroke-dasharray="4 5" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="concept-step-3">
+                <div class="step-heading">
+                    <h3>Step <br />
+                        <span class="second-line">03</span>
+                    </h3>
+                </div>
+                <object class="concept-icon icon" type="image/svg+xml" data="images/index/icons/introduction-icon.svg" alt="Et hold på 4 personer">
+                    <img class="concept-icon icon" src="images/index/icons/introduction-icon@2x.png" alt="Et hold på 4 personer">
+                </object>
+                <h4>Få intro og udstyr</h4>
+                <p>Missionen indledes med en kort intro fra jeres gamemaster. I vil herefter blive udstyret med en iPad og en kuffert fyldt med gadgets og ledetråde.</p>
+                <div class="dashed-line-wrapper">
+                    <svg class="dashed-line-right" viewBox="0 0 100 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.79298" y1="3.11418" x2="336.793" y2="125.114" stroke="white" stroke-width="5" stroke-dasharray="4 5" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="concept-step-4">
+                <div class="step-heading">
+                    <h3>Step <br />
+                        <span class="second-line">04</span>
+                    </h3>
+                </div>
+                <object class="concept-icon icon" type="image/svg+xml" data="images/index/icons/go-icon.svg" alt="Fødder på farten">
+                    <img class="concept-icon icon" src="images/index/icons/go-icon@2x.png" alt="Fødder på farten">
+                </object>
+                <h4 class="align-right">Sæt i gang</h4>
+                <p class="align-right">Gamemasteren slipper jer fri til at løse missionen på egen hånd, og nedtællingsuret sættes i gang. I har to timer til at nå i mål, og det er med at sætte det lange ben foran. </p>
+                <div class="dashed-line-wrapper">
+                    <svg class="dashed-line-left" viewBox="100 52 100 38" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="336.793"  y1="2.81245" x2="1.79299" y2="124.812" stroke="white" stroke-width="5" stroke-dasharray="4 5" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="concept-step-5">
+                <div class="step-heading">
+                    <h3>Step <br />
+                        <span class="second-line">05</span>
+                    </h3>
+                </div>
+                <object class="concept-icon icon" type="image/svg+xml" data="images/index/icons/map-icon.svg" alt="Fold-ud-kort med nål i">
+                    <img class="concept-icon icon" src="images/index/icons/map-icon@2x.png" alt="Fold-ud-kort med nål i">
+                </object>
+                <h4>Følg kortet rundt i byen</h4>
+                <p>På iPad’en vil der være et GPS-kort over byen, hvor de forskellige delmissioner er markeret. Find frem til dem så hurtigt I kan.</p>
+                <div class="dashed-line-wrapper">
+                    <svg class="dashed-line-right" viewBox="0 0 100 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.79298" y1="3.11418" x2="336.793" y2="125.114" stroke="white" stroke-width="5" stroke-dasharray="4 5" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="concept-step-6">
+                <div class="step-heading">
+                    <h3>Step <br />
+                        <span class="second-line">06</span>
+                    </h3>
+                </div>
+                <object class="concept-icon icon" type="image/svg+xml" data="images/index/icons/lock-icon.svg" alt="Hængelås">
+                    <img class="concept-icon icon" src="images/index/icons/lock-icon@2x.png" alt="Hængelås">
+                </object>
+                <h4 class="align-right">Udforsk byen og løs opgaverne</h4>
+                <p class="align-right">Udforsk byen hvor opgaver og mysterier venter jer. I får brug for både gadgets, ledetråde samt en god portion kløgt for at løse opgaverne.</p>
+                <div class="dashed-line-wrapper">
+                    <svg class="dashed-line-left" viewBox="100 52 100 38" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="336.793"  y1="2.81245" x2="1.79299" y2="124.812" stroke="white" stroke-width="5" stroke-dasharray="4 5" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="concept-step-7">
+                <div class="step-heading">
+                    <h3>Step <br />
+                        <span class="second-line">07</span>
+                    </h3>
+                </div>
+                <object class="concept-icon icon" type="image/svg+xml" data="images/index/icons/checkmark.svg" alt="Flueben">
+                    <img class="concept-icon icon" src="images/index/icons/checkmark@2x.png" alt="Flueben">
+                </object>
+                <h4>Fuldfør missionen</h4>
+                <p>Brug alt den viden i har indsamlet undervejs til at løse den sidste mission. Har I mon hvad der skal til?</p>
+                <div class="dashed-line-wrapper">
+                    <svg class="dashed-line-right" viewBox="0 0 100 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.79298" y1="3.11418" x2="336.793" y2="125.114" stroke="white" stroke-width="5" stroke-dasharray="4 5" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+            </section>
+
+            <section class="concept-step-8">
+                <div class="step-heading">
+                    <h3>Step <br />
+                        <span class="second-line">08</span>
+                    </h3>
+                </div>
+                <object class="concept-icon icon" type="image/svg+xml" data="images/index/icons/celebrate-icon.svg" alt="Konfetti">
+                    <img class="concept-icon icon" src="images/index/icons/celebrate-icon@2x.png" alt="Konfetti">
+                </object>
+                <h4 class="align-right">Fejr at I kom igennem</h4>
+                <p class="align-right">Fejr at i kom over målstregen! Fik I løst missionen inden tiden løb ud? På iPaden vil I kunne se jeres plads på high score-listen. </p>
+            </section>
+
+        </article>
+
     </main>
     <!-- main content slut -->
 
@@ -273,7 +448,7 @@
                             </ul>
                         </li>
                     </div>
-                    <li><a href="index.html/#koncept-article">Koncept</a></li>
+                    <li><a href="index.html/#concept-article">Koncept</a></li>
                     <li><a href="index.html/#prices-article">Priser</a></li>
                     <li><a href="index.html/#cities-article">Byer</a></li>
                     <li><a href="booking.html" class="out-of-time">Booking</a></li>

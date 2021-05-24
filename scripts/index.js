@@ -11,7 +11,13 @@
  * setTyper funktionen tager de to konstanter som inputsparametrer
  */
 
-const WORDS = ['Find spor', 'Løs gåder', 'Knæk koder', 'Opklar mysterier', 'CITY ESCAPE'];
+const WORDS = [
+  'Find spor',
+  'Løs gåder',
+  'Knæk koder',
+  'Opklar mysterier',
+  'CITY ESCAPE',
+];
 const TEXT = document.querySelector('.video-overlay-text');
 setTyper(TEXT, WORDS);
 
@@ -91,7 +97,7 @@ function setTyper(element, WORDS) {
        * setTimeout fungerer ligesom setInterval, men i stedet for at kalde funktionen gentagende gange kalder
        * den kun funktionen 1 gang efter den angivne forsinkelse (vores wordStayDelay på 1000ms)
        *
-       * fordi vi lige ovenfor har ryddet den nuværende tråd, skal vi starte en ny tråd for at skrive næste tegn i det næste ord 
+       * fordi vi lige ovenfor har ryddet den nuværende tråd, skal vi starte en ny tråd for at skrive næste tegn i det næste ord
        * derfor kalder vi setTimeout på vores startTyping metode igen før vi kalder nextWord metoden som defineres nedenfor
        */
       setTimeout(startTyping, wordStayDelay);
@@ -103,22 +109,22 @@ function setTyper(element, WORDS) {
     }
 
     /*
-    * substring metoden bruges til at finde den bid af ordet, som er udgjort af tegnene mellem starten af ordet og det nuværende
-    * tegnindeks. 
-    * 
-    * elementet (i vores tilfælde vores h1'er fra indekset) bliver derefter sat og opdateret med innerText metoden
-    */
+     * substring metoden bruges til at finde den bid af ordet, som er udgjort af tegnene mellem starten af ordet og det nuværende
+     * tegnindeks.
+     *
+     * elementet (i vores tilfælde vores h1'er fra indekset) bliver derefter sat og opdateret med innerText metoden
+     */
 
     const TEXT_TO_TYPE = WORD.substring(0, letterIndex);
     element.innerText = TEXT_TO_TYPE;
   }
 
-/*
-* metoden sørger for:
-* 1) at resette tegnindekset
-* 2) at resette ordindekset, hvis det nuværende ordindeks er ved sidste element i vores ord-array
-* 3) at inkrementerer ordindekset.
-*/
+  /*
+   * metoden sørger for:
+   * 1) at resette tegnindekset
+   * 2) at resette ordindekset, hvis det nuværende ordindeks er ved sidste element i vores ord-array
+   * 3) at inkrementerer ordindekset.
+   */
 
   function nextWord() {
     letterIndex = 0;
@@ -130,28 +136,30 @@ function setTyper(element, WORDS) {
 }
 
 /*
-* OUT OF SCOPE LINKS
-*
-* Funktionalitet som laver en lille alert, og informerer om at linket er uden for projektets scope, når man klikker på døde links.
-* Alle links med out-of-scope klassen gemmes i et array (konstant) gennem querySelectorAll-metoden, og traverseres gennem et forEach-loop.
-* Hvert element får knyttet en onclick-event listener til sig, som udløser en bekræftelsesdialog, som informerer om døde links/årsag.
-* Beskeden er gemt i en template literal (muliggør multiline og interpolation (sidstnævnte ikke brugt her)).  
-*/
+ * OUT OF SCOPE LINKS
+ *
+ * Funktionalitet som laver en lille alert, og informerer om at linket er uden for projektets scope, når man klikker på døde links.
+ * Alle links med out-of-scope klassen gemmes i et array (konstant) gennem querySelectorAll-metoden, og traverseres gennem et forEach-loop.
+ * Hvert element får knyttet en onclick-event listener til sig, som udløser en bekræftelsesdialog, som informerer om døde links/årsag.
+ * Beskeden er gemt i en template literal (muliggør multiline og interpolation (sidstnævnte ikke brugt her)).
+ */
 
 const OUT_OF_SCOPE_MESSAGE = `Beklager 😢
 
 Linket peger på tomt indhold, som vi har fravalgt i vores scope 🎯`;
 const OUT_OF_TIME_MESSAGE = `Beklager 😢
 
-Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, men som vi desværre måtte udelade pga. tidsmæssige udfordringer 🕒`;
+Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, men som vi desværre måtte udelade pga. tidsmæssige udfordringer 🕒.
+
+Indholdet vil i stedet blive produceret i en iteration efter afleveringsfristen for projektet, og således være klar til fremvisning til eksamineringen ✔️`;
 
 addConfirmationDialogs('out-of-scope', OUT_OF_SCOPE_MESSAGE);
 addConfirmationDialogs('out-of-time', OUT_OF_TIME_MESSAGE);
 
 function addConfirmationDialogs(className, message) {
-document.querySelectorAll(`.${className}`).forEach(element => {
-  element.addEventListener('click', event => {
-    confirm(message);
-  })
-});
+  document.querySelectorAll(`.${className}`).forEach((element) => {
+    element.addEventListener('click', (event) => {
+      confirm(message);
+    });
+  });
 }

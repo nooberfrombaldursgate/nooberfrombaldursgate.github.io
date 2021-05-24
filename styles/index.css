@@ -173,9 +173,7 @@ body {
   padding: 0 20px 0;
 }
 
-#escape-games-article
-  .heading-and-icon-wrapper
-  .icon {
+#escape-games-article .heading-and-icon-wrapper .icon {
   padding-right: 20px;
   height: 44px;
 }
@@ -221,7 +219,8 @@ body {
   color: white;
 }
 
-.pirate-escape-card, .the-murderer-at-grand-hotel-card {
+.pirate-escape-card,
+.the-murderer-at-grand-hotel-card {
   padding-top: 53px;
   padding-bottom: 60px;
 }
@@ -232,5 +231,86 @@ body {
 }
 
 /* ESCAPE GAMES SEKTION SLUT */
+
+.copenhagen-silouhette {
+  background: url('../images/index/copenhagen-sillouhette.svg') repeat top right,
+    url('../images/index/bg-textures/brickwall.png') repeat;
+}
+
+/* KONCEPT SEKTION START */
+
+#concept-article {
+  color: white;
+  background: black;
+}
+
+#concept-article h3 {
+  padding-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+#concept-article h2,
+#concept-article h3,
+#concept-article h4,
+#concept-article p,
+.concept-icon {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* 
+* pseudo selectoren nth-child(even) anvendes for at ramme hver
+* anden section og skubbe det mod højre med flex 
+*/
+
+#concept-article section:nth-child(even) {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+#concept-article hr {
+  margin: 1rem 20px 40px;
+}
+
+#concept-article h3 .second-line {
+  color: var(--gold);
+  font-size: 36px;
+  line-height: 42px;
+}
+
+#concept-article h4 {
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.concept-icon,
+#concept-article h4 {
+  color: var(--gold);
+  padding-top: 20px;
+}
+
+#concept-article p {
+  padding-top: 5px;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.dashed-line-wrapper {
+  margin: 20px;
+}
+
+.dashed-line-left {
+  margin-top: 25px;
+}
+
+
+/* KONCEPT SEKTION SLUT */
 
 /* MAIN SEKTION SLUT */
