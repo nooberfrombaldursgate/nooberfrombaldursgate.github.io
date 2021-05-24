@@ -12,6 +12,17 @@ body {
   height: initial;
 }
 
+.heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.heading-container {
+  max-width: 335px;
+}
+
+
 /* GLOBAL SEKTION SLUT */
 
 /* MAIN SEKTION START */
@@ -494,7 +505,6 @@ body {
   padding-bottom: 24px;
 }
 
-
 .reviews-facebook-logo {
   padding-bottom: 60px;
   width: 60px;
@@ -503,9 +513,86 @@ body {
 /* ANMELDELSER SEKTION SLUT */
 
 /* BYER SEKTION START */
+
+#cities-section {
+  background: center / cover no-repeat
+    url('../images/index/bg-photo/city@0.33x.jpg');
+}
+
+#cities-section h2 {
+  padding: 60px 20px 0;
+  color: white;
+}
+
+#cities-section hr {
+  margin: 0 20px 0;
+}
+
+.cities-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 195px);
+  justify-content: center;
+}
+
+.cities-wrapper div {
+  margin-top: 15px;
+}
+
+.cities-wrapper div:nth-last-child(odd) {
+  margin-left: 20px;
+}
+
+.cities-wrapper div:nth-last-child(even) {
+  margin-right: 20px;
+}
+
+#copenhagen,
+#aarhus {
+  margin-top: 60px;
+}
+
+.city-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 160px;
+  height: 84px;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+
+.city-container p {
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+#horsens {
+  margin-bottom: 60px;
+}
 /* BYER SEKTION SLUT */
 
 /* CTA SEKTION START */
 /* CTA SEKTION SLUT */
 
 /* MAIN SEKTION SLUT */
+
+@media only screen and (min-width: 768px) {
+  #cities-section {
+    background: center / cover no-repeat
+      url('../images/index/bg-photo/city@0.5x.jpg');
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #cities-section {
+    background: center / cover no-repeat
+      url('../images/index/bg-photo/city.jpg');
+  }
+}

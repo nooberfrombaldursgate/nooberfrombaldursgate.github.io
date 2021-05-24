@@ -144,14 +144,10 @@ function setTyper(element, WORDS) {
  * Beskeden er gemt i en template literal (muliggør multiline og interpolation (sidstnævnte ikke brugt her)).
  */
 
-const OUT_OF_SCOPE_MESSAGE = `Beklager 😢
+const OUT_OF_SCOPE_MESSAGE = `Linket peger på tomt indhold, som vi har fravalgt i vores scope 🎯`;
+const OUT_OF_TIME_MESSAGE = `Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, men som vi har nedprioriteret og udeladt pga. tidsmæssige udfordringer 🕒.
 
-Linket peger på tomt indhold, som vi har fravalgt i vores scope 🎯`;
-const OUT_OF_TIME_MESSAGE = `Beklager 😢
-
-Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, men som vi desværre måtte udelade pga. tidsmæssige udfordringer 🕒.
-
-Indholdet vil i stedet blive produceret i en iteration efter afleveringsfristen for projektet, og således være klar til fremvisning til eksamineringen ✔️`;
+Det vil med overvejende sandsynlighed være klar til fremvisning til eksamineringsdelen ✔️`;
 
 addConfirmationDialogs('out-of-scope', OUT_OF_SCOPE_MESSAGE);
 addConfirmationDialogs('out-of-time', OUT_OF_TIME_MESSAGE);
