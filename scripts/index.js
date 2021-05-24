@@ -145,9 +145,7 @@ function setTyper(element, WORDS) {
  */
 
 const OUT_OF_SCOPE_MESSAGE = `Linket peger på tomt indhold, som vi har fravalgt i vores scope 🎯`;
-const OUT_OF_TIME_MESSAGE = `Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, men som vi har nedprioriteret og udeladt pga. tidsmæssige udfordringer 🕒.
-
-Det vil med overvejende sandsynlighed være klar til fremvisning til eksamineringsdelen ✔️`;
+const OUT_OF_TIME_MESSAGE = `Linket peger på tomt indhold, som vi havde håbet at kunne få med i vores endelige løsning, men som vi har nedprioriteret og udeladt pga. tidsmæssige udfordringer 🕒.`;
 
 addConfirmationDialogs('out-of-scope', OUT_OF_SCOPE_MESSAGE);
 addConfirmationDialogs('out-of-time', OUT_OF_TIME_MESSAGE);

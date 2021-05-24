@@ -15,39 +15,33 @@ body {
 .heading-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  
 }
+
 .heading-container {
   max-width: 335px;
 }
-
 
 /* GLOBAL SEKTION SLUT */
 
 /* MAIN SEKTION START */
 
-/* 
-* fratrækker 65px i beregningen af height af hero video containeren, for at tage højde 
-* for headerens højde + top margin på 15 px
-*/
-
 /* HERO SEKTION START */
 
 .hero-wrapper {
-  /* height: calc(100vh - 50px); */
   background-color: var(--dark-grey);
 }
 
 .top-hero,
 .bottom-hero,
-.cta-container {
+.hero-wrapper .cta-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .top-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 86px;
 }
 
@@ -63,15 +57,13 @@ body {
   min-width: 100%;
   min-height: 100%;
   width: 100%;
-  /* object-fit: fill;
-  z-index: 1; */
 }
 
 .middle-hero-inner-container {
   background: var(--dark-grey);
 }
 
-.cta-container {
+.hero-wrapper .cta-wrapper {
   position: relative;
   bottom: 50px;
   display: flex;
@@ -81,6 +73,8 @@ body {
 }
 
 .bottom-hero {
+  display: flex;
+  justify-content: center;
   padding: 30px 0;
 }
 
@@ -102,7 +96,7 @@ body {
 
 #why-choose-us-article {
   padding: 0 20px;
-  margin-top: 51px;
+  margin-top: 60px;
 }
 
 #why-choose-us-article hr {
@@ -133,7 +127,7 @@ body {
 }
 
 .teamwork-section {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 /* HVORFOR VÆLGE OS SEKTION SLUT */
@@ -159,11 +153,11 @@ body {
 }
 
 #escape-games-article header h2 {
-  padding: 43px 20px 10px;
+  padding: 60px 20px 10px;
 }
 
 #escape-games-article p {
-  padding: 22px 20px 55px;
+  padding: 22px 20px 60px;
 }
 
 #escape-games-article hr {
@@ -175,7 +169,7 @@ body {
 }
 
 #escape-games-article .heading-and-icon-wrapper {
-  padding-top: 49px;
+  padding-top: 60px;
 }
 
 #escape-games-article .icon-wrapper {
@@ -272,18 +266,18 @@ body {
 }
 
 /* 
-* pseudo selectoren nth-child(even) anvendes for at ramme hver
+* pseudo selectoren nth-child(odd) anvendes for at ramme hver
 * anden section og skubbe det mod højre med flex 
 */
 
-#concept-article section:nth-child(even) {
+#concept-article section:nth-child(odd) {
   display: flex;
   flex-direction: column;
   align-items: end;
 }
 
 #concept-article hr {
-  margin: 1rem 20px 40px;
+  margin: 0 20px 0;
 }
 
 #concept-article h3 .second-line {
@@ -319,6 +313,10 @@ body {
 
 .dashed-line-left {
   margin-top: 25px;
+}
+
+.concept-step-8 {
+  padding-bottom: 56px;
 }
 
 /* KONCEPT SEKTION SLUT */
@@ -528,23 +526,16 @@ body {
   margin: 0 20px 0;
 }
 
-.cities-wrapper  {
+.cities-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 175px);
+  grid-template-columns: repeat(2, 160px);
   justify-content: center;
+  gap: 20px;
 }
 
 .cities-wrapper div {
   margin-top: 15px;
 }
-
-/* .cities-wrapper div:nth-last-child(odd) {
-  margin-left: 20px;
-}
-
-.cities-wrapper div:nth-last-child(even) {
-  margin-right: 20px;
-} */
 
 #copenhagen,
 #aarhus {
@@ -580,6 +571,41 @@ body {
 /* BYER SEKTION SLUT */
 
 /* CTA SEKTION START */
+
+#cta-section {
+  background-color: var(--dark-grey);
+}
+
+#cta-section h2 {
+  padding: 60px 20px 0;
+  color: white;
+}
+
+#cta-section .cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 60px;
+}
+
+#cta-section .cta-wrapper .cta-button {
+  width: 335px;
+  height: 50px;
+  line-height: 33px;
+}
+
+/* selectoren vælger det html element, som har både cta-button og .cta-button.white-button
+som classes, fordi ikke at ramme den hvide cta knap  */
+.cta-button.gold-button {
+  font-size: 22px;
+  margin-top: 30px;
+  color: black;
+}
+
+.cta-button.white-button {
+  font-size: 19px;
+}
+
 /* CTA SEKTION SLUT */
 
 /* MAIN SEKTION SLUT */
