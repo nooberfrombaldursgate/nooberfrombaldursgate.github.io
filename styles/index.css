@@ -390,11 +390,6 @@ body {
   text-transform: uppercase;
 }
 
-/* .prices-row {
-  display: flex;
-  justify-content: space-between;
-} */
-
 .prices-row-right {
   display: flex;
   flex: nowrap;
@@ -410,5 +405,52 @@ body {
 }
 
 /* PRISER SEKTION SLUT */
+
+/* ANLEDNING SEKTION START */
+
+#occasion-section h2 { 
+  padding: 60px 20px 0;
+}
+
+#occasion-section hr {
+  margin: 0 20px;
+}
+
+.occasion-icon-wrapper, .occasion-icon-wrapper div  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.occasion-bachelor-party {
+  padding-top: 60px;
+}
+
+.occasion-icon-wrapper p {
+ padding-top: 22px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 170%;
+  text-align: center;
+}
+
+.occasion-icon-wrapper > * + * {
+  padding-top: 60px;
+}
+
+.occasion-friends-and-family {
+  padding-bottom: 12px;
+}
+
+/* ANLEDNING SEKTION SLUT */
+
+/* ANMELDELSER SEKTION START */
+/* ANMELDELSER SEKTION SLUT */
+
+/* BYER SEKTION START */
+/* BYER SEKTION SLUT */
+
+/* CTA SEKTION START */
+/* CTA SEKTION SLUT */
 
 /* MAIN SEKTION SLUT */
