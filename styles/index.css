@@ -528,9 +528,9 @@ body {
   margin: 0 20px 0;
 }
 
-.cities-wrapper {
+.cities-wrapper  {
   display: grid;
-  grid-template-columns: repeat(2, 195px);
+  grid-template-columns: repeat(2, 175px);
   justify-content: center;
 }
 
@@ -538,13 +538,13 @@ body {
   margin-top: 15px;
 }
 
-.cities-wrapper div:nth-last-child(odd) {
+/* .cities-wrapper div:nth-last-child(odd) {
   margin-left: 20px;
 }
 
 .cities-wrapper div:nth-last-child(even) {
   margin-right: 20px;
-}
+} */
 
 #copenhagen,
 #aarhus {
@@ -552,6 +552,7 @@ body {
 }
 
 .city-container {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
