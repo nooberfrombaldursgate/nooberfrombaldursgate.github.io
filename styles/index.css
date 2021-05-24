@@ -408,7 +408,7 @@ body {
 
 /* ANLEDNING SEKTION START */
 
-#occasion-section h2 { 
+#occasion-section h2 {
   padding: 60px 20px 0;
 }
 
@@ -416,7 +416,8 @@ body {
   margin: 0 20px;
 }
 
-.occasion-icon-wrapper, .occasion-icon-wrapper div  {
+.occasion-icon-wrapper,
+.occasion-icon-wrapper div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -427,7 +428,7 @@ body {
 }
 
 .occasion-icon-wrapper p {
- padding-top: 22px;
+  padding-top: 22px;
   font-weight: 600;
   font-size: 20px;
   line-height: 170%;
@@ -445,6 +446,60 @@ body {
 /* ANLEDNING SEKTION SLUT */
 
 /* ANMELDELSER SEKTION START */
+
+#reviews-section {
+  background-color: black;
+  color: white;
+}
+
+#reviews-section h2 {
+  padding: 37px 20px 0;
+}
+
+#reviews-section hr {
+  margin: 0 20px 0;
+}
+
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-wrapper > * + * {
+  padding-top: 30px;
+}
+
+.reviews-wrapper p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.075em;
+}
+
+.reviews-wrapper a {
+  color: var(--gold);
+}
+
+.review {
+  width: 335px;
+}
+
+.review:first-child {
+  padding-top: 60px;
+}
+
+.review:last-child {
+  padding-bottom: 24px;
+}
+
+
+.reviews-facebook-logo {
+  padding-bottom: 60px;
+  width: 60px;
+}
+
 /* ANMELDELSER SEKTION SLUT */
 
 /* BYER SEKTION START */
