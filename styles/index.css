@@ -310,7 +310,105 @@ body {
   margin-top: 25px;
 }
 
-
 /* KONCEPT SEKTION SLUT */
+
+/* PRISER SEKTION START */
+
+#prices-article {
+  background: linear-gradient(
+    360deg,
+    rgba(201, 157, 43, 0.38) -45.98%,
+    rgba(255, 255, 255, 0) 200.09%
+  );
+}
+
+#prices-article h2 {
+  padding: 40px 20px 0;
+}
+
+#prices-article hr {
+  margin: 0 20px 0;
+}
+
+.prices-top-row {
+  padding: 33px 20px 0;
+}
+
+.prices-top-row,
+.prices-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.prices-top-row p:last-child {
+  align-self: end;
+}
+
+.prices-top-row p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+
+.prices-row {
+  padding: 40px 0 0;
+}
+
+.prices-row-left {
+  padding-left: 20px;
+}
+
+.prices-row-right {
+  padding-right: 20px;
+}
+
+.prices-row-left p,
+.prices-row-right p:first-child {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+}
+
+.prices-row-right {
+  justify-self: end;
+}
+
+.prices-row-right p:first-child {
+  padding-right: 10px;
+}
+
+.prices-bottom-row {
+  padding: 26px 20px 37px;
+}
+
+.prices-bottom-row small {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+/* .prices-row {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.prices-row-right {
+  display: flex;
+  flex: nowrap;
+}
+
+.prices-row-right p:last-child {
+  line-height: 1.9em;
+}
+
+.prices-middle-divider {
+  border: 1px dashed black;
+  margin: 0 20px 0;
+}
+
+/* PRISER SEKTION SLUT */
 
 /* MAIN SEKTION SLUT */
