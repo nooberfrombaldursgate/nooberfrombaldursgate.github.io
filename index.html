@@ -17,7 +17,12 @@
     <!-- web- (google) og selfhostede fonts anvendes med preload og preconnect for ikke at optimere loadtime -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="preload" href="fonts/321perfect/321perfect-webfont.woff2" as="cityescape" crossorigin>
+    <link rel="preload" href="fonts/321perfect/321perfect-webfont.woff2" as="font" crossorigin>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/android-chrome-512x512.png" sizes="512x512">
     <title>City Escape - escape games i byen</title>
 </head>
 
@@ -71,7 +76,7 @@
             </div>
             <div class="middle-hero">
                 <div class="middle-hero-inner-container">
-                    <video class="video" muted autoplay loop>
+                    <video class="video" autoplay loop muted playsinline>
                         <source src="videos/index/atmosphere-video-optimized.mp4" type="video/mp4">
                     </video>
                     <div class="cta-wrapper">
@@ -82,13 +87,22 @@
             </div>
             <div class="bottom-hero">
                 <div class="review-slider">
-                    <object class="review-slider-placeholder out-of-time" type="image/svg+xml" data="images/index/hero/review-slider/review-slider-placeholder.svg" alt="Placeholder til anmeldelser">
-                        <img class="review-slider-placeholder out-of-time" src="images/index/hero/review-slider/review-slider-placeholder@2x.png" alt="Placeholder til anmeldelser">
-                    </object>
+                    <div class="review-slider-left">
+                        <img class="review-slider-icon-left" src="images/index/reviews/review-slider/review-slider-left@2x.png" alt="Pil til venstre">
+                    </div>
+                    <div class="review-slider-content">
+                        <div class="review-slider-content-top">
+                            <p><span id="review-name" class="golden">Emil H.</span> anbefaler City Escape</p>
+                        </div>
+                        <div class="review-slider-content-bottom">
+                            <img id="review-profile-picture" src="images/index/reviews/profile-pictures/esben@2x.png" alt="Esben">
+                            <p id="review-text">Det var virkelig sjovt! Det er en fed måde at se sin by på.</p>
+                        </div>
+                    </div>
+                    <div class="review-slider-right">
+                        <img class="review-slider-icon-right" src="images/index/reviews/review-slider/review-slider-right@2x.png" alt="Pil til højre">
+                    </div>
                 </div>
-                <!-- TODO: 
-                * Opbyg i js og fjern placeholder
-                -->
             </div>
         </header>
 

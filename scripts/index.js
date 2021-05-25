@@ -11,13 +11,7 @@
  * setTyper funktionen tager de to konstanter som inputsparametrer
  */
 
-const WORDS = [
-  'Find spor',
-  'Løs gåder',
-  'Knæk koder',
-  'Opklar mysterier',
-  'CITY ESCAPE',
-];
+const WORDS = ['Find spor', 'Løs gåder', 'Knæk koder', 'Opklar mysterier', 'CITY ESCAPE'];
 const TEXT = document.querySelector('.video-overlay-text');
 setTyper(TEXT, WORDS);
 
@@ -133,6 +127,120 @@ function setTyper(element, WORDS) {
       wordIndex = 0;
     }
   }
+}
+
+/*
+ * REVIEW SLIDER
+ *
+ * review slider som bladrer gennem anmeldelser ved klik på left/right controls.
+ */
+
+/* index til at holde styr på hvilken anmeldelse man er ved*/
+let reviewIndex = 0;
+const NAME_ELEMENT = document.querySelector('#review-name');
+const PROFILE_PICTURE_ELEMENT = document.querySelector('#review-profile-picture');
+const REVIEW_TEXT_ELEMENT = document.querySelector('#review-text');
+
+
+/*
+* tilføjer clik eventlisters til review sliders, kunne også være gjort direkte i html'en men er good practise at holde vandtætte
+* skotter mellem html/css/js. vi rammer også hele div'en så vi har større klikflade (ikonerne er ret små på iphone 8/375px vw);
+*
+* klik på venstre div kalder goPrevReview() funktionen, som går et review tilbage i stakken klik på højre div kalder goNextReview() 
+* funktionen som går et review frem i stakken
+*/
+
+const REVIEW_SLIDER_LEFT = document.querySelector('.review-slider-left'); 
+const REVIEW_SLIDER_ICON_LEFT = document.querySelector('.review-slider-icon-left'); 
+const REVIEW_SLIDER_RIGHT = document.querySelector('.review-slider-right'); 
+const REVIEW_SLIDER_ICON_RIGHT = document.querySelector('.review-slider-icon-right'); 
+
+REVIEW_SLIDER_LEFT.addEventListener('click', (event) => {
+  goPrevReview();
+});
+
+// REVIEW_SLIDER_ICON_LEFT.addEventListener('click', (event) => {
+//   goPrevReview();
+// });
+
+REVIEW_SLIDER_RIGHT.addEventListener('click', (event) => {
+  goNextReview();
+});
+
+// REVIEW_SLIDER_ICON_RIGHT.addEventListener('click', (event) => {
+//   goNextReview();
+// });
+
+
+/*
+* ternary operators anvendes til at inkrementere og dekrementere reviewIndex'et, så vi ikke kommer 'out of bounds'.
+* goNextReview(): hvis reviewIndex er mindre end 4 inkrementerer vi, hvis ikke resetter vi index til 0.
+* goPrevReview(): hvis reviewIndex er større end 0 dekrementerer vi, hvis ikke resetter vi index til 4.
+* afsluttes med switch statement.
+*/
+function goNextReview() {
+  reviewIndex < 4 ? reviewIndex++ : reviewIndex = 0;
+  switchReview();
+}
+
+function goPrevReview() {
+  reviewIndex > 0 ? reviewIndex-- : reviewIndex = 4;
+  switchReview();
+}
+
+/* switch statement anvendes til at håndtere logikken (case klausul-baseret alternativ til if-else sætninger som kontrolstruktur)*/
+function switchReview(){
+  switch (reviewIndex) {
+    case 0:
+      NAME_ELEMENT.innerText = 'Esben H.';
+      PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/esben@2x.png';
+      PROFILE_PICTURE_ELEMENT.alt ="Esben";
+      REVIEW_TEXT_ELEMENT.innerText = 'Det var virkelig sjovt! Det er en fed måde at se sin by på.';
+      test();
+      break;
+    case 1:
+      NAME_ELEMENT.innerText = 'Amaile H.';
+      PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/amalie@2x.png';
+      PROFILE_PICTURE_ELEMENT.alt ="Amalie";
+      REVIEW_TEXT_ELEMENT.innerText = 'Det var mega godt! Var seriøst stor fan, og er super godt til at ryste sammen!';
+      test();
+      break;
+    case 2:
+      NAME_ELEMENT.innerText = 'Pernille R.';
+      PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/pernille@2x.png';
+      PROFILE_PICTURE_ELEMENT.alt ="Pernille";
+      REVIEW_TEXT_ELEMENT.innerText = 'Fantastisk måde at bruge en december formiddag i Corona-tiden.';
+      test();
+      break;
+    case 3:
+      NAME_ELEMENT.innerText = 'Kim M.';
+      PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/kim@2x.png';
+      PROFILE_PICTURE_ELEMENT.alt ="Kim";
+      REVIEW_TEXT_ELEMENT.innerText = 'Hold kæft hvor var det bare fedt! Vi glemte alt om tid og sted.';
+      test();
+      break;
+    case 4:
+      NAME_ELEMENT.innerText = 'Charlotte K.';
+      PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/charlotte@2x.png';
+      PROFILE_PICTURE_ELEMENT.alt ="Charlotte";
+      REVIEW_TEXT_ELEMENT.innerText = 'Vi havde et par super hyggelige timer med super gode udfordringer og masser af sjov';
+      test();
+      break;
+    default:
+      NAME_ELEMENT.innerText = 'Esben H.';
+      PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/esben@2x.png';
+      PROFILE_PICTURE_ELEMENT.alt ="Esben";
+      REVIEW_TEXT_ELEMENT.innerText = 'Det var virkelig sjovt! Det er en fed måde at se sin by på.';
+      test();
+      break;
+  }
+}
+
+function test() {
+  console.log(NAME_ELEMENT.innerText);
+  console.log(PROFILE_PICTURE_ELEMENT.src);
+  console.log(REVIEW_TEXT_ELEMENT.innerText);
+  console.log(reviewIndex);
 }
 
 /*
