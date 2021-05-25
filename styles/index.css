@@ -45,7 +45,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 86px;
+  height: 60px;
 }
 
 .top-hero h1 {
@@ -79,7 +79,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 133px;
 }
 
 .review-slider {

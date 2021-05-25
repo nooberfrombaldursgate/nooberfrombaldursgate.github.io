@@ -223,7 +223,7 @@ function switchReview(){
       NAME_ELEMENT.innerText = 'Charlotte K.';
       PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/charlotte@2x.png';
       PROFILE_PICTURE_ELEMENT.alt ="Charlotte";
-      REVIEW_TEXT_ELEMENT.innerText = 'Vi havde et par super hyggelige timer med super gode udfordringer og masser af sjov';
+      REVIEW_TEXT_ELEMENT.innerText = 'Vi havde et par super hyggelige timer med super gode udfordringer';
       test();
       break;
     default:
