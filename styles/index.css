@@ -17,11 +17,39 @@ body {
   flex-direction: column;
 }
 
+.heading-wrapper hr {
+  width: calc(100vw - 40px);
+  max-width: 460px;
+}
+
+/* .heading-container {
+  padding-left: 20px;
+  padding-right: 20px;
+} */
+
 /* GLOBAL SEKTION SLUT */
 
 /* VIEWPORT START */
 
+#why-choose-us-article,
+#escape-games-article header,
+.outdoor-escape-game-section,
+.mobile-escape-room-section,
+.murder-mystery-section,
+#concept-article,
+#prices-article,
+#occasion-section,
+#reviews-section,
+#cities-section,
+#cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .section-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
   max-width: 500px;
 }
 
@@ -30,14 +58,6 @@ body {
 /* MAIN SEKTION START */
 
 /* HERO SEKTION START */
-
-.top-hero {
-  background-color: black;
-}
-
-.bottom-hero {
-  background-color: var(--dark-grey);
-}
 
 .top-hero,
 .bottom-hero,
@@ -49,7 +69,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 133px;
+  background-color: black;
+
 }
 
 .top-hero h1 {
@@ -84,6 +106,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 133px;
+  background-color: var(--dark-grey);
 }
 
 .review-slider {
@@ -150,6 +173,10 @@ body {
   padding-left: 20px;
 }
 
+#review-text {
+  letter-spacing: 0.06em;
+}
+
 .video-overlay-button {
   height: 35px;
   margin-left: 15px;
@@ -167,7 +194,12 @@ body {
   margin-top: 60px;
 }
 
+#why-choose-us-article img {
+  width: 100%;
+}
+
 #why-choose-us-article hr {
+  max-width: 500px;
   margin-bottom: 60px;
 }
 
@@ -221,20 +253,13 @@ body {
 }
 
 #escape-games-article header h2 {
-  padding: 60px 20px 10px;
+  padding: 60px 0 10px;
 }
 
 #escape-games-article p {
-  padding: 22px 20px 60px;
+  padding: 22px 0 60px;
 }
 
-#escape-games-article hr {
-  margin: 0 20px 0;
-}
-
-#escape-games-article h3 {
-  padding: 0 0 0 20px;
-}
 
 #escape-games-article .heading-and-icon-wrapper {
   padding-top: 60px;
@@ -243,7 +268,6 @@ body {
 #escape-games-article .icon-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px 0;
 }
 
 #escape-games-article .heading-and-icon-wrapper .icon {
@@ -260,11 +284,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20px 0;
 }
 
 .card {
-  max-width: 335px;
+  align-self: center;
+  width: 100%;
+  max-width: 500px;
 }
 
 /* 
@@ -321,6 +346,10 @@ body {
   background: black;
 }
 
+#concept-article h2 {
+  padding-bottom: 10px;
+}
+
 #concept-article h3 {
   padding-top: 20px;
   font-family: 'Roboto', sans-serif;
@@ -328,7 +357,6 @@ body {
   line-height: 19px;
 }
 
-#concept-article h2,
 #concept-article h3,
 #concept-article h4,
 #concept-article p,
@@ -348,9 +376,10 @@ body {
   align-items: end;
 }
 
-#concept-article hr {
-  margin: 0 20px 0;
-}
+#concept-article .heading-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+} 
 
 #concept-article h3 .second-line {
   color: var(--gold);
@@ -404,7 +433,7 @@ body {
 }
 
 #prices-article h2 {
-  padding: 40px 20px 0;
+  padding: 60px 20px 10px;
 }
 
 #prices-article hr {
@@ -479,7 +508,7 @@ body {
 }
 
 .prices-bottom-row {
-  padding: 26px 20px 37px;
+  padding: 26px 20px 60px;
 }
 
 .prices-bottom-row small {
@@ -510,11 +539,16 @@ body {
 /* ANLEDNING SEKTION START */
 
 #occasion-section h2 {
-  padding: 60px 20px 0;
+  padding: 60px 20px 10px;
 }
 
 #occasion-section hr {
   margin: 0 20px;
+}
+
+.occasion-icon-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .occasion-icon-wrapper,
@@ -524,8 +558,22 @@ body {
   align-items: center;
 }
 
+
+
+.occasion-icon { 
+  height: 115px;
+}
+
 .occasion-bachelor-party {
   padding-top: 60px;
+}
+
+.occasion-bachelor-party, .occasion-corporate-event {
+  align-self: flex-start;
+}
+
+.occasion-birthday-party, .occasion-friends-and-family {
+  align-self: flex-end;
 }
 
 .occasion-icon-wrapper p {
@@ -541,7 +589,7 @@ body {
 }
 
 .occasion-friends-and-family {
-  padding-bottom: 12px;
+  padding-bottom: 60px;
 }
 
 /* ANLEDNING SEKTION SLUT */
@@ -553,18 +601,17 @@ body {
   color: white;
 }
 
-#reviews-section h2 {
-  padding: 37px 20px 0;
+#reviews-section .heading-wrapper {
+  padding-top: 37px;
 }
 
-#reviews-section hr {
-  margin: 0 20px 0;
+#reviews-section h2 {
+  padding-bottom: 10px;
 }
 
 .reviews-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .reviews-wrapper > * + * {
@@ -584,7 +631,8 @@ body {
 }
 
 .review {
-  width: 335px;
+  width: 100%;
+  max-width: 460px;
 }
 
 .review:first-child {
@@ -598,6 +646,7 @@ body {
 .reviews-facebook-logo {
   padding-bottom: 60px;
   width: 60px;
+  align-self: center;
 }
 
 /* ANMELDELSER SEKTION SLUT */
@@ -609,18 +658,18 @@ body {
     url('../images/index/bg-photo/city@0.33x.jpg');
 }
 
-#cities-section h2 {
-  padding: 60px 20px 0;
-  color: white;
+#cities-section .heading-wrapper {
+  padding-top: 60px;
 }
 
-#cities-section hr {
-  margin: 0 20px 0;
+#cities-section h2 {
+  color: white;
+  padding-bottom: 10px;
 }
 
 .cities-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 160px);
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
   justify-content: center;
   gap: 20px;
 }
@@ -640,7 +689,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 160px;
+  width: 100%;
   height: 84px;
   background-color: #fafafa;
   border-radius: 5px;
@@ -668,8 +717,11 @@ body {
   background-color: var(--dark-grey);
 }
 
-#cta-section h2 {
+#cta-section .heading-wrapper {
   padding: 60px 20px 0;
+}
+
+#cta-section h2 {
   color: white;
 }
 
@@ -681,7 +733,7 @@ body {
 }
 
 #cta-section .cta-wrapper .cta-button {
-  width: 335px;
+  width: 100%;
   height: 50px;
   line-height: 33px;
 }
@@ -696,6 +748,10 @@ som classes, fordi ikke at ramme den hvide cta knap  */
 
 .cta-button.white-button {
   font-size: 19px;
+}
+
+#cities-section .heading-wrapper {
+  padding-top: 60px;
 }
 
 /* CTA SEKTION SLUT */
