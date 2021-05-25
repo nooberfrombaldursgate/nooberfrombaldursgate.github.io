@@ -17,11 +17,15 @@ body {
   flex-direction: column;
 }
 
-.heading-container {
-  max-width: 335px;
+/* GLOBAL SEKTION SLUT */
+
+/* VIEWPORT START */
+
+.section-wrapper {
+  max-width: 500px;
 }
 
-/* GLOBAL SEKTION SLUT */
+/* VIEWPORT SLUT */ 
 
 /* MAIN SEKTION START */
 
@@ -119,10 +123,14 @@ body {
   height: 20px;
 }
 
-.review-slider-left, .review-slider-right {
+.review-slider-left, 
+.review-slider-right, 
+.review-slider-icon-left, 
+.review-slider-icon-right {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .review-slider-left {
@@ -410,7 +418,7 @@ body {
 .prices-top-row,
 .prices-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 150px;
 }
 
 .prices-top-row p:last-child {
@@ -429,7 +437,22 @@ body {
 }
 
 .prices-row-left {
+  display: flex;
+  flex-wrap: nowrap;
   padding-left: 20px;
+}
+
+.prices-icon-wrapper {
+  padding-left: 15px;
+}
+
+.prices-wrapper p {
+  line-height: 30px;
+  align-self: end;
+}
+
+.prices-icon-wrapper > * + * {
+  padding-left: 10px;
 }
 
 .prices-row-right {
@@ -441,6 +464,10 @@ body {
   font-weight: 500;
   font-size: 28px;
   line-height: 100%;
+}
+
+.prices-row-left p {
+  font-size: 36px;
 }
 
 .prices-row-right {
@@ -463,13 +490,14 @@ body {
   text-transform: uppercase;
 }
 
-.prices-row-right {
-  display: flex;
-  flex: nowrap;
+#prices-plus {
+  font-size: 24px;
+  padding-left: 10px;
+  align-self: center;
 }
 
-.prices-row-right p:last-child {
-  line-height: 1.9em;
+.prices-row-right {
+  display: flex;
 }
 
 .prices-middle-divider {
@@ -685,5 +713,20 @@ som classes, fordi ikke at ramme den hvide cta knap  */
   #cities-section {
     background: center / cover no-repeat
       url('../images/index/bg-photo/city.jpg');
+  }
+}
+
+@media only screen and (min-width: 1163px) {
+  video {
+    /* position: fixed; */
+    /* left: 0; */
+    /* bottom: 0; */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    max-height: calc(100vh - 233px);
+    object-fit: fill;
+    z-index: 1;
   }
 }

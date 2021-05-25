@@ -195,7 +195,7 @@ function switchReview(){
       NAME_ELEMENT.innerText = 'Esben H.';
       PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/esben@2x.png';
       PROFILE_PICTURE_ELEMENT.alt ="Esben";
-      REVIEW_TEXT_ELEMENT.innerText = 'Det var virkelig sjovt! Det er en fed måde at se sin by på.';
+      REVIEW_TEXT_ELEMENT.innerText = 'Det var virkelig sjovt! Det er en fed måde at se sin by på';
       test();
       break;
     case 1:
@@ -209,14 +209,14 @@ function switchReview(){
       NAME_ELEMENT.innerText = 'Pernille R.';
       PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/pernille@2x.png';
       PROFILE_PICTURE_ELEMENT.alt ="Pernille";
-      REVIEW_TEXT_ELEMENT.innerText = 'Fantastisk måde at bruge en december formiddag i Corona-tiden.';
+      REVIEW_TEXT_ELEMENT.innerText = 'Fantastisk måde at bruge en december formiddag i Corona-tiden';
       test();
       break;
     case 3:
       NAME_ELEMENT.innerText = 'Kim M.';
       PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/kim@2x.png';
       PROFILE_PICTURE_ELEMENT.alt ="Kim";
-      REVIEW_TEXT_ELEMENT.innerText = 'Hold kæft hvor var det bare fedt! Vi glemte alt om tid og sted.';
+      REVIEW_TEXT_ELEMENT.innerText = 'Hold kæft hvor var det bare fedt! Vi glemte alt om tid og sted';
       test();
       break;
     case 4:
@@ -230,7 +230,7 @@ function switchReview(){
       NAME_ELEMENT.innerText = 'Esben H.';
       PROFILE_PICTURE_ELEMENT.src = '/images/index/reviews/profile-pictures/esben@2x.png';
       PROFILE_PICTURE_ELEMENT.alt ="Esben";
-      REVIEW_TEXT_ELEMENT.innerText = 'Det var virkelig sjovt! Det er en fed måde at se sin by på.';
+      REVIEW_TEXT_ELEMENT.innerText = 'Det var virkelig sjovt! Det er en fed måde at se sin by på';
       test();
       break;
   }

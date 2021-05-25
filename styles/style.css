@@ -139,10 +139,12 @@ hr {
 
 .gold-button,
 .white-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   cursor: pointer;
   border-radius: 0.5rem;
-  text-align: center;
   padding: 7px 10px;
   text-transform: uppercase;
   color: white;
@@ -181,7 +183,6 @@ hr {
 
 #main-header {
   height: 50px;
-  /* overflow: hidden; */
   background-color: black;
 }
 
@@ -227,7 +228,7 @@ hr {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  line-height: 2rem;
+  /* line-height: 2rem; */
 }
 
 #mobile-bottom-nav ul {
@@ -244,18 +245,6 @@ hr {
   margin: 42px 0 10px;
 }
 
-/* 
-* selectoren > * + * kaldes for the lobotimized owl selector (uglen med det hvide snit), 
-* og bruges ofte til flex/grid i stedet for 'gap', når der skal ydes support til safari ios, 
-* når man bruger den på parent elementet, vil øverste child element ikke blive ramt af reglen 
-* (man vil gerne undgå at der kommer margin/padding på første element)
-* se: https://www.youtube.com/watch?v=VvqyUUROmJw 
-*/
-
-#mobile-bottom-nav ul > * + * {
-  margin-top: 30px;
-}
-
 #mobile-bottom-nav li {
   display: flex;
   flex-direction: column;
@@ -264,48 +253,50 @@ hr {
   text-transform: uppercase;
 }
 
-/*
-* pseudo selectorene :not() og :first-child anvendes for ikke at give escape 
-* game list item'et en højde på 43 px (rummer flere nestede links og ville derfor 
-* resultere i overflow)
-*/
-
-.outer-nav-ul > li:not(:first-child) {
-  height: 43px;
-}
-
 .parent-anchor {
-  height: 43px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.list-item-group {
-  margin-top: 60px;
-  width: 100%;
+/* 
+* selectoren > * + * kaldes for the lobotimized owl selector (uglen med det hvide snit), 
+* og bruges ofte til flex/grid i stedet for 'gap', når der skal ydes support til safari ios, 
+* når man bruger den på parent elementet, vil øverste child element ikke blive ramt af reglen 
+* (man vil gerne undgå at der kommer margin/padding på første element). kan også bruges i andre
+* use cases som her, hvor vi har forskellig margin på første og efterfølgende elementer.
+* se: https://www.youtube.com/watch?v=VvqyUUROmJw 
+*/
+
+.outer-nav-ul > * + *, .inner-nav-ul > li {
+  margin-top: 30px;
+}
+
+.outer-nav-ul > * + * {
+  background-color: var(--dark-grey);
+}
+
+
+.child-anchor {
   background-color: black;
 }
 
-.outer-nav-ul > li,
+
+.outer-nav-ul {
+  border-top: 50px;
+}
+
 .parent-anchor {
   background-color: var(--dark-grey);
 }
 
-.inner-nav-ul > li {
-  height: 43px;
-}
-
-.inner-nav-ul li:first-child {
-  margin-top: 30px;
-}
-
 #mobile-bottom-nav {
-  margin-bottom: 38px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 #mobile-bottom-nav ul {
-  line-height: 24px;
+  line-height: 43px;
   letter-spacing: 0.05em;
 }
 
