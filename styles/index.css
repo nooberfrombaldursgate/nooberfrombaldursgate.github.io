@@ -430,7 +430,7 @@ body {
 /* PRISER SEKTION START */
 
 #prices-article {
-  background: linear-gradient(360deg, rgba(201, 157, 43, 0.38) -45.98%, rgba(255, 255, 255, 0) 200.09%);
+  background: url('../images/index/bg-textures/concrete-texture.png') repeat;
 }
 
 #prices-article h2 {
@@ -538,6 +538,14 @@ body {
 /* PRISER SEKTION SLUT */
 
 /* ANLEDNING SEKTION START */
+
+#occasion-section {
+  background: url('../images/index/bg-textures/funky-lines.png') repeat;
+}
+
+.aarhus-silouhette.funkylines {
+  background: url('../images/index/aarhus-sillouhette.svg') repeat top right, url('../images/index/bg-textures/funky-lines.png') repeat;
+}
 
 #occasion-section h2 {
   padding: 60px 20px 10px;
