@@ -53,7 +53,7 @@ body {
   max-width: 500px;
 }
 
-/* VIEWPORT SLUT */ 
+/* VIEWPORT SLUT */
 
 /* MAIN SEKTION START */
 
@@ -71,7 +71,6 @@ body {
   align-items: center;
   height: 133px;
   background-color: black;
-
 }
 
 .top-hero h1 {
@@ -97,7 +96,7 @@ body {
   bottom: 50px;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 1;
   height: 0;
 }
 
@@ -142,13 +141,14 @@ body {
   line-height: 18px;
 }
 
-.review-slider-icon-left, .review-slider-icon-right {
+.review-slider-icon-left,
+.review-slider-icon-right {
   height: 20px;
 }
 
-.review-slider-left, 
-.review-slider-right, 
-.review-slider-icon-left, 
+.review-slider-left,
+.review-slider-right,
+.review-slider-icon-left,
 .review-slider-icon-right {
   display: flex;
   justify-content: center;
@@ -230,6 +230,10 @@ body {
   padding-bottom: 60px;
 }
 
+#escape-games-definition {
+  cursor: pointer;
+}
+
 /* HVORFOR VÆLGE OS SEKTION SLUT */
 
 .aarhus-silouhette,
@@ -259,7 +263,6 @@ body {
 #escape-games-article p {
   padding: 22px 0 60px;
 }
-
 
 #escape-games-article .heading-and-icon-wrapper {
   padding-top: 60px;
@@ -335,8 +338,7 @@ body {
 /* ESCAPE GAMES SEKTION SLUT */
 
 .copenhagen-silouhette {
-  background: url('../images/index/copenhagen-sillouhette.svg') repeat top right,
-    url('../images/index/bg-textures/brickwall.png') repeat;
+  background: url('../images/index/copenhagen-sillouhette.svg') repeat top right, url('../images/index/bg-textures/brickwall.png') repeat;
 }
 
 /* KONCEPT SEKTION START */
@@ -373,13 +375,13 @@ body {
 #concept-article section:nth-child(odd) {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
 }
 
 #concept-article .heading-wrapper {
   margin-left: 20px;
   margin-right: 20px;
-} 
+}
 
 #concept-article h3 .second-line {
   color: var(--gold);
@@ -409,6 +411,7 @@ body {
 }
 
 .dashed-line-wrapper {
+  width: calc(100% - 40px);
   margin: 20px;
 }
 
@@ -425,11 +428,7 @@ body {
 /* PRISER SEKTION START */
 
 #prices-article {
-  background: linear-gradient(
-    360deg,
-    rgba(201, 157, 43, 0.38) -45.98%,
-    rgba(255, 255, 255, 0) 200.09%
-  );
+  background: linear-gradient(360deg, rgba(201, 157, 43, 0.38) -45.98%, rgba(255, 255, 255, 0) 200.09%);
 }
 
 #prices-article h2 {
@@ -451,7 +450,7 @@ body {
 }
 
 .prices-top-row p:last-child {
-  align-self: end;
+  align-self: flex-end;
 }
 
 .prices-top-row p {
@@ -477,7 +476,7 @@ body {
 
 .prices-wrapper p {
   line-height: 30px;
-  align-self: end;
+  align-self: flex-end;
 }
 
 .prices-icon-wrapper > * + * {
@@ -500,7 +499,7 @@ body {
 }
 
 .prices-row-right {
-  justify-self: end;
+  justify-self: flex-end;
 }
 
 .prices-row-right p:first-child {
@@ -558,9 +557,7 @@ body {
   align-items: center;
 }
 
-
-
-.occasion-icon { 
+.occasion-icon {
   height: 115px;
 }
 
@@ -568,11 +565,13 @@ body {
   padding-top: 60px;
 }
 
-.occasion-bachelor-party, .occasion-corporate-event {
+.occasion-bachelor-party,
+.occasion-corporate-event {
   align-self: flex-start;
 }
 
-.occasion-birthday-party, .occasion-friends-and-family {
+.occasion-birthday-party,
+.occasion-friends-and-family {
   align-self: flex-end;
 }
 
@@ -654,8 +653,7 @@ body {
 /* BYER SEKTION START */
 
 #cities-section {
-  background: center / cover no-repeat
-    url('../images/index/bg-photo/city@0.33x.jpg');
+  background: center / cover no-repeat url('../images/index/bg-photo/city@0.33x.jpg');
 }
 
 #cities-section .heading-wrapper {
@@ -695,7 +693,7 @@ body {
   border-radius: 5px;
 }
 
-.city-container p {
+.city {
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -704,6 +702,10 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.05em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #horsens {
@@ -758,17 +760,104 @@ som classes, fordi ikke at ramme den hvide cta knap  */
 
 /* MAIN SEKTION SLUT */
 
+/* MODAL SEKTION START */
+
+/* modal-vinduet er gemt som standard, har fixed position, og får z-index så d */
+
+.modal {
+  position: fixed;
+  top: 50vh;
+  left: calc(50vw - 124px);
+  width: 248px;
+  height: 336px;
+}
+
+.modal-wrapper {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-top {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: var(--gold);
+  height: 48px;
+}
+
+.modal-bottom {
+  background-color: black;
+}
+
+.modal-heading {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.18em;
+  color: black;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+
+.modal-subheading {
+  padding: 15px 15px 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+
+.modal-bottom hr {
+  margin: 0 15px 0;
+}
+
+.modal-subsubheading {
+  padding: 20px 15px 0;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: white;
+}
+
+.modal-paragraph {
+  padding: 20px 15px 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 174.5%;
+  color: white;
+}
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px 13px 0;
+}
+
+/* MODAL SEKTION SLUT */
+
 @media only screen and (min-width: 768px) {
   #cities-section {
-    background: center / cover no-repeat
-      url('../images/index/bg-photo/city@0.5x.jpg');
+    background: center / cover no-repeat url('../images/index/bg-photo/city@0.5x.jpg');
   }
 }
 
 @media only screen and (min-width: 1024px) {
   #cities-section {
-    background: center / cover no-repeat
-      url('../images/index/bg-photo/city.jpg');
+    background: center / cover no-repeat url('../images/index/bg-photo/city.jpg');
   }
 }
 

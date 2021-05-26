@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/index.css">
-    <!-- web- (google) og selfhostede fonts anvendes med preload og preconnect for ikke at optimere loadtime -->
+    <!-- web- (google) og selfhostede fonts anvendes med hhv preconnect og preload for at forsøge at forbedre
+    brugeroplevelsen ved hurtigt at loade fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="preload" href="fonts/321perfect/321perfect-webfont.woff2" as="font" crossorigin>
@@ -27,7 +28,7 @@
 </head>
 
 <body>
-    <!-- main header start -->
+    <!-- MAIN HEADER START -->
     <header id="main-header">
         <nav id="top-nav">
             <div id="mobile-top-nav">
@@ -52,9 +53,8 @@
                     </div>
                 </div>
             </div>
-
-
-            <div id="desktop-top-nav">
+            <!-- TODO: FÆRDIGGØR DESKTOP TOP NAV -->
+            <!-- <div id="desktop-top-nav">
                 <ul>
                     <li><a id="dropdown-anchor" href="index.html">link</a>
                         <ul class="dropdown">
@@ -66,13 +66,14 @@
                     <li><a href="link.html">link</a></li>
                     <li id="last-anchor"><a href="link.html">link</a></li>
                 </ul>
-            </div>
+            </div> -->
         </nav>
     </header>
-    <!-- main header slut -->
+    <!-- MAIN HEADER SLUT -->
 
-    <!-- main content start -->
+    <!-- MAIN CONTENT START -->
     <main id="main-content">
+        <!-- HERO START -->
         <header class="hero-wrapper">
             <div class="top-hero">
                 <h1 class="video-overlay-text">City Escape</h1>
@@ -108,7 +109,9 @@
                 </div>
             </div>
         </header>
-        <!-- TODO -->
+        <!-- HERO SLUT -->
+
+        <!-- HVORFOR VÆLGE OS SEKTION START -->
         <article id="why-choose-us-article">
             <div class="section-wrapper">
                 <div class="heading-wrapper">
@@ -128,22 +131,17 @@
                             </object>
                         </div>
                     </div>
-                    <!--
-                            * TODO: Lav definitionskort overlay
-                            * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
-                            * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
-                            * https://stackoverflow.com/questions/1232793/javascript-set-img-src
-                            -->
                     <p>
-                        Vi tilbyder underholdende og udfordrende <a class="golden out-of-time" href="javascript:void(0);">escape games</a>. Vores spiloplevelser er designet af passionerede
+                        Vi tilbyder underholdende og udfordrende <span class="escape-games-definition" class="golden">escape games</span>. Vores spiloplevelser er
+                        designet af passionerede
                         entusiaster, og
                         byder på originale gåder, fængslende fortællinger og et
                         medrivende univers.
                     </p>
                     <!--
-                            * resolution switching anvendes for at få responsive billeder,
-                            * se https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
-                            -->
+                    * resolution switching anvendes for at få responsive billeder,
+                    * se https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+                    -->
                     <img class="why-choose-us-photo photo" srcset="images/index/photos/line-uv-light@1.jpg 335w, images/index/photos/line-uv-light@1.5.jpg 503w" sizes="(max-width: 600px) 335px, 503px"
                         src="images/index/photos/line-uv-light@1.5.jpg" alt="Kvinde som lyser med UV lys bag en container">
                 </section>
@@ -184,22 +182,26 @@
                 </section>
             </div>
         </article>
+        <!-- HVORFOR VÆLGE OS SEKTION SLUT -->
+
         <div class="aarhus-silouhette"></div>
+
+        <!-- ESCAPE GAMES SEKTION START -->
         <article id="escape-games-article">
+            <!-- ESCAPE GAMES INTRO START -->
             <header>
                 <div class="section-wrapper">
-                    <!-- <div class="heading-wrapper">
-                        <div class="heading-container"> -->
                     <h2>Hvilken spiltype skal du vælge?</h2>
                     <hr>
-                    <!-- </div>
-                    </div> -->
                     <p>
                         Vi har et bredt udvalg af forskellige escape games med tre forskellige spiltyper. Uanset hvad valget falder på, garanterer vi, at det vil blive en sjov og uforglemmelig
                         oplevelse.
                     </p>
                 </div>
             </header>
+            <!-- ESCAPE GAMES INTRO SLUT -->
+
+            <!-- UDENDØRS ESCAPE GAMES START -->
             <section class="outdoor-escape-game-section">
                 <div class="section-wrapper">
                     <div class="heading-and-icon-wrapper">
@@ -237,6 +239,9 @@
                     </div>
                 </div>
             </section>
+            <!-- UDENDØRS ESCAPE GAMES SLUT -->
+
+            <!-- MOBILE ESCAPE GAMES START -->
             <section class="mobile-escape-room-section">
                 <div class="section-wrapper">
                     <div class="heading-and-icon-wrapper">
@@ -268,6 +273,9 @@
                     </div>
                 </div>
             </section>
+            <!-- MOBILE ESCAPE GAMES SLUT -->
+
+            <!-- MURDER MYSTERY SEKTION START -->
             <section class="murder-mystery-section">
                 <div class="section-wrapper">
                     <div class="heading-and-icon-wrapper">
@@ -300,8 +308,13 @@
                     </div>
                 </div>
             </section>
+            <!-- MURDER MYSTERY SEKTION SLUT -->
         </article>
+        <!-- ESCAPE GAMES SEKTION SLUT -->
+
         <div class="copenhagen-silouhette"></div>
+
+        <!-- KONCEPT SEKTION START -->
         <article id="concept-article">
             <div class="section-wrapper">
                 <div class="heading-wrapper">
@@ -454,6 +467,9 @@
                 </section>
             </div>
         </article>
+        <!-- KONCEPT SEKTION SLUT -->
+
+        <!-- PRISER SEKTION START -->
         <article id="prices-article">
             <div class="section-wrapper">
                 <div class="heading-wrapper">
@@ -564,11 +580,14 @@
                 </div>
             </div>
         </article>
+        <!-- PRISER SEKTION SLUT -->
+
+        <!-- ANLEDNINGER SEKTION START -->
         <!--
-            * strukturen bliver brudt lidt her, hvor <article> skiftes ud med <section> ud fra en vurdering af, at indholdet begynder at bevæge sig væk fra
-            * <article>-taggets anvendelsesområde som noget der er selvindholdende, og som er beregnet til syndikation og vil give mening i sig selv syndikeret.
-            * <section> bruges, da der ikke umiddelbart syntes at være mere passende semantiske tags.
-            -->
+        * strukturen bliver brudt lidt her, hvor <article> skiftes ud med <section> ud fra en vurdering af, at indholdet begynder at bevæge sig væk fra
+        * <article>-taggets anvendelsesområde som noget der er selvindholdende, og som er beregnet til syndikation og vil give mening i sig selv syndikeret.
+        * <section> bruges, da der ikke umiddelbart syntes at være mere passende semantiske tags.
+        -->
         <section id="occasion-section">
             <div class="section-wrapper">
                 <div class="heading-wrapper">
@@ -605,7 +624,11 @@
                 </div>
             </div>
         </section>
+        <!-- ANLEDNINGER SEKTION SLUT -->
+
         <div class="aarhus-silouhette"></div>
+
+        <!-- ANMELDELSER SEKTION START -->
         <section id="reviews-section">
             <div class="section-wrapper">
                 <div class="heading-wrapper">
@@ -639,6 +662,9 @@
                 </div>
             </div>
         </section>
+        <!-- ANMELDELSER SEKTION SLUT -->
+
+        <!-- BYER SEKTION START -->
         <section id="cities-section">
             <div class="section-wrapper">
                 <div class="heading-wrapper">
@@ -648,36 +674,39 @@
                     </div>
                 </div>
                 <div class="cities-wrapper">
-                    <div id="copenhagen" class="city-container out-of-time">
-                        <p>København</p>
+                    <div id="copenhagen" class="city-container">
+                        <p class="city">København</p>
                     </div>
-                    <div id="aarhus" class="city-container out-of-time">
-                        <p>Aarhus</p>
+                    <div id="aarhus" class="city-container">
+                        <p class="city">Aarhus</p>
                     </div>
-                    <div id="odense" class="city-container out-of-time">
-                        <p>Odense</p>
+                    <div id="odense" class="city-container">
+                        <p class="city">Odense</p>
                     </div>
-                    <div id="esbjerg" class="city-container out-of-time">
-                        <p>Esbjerg</p>
+                    <div id="esbjerg" class="city-container">
+                        <p class="city">Esbjerg</p>
                     </div>
-                    <div id="kolding" class="city-container out-of-time">
-                        <p>Kolding</p>
+                    <div id="kolding" class="city-container">
+                        <p class="city">Kolding</p>
                     </div>
-                    <div id="randers" class="city-container out-of-time">
-                        <p>Randers</p>
+                    <div id="randers" class="city-container">
+                        <p class="city">Randers</p>
                     </div>
-                    <div id="herning" class="city-container out-of-time">
-                        <p>Herning</p>
+                    <div id="herning" class="city-container">
+                        <p class="city">Herning</p>
                     </div>
-                    <div id="roskilde" class="city-container out-of-time">
-                        <p>Roskilde</p>
+                    <div id="roskilde" class="city-container">
+                        <p class="city">Roskilde</p>
                     </div>
-                    <div id="horsens" class="city-container out-of-time">
-                        <p>Horsens</p>
+                    <div id="horsens" class="city-container">
+                        <p class="city">Horsens</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- BYER SEKTION SLUT -->
+
+        <!-- CTA SEKTION START -->
         <section id="cta-section">
             <div class="section-wrapper">
                 <div class="heading-wrapper">
@@ -692,16 +721,17 @@
                 </div>
             </div>
         </section>
+        <!-- CTA SEKTION SLUT -->
     </main>
-    <!-- main content slut -->
+    <!-- MAIN CONTENT SLUT -->
 
-    <!-- main footer start -->
+    <!-- MAIN FOOTER START -->
     <footer id="main-footer">
         <div class="footer-wrapper">
             <div id="mobile-footer">
                 <nav id="mobile-bottom-nav">
                     <ul class="outer-nav-ul">
-                        <li class="test">
+                        <li>
                             <div class="parent-anchor-container">
                                 <a class="parent-anchor" href="index.html#escape-games-article">Escape games</a>
                             </div>
@@ -768,7 +798,28 @@
         </div>
 
     </footer>
-    <!-- main footer slut -->
+    <!-- MAIN FOOTER SLUT -->
+
+    <!-- MODALS START -->
+    <!-- ESCAPE GAME DEFINITION MOBILE MODAL START -->
+
+    <aside class="modal-wrapper">
+        <div class="modal">
+            <div class="modal-top">
+                <h4 class="modal-heading">Test</h4>
+                    <img class="modal-close" src="images/index/icons/close-modal-black@2x.png" alt="Luk vinduet">
+            </div>
+            <div class="modal-bottom">
+                <h5 class="modal-subheading">subheading</h5>
+                <hr>
+                <h6 class="modal-subsubheading">Subsubheading</h6>
+                <p class="modal-paragraph">Paragraph</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ESCAPE GAME DEFINITION MOBILE MODAL SLUT -->
+    <!-- MODALS SLUT -->
 
     <script src="scripts/index.js"></script>
 </body>
