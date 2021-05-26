@@ -230,7 +230,9 @@ body {
   padding-bottom: 60px;
 }
 
-#escape-games-definition {
+.escape-games-definition {
+  color: var(--gold);
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -766,7 +768,7 @@ som classes, fordi ikke at ramme den hvide cta knap  */
 
 .modal {
   position: fixed;
-  top: 50vh;
+  top: calc(50vh - 168px);
   left: calc(50vw - 124px);
   width: 248px;
   height: 336px;

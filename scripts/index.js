@@ -65,7 +65,7 @@ function setTyper(element, WORDS) {
     if (letterIndex == 0 && wordIndex == WORDS.length - 1) {
       TEXT.style.color = 'var(--gold)';
       TEXT.style.fontFamily = 'City Escape';
-      TEXT.textTransform = 'capitalize';
+      TEXT.style.textTransform = 'uppercase';
       TEXT.style.fontSize = '24px';
       TEXT.style.paddingTop = '10px';
       wordStayDelay = 2000;
@@ -301,81 +301,81 @@ function renderModal(element) {
     case 'escape-games-definition':
     MODAL_HEADING.innerText = 'DEFINITION';
     MODAL_SUBHEADING.innerText = 'es•cape game';
-    MODAL_SUBHEADING.textTransform = 'lowercase';
+    MODAL_SUBHEADING.style.textTransform = 'lowercase';
     MODAL_SUBSUBHEADING.innerText = '\\i-ˈskāp ˈgām\\';
-    MODAL_SUBSUBHEADING.textTransform = 'lowercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'lowercase';
     MODAL_PARAGRAPH.innerText = 'et spil hvor en gruppe deltagere i fællesskab opdager og løser gåder, opgaver og udfordringer, der ikke kræver udefrakommende viden på et fysisk sted for at nå et mål inden for en fast tidsramme';
     break;
     case 'copenhagen':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'FLÆSKETORVET 68';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'KØBENHAVN';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I booker vores City Escape Games, mødes I med jeres instruktør i Kødbyen, lige ved indgangen til SOHO som ligger på Flæsketorvet 68 – en spytklat fra Københavns Hovedbanegård eller Fisketorvet station. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
     case 'aarhus':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'MATHILDE FIBIGERS HAVE';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'AARHUS';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I booker vores City Escape Games, mødes I med jeres instruktør på Mathilde Fibigers Have, lige ved indgangen til Besættelsesmuseum Aarhus, en spytklat fra Aarhus domkirke. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
     case 'odense':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'FLAKHAVEN – TORVET';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'ODENSE';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I har booket vores City Escape Games, mødes I med jeres instruktør på Flakhaven, torvet lige udenfor Odense Rådhus. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
     case 'esbjerg':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'STREET FOOD ESBJERG';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'ESBJERG';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I har booket vores City Escape Games, mødes vi på vores stand indendørs i Esbjerg StreetFood. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
     case 'kolding':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'LÅSBYBANKE PLADS';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'KOLDING';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I booker vores City Escape Games, mødes I med jeres instruktør på LÅSBYBANKE PLADS, tæt på Koldinghus. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
     case 'randers':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'RÅDHUSTORVET';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'RANDERS';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I booker vores City Escape Games, mødes I med jeres instruktør på RÅDHUSTORVET, på pladsen til det gamle rådhus. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
     case 'herning':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'TORVET I HERNING';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'HERNING';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I booker vores City Escape Games, mødes I med jeres instruktør på Torvet i herning, lige ved siden af B&O bygningen. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
     case 'roskilde':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'STÆNDERTORVET';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'ROSKILDE';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I booker vores City Escape Games, mødes I med jeres instruktør på STÆNDERTORVET, på den store plads centralt i Roskilde. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
     case 'horsens':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'BRÆTSPILSCAFEEN';
-    MODAL_SUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBHEADING.style.textTransform = 'uppercase';
     MODAL_SUBSUBHEADING.innerText = 'HORSENS';
-    MODAL_SUBSUBHEADING.textTransform = 'uppercase';
+    MODAL_SUBSUBHEADING.style.textTransform = 'uppercase';
     MODAL_PARAGRAPH.innerText = 'Når I booker vores City Escape Games, mødes I med jeres instruktør hos BRÆTSPILSCAFEEN, som ligger på Allegade 1 E, st. tv. Her får I en grundig introduktion, samt udleveret jeres udstyr, inden I bliver sluppet løs i byen.';
     break;
   }
