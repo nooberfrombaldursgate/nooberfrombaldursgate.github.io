@@ -35,6 +35,9 @@
 
 :root {
   --gold: #c99d2b;
+  --light-blue: #0E9DCF;
+  --dark-green: #1a4355;
+  --dark-blue: #00344B;
   --dark-grey: #1c1c1c;
   --main-font: 'Poppins', sans-serif;
 }
@@ -167,6 +170,10 @@ hr {
   color: var(--gold);
 }
 
+.align-right {
+  text-align: right;
+}
+
 /* GLOBAL SEKTION SLUT */
 
 /* HEADER SEKTION START */
@@ -210,8 +217,15 @@ hr {
 
 .pictorial-logo {
   display: block;
-  width: 27px;
+  width: calc(27px + 1vw);
+  max-width: 30px;
 }
+
+.burger-icon {
+  width: calc(19px + 1vw);
+  max-width: 25px;
+}
+
 
 /* HEADER SEKTION SLUT */
 
@@ -226,7 +240,6 @@ hr {
 }
 
 #main-footer {
-  height: 100%;
   background: black;
   color: white;
   display: flex;
@@ -366,20 +379,4 @@ hr {
   height: 25px;
 }
 
-/* MOBIL NAV SLUT */
-
-/* FOOTER SEKTION SLUT */
-
-/* TODO: FÆRDIGGØR MEDIA QUERIES SWITCH FRA MOBIL TIL DESKTOP
-@media only screen and (min-width: 768px) {
-   #mobile-top-nav,
-  #mobile-bottom-nav {
-    display: none;
-  }
-
-  #desktop-top-nav,
-  #desktop-top-nav {
-    display: unset;
-  } 
-}
-*/
+@media only screen and (min-width: 3)

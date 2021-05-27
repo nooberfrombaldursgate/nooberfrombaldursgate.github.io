@@ -1,0 +1,238 @@
+/* STYLESHEET TIL INDEX.HTML */
+
+/* GLOBAL SEKTION START */
+
+/* GLOBAL SEKTION SLUT */
+
+/* VIEWPORT START */
+
+#can-you-save-the-city-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+}
+
+hr {
+  background-color: var(--light-blue);
+}
+
+/* VIEWPORT SLUT */
+
+/* MAIN SEKTION START */
+
+/* HERO SEKTION START */
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(1, 61, 89, 0.9) 0%, rgba(2, 41, 58, 0.9) 100%);
+}
+
+.operation-mindfall-hero-logo {
+  width: 100%;
+  max-width: 700px;
+  padding: 25px;
+}
+
+.video-trailer {
+  width: 100%;
+  max-height: calc(100vh - 50px);
+}
+
+/* CAN YOU SAVE THE CITY START */
+
+.operation-mindfall-icons-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.operation-mindfall-icons-wrapper .icon {
+  width: 335px;
+}
+
+.participant-icon {
+  padding-top: 60px;
+}
+
+/* tilføjer 20 px for at udligne forskel i højde på ikoner */
+.escape-rate-icon {
+  padding-top: 20px;
+}
+
+.heading-wrapper {
+  padding-top: 60px;
+}
+
+#can-you-save-the-city-article p {
+    font-size: 18px;
+    line-height: 170%;
+    letter-spacing: 0.05em;
+}
+
+#can-you-save-the-city-article .paragraph-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+#can-you-save-the-city-article .paragraph-wrapper > * + * {
+  padding-top: 30px;
+}
+
+.male-spy {
+  align-self: flex-start;
+}
+
+.mindfall-book-now-button {
+  width: calc(175px + 1vw);
+}
+
+#can-you-save-the-city-article .photo-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-gallery {
+  color: white;
+  background-color: var(--dark-blue);
+  margin: 60px 0 0;
+  width: 100%;
+}
+
+.photo-gallery .heading-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.mindfall-photo-icon {
+  padding-top: 40px;
+}
+
+.photo-icon-wrapper > * + * {
+  padding-top: 40px;
+}
+
+.photo-gallery img:last-child {
+  padding-bottom: 40px;
+}
+
+.section-wrapper.dark-blue {
+  background-color: pink;
+}
+
+/* CAN YOU SAVE THE CITY SLUT */
+
+/* BRIEFCASE START */
+
+.briefcase-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.female-spy {
+  padding-top: 60px;
+  width: 100%;
+  max-width: 335px;
+  transform: translateY(3.5px);
+}
+
+.briefcase-wrapper {
+  background-color: var(--dark-green);
+}
+
+.vials-wrapper {
+  background-color: var(--dark-blue);
+}
+
+.mindfall-briefcase, .mindfall-vials {
+  width: 100%;
+  width: 250px;
+  padding: 20px;
+}
+
+.briefcase-wrapper, .vials-wrapper {
+  color: white;
+}
+
+.briefcase-container, .vials-container {
+  display: flex;
+  max-width: 500px;
+}
+
+
+/* BRIEFCASE SLUT */
+
+
+/* MAIN SEKTION SLUT */
+
+/* FOOTER START */
+
+#main-footer,
+.child-anchor {
+  background-color: var(--dark-green);
+}
+
+.outer-nav-ul > * + *,
+.parent-anchor {
+  background-color: var(--light-blue);
+}
+
+/* FOOTER SLUT */
+
+@media only screen and (min-width: 1366px) {
+  .watch-trailer-button {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1117px) {
+  .video-trailer {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    max-height: calc(100vh - 314px);
+    object-fit: fill;
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .operation-mindfall-icons-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .operation-mindfall-icons-wrapper > * + * {
+    padding-left: 60px;
+  }
+
+  .operation-mindfall-icons-wrapper .icon {
+    width: unset;
+  }
+
+  .participant-icon {
+    padding-top: 152px;
+  }
+
+  .duration-icon {
+    padding-top: 50px;
+  }
+}

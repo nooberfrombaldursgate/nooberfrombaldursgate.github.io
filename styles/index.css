@@ -93,7 +93,7 @@ body {
 
 .hero-wrapper .cta-wrapper {
   position: relative;
-  bottom: 50px;
+  bottom: 75px;
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -178,12 +178,17 @@ body {
 }
 
 .video-overlay-button {
-  height: 35px;
+  height: calc(34px + 1vw);
+  max-height: 55px;
   margin-left: 15px;
   margin-right: 15px;
-  width: 130px;
+  width: calc(123.75px + 2.5vw);
+  max-width: 200px;
   letter-spacing: 0;
+  font-size: 14px;
 }
+
+
 
 /* HERO SEKTION SLUT */
 
@@ -406,10 +411,6 @@ body {
   padding-top: 5px;
   font-size: 16px;
   line-height: 150%;
-}
-
-.align-right {
-  text-align: right;
 }
 
 .dashed-line-wrapper {
@@ -865,7 +866,11 @@ som classes, fordi ikke at ramme den hvide cta knap  */
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1366px) {
+  .video-overlay-button {
+    font-size: 18px;
+  }
+
   #cities-section {
     background: center / cover no-repeat url('../images/index/bg-photo/city.jpg');
   }
@@ -873,14 +878,11 @@ som classes, fordi ikke at ramme den hvide cta knap  */
 
 @media only screen and (min-width: 1163px) {
   video {
-    /* position: fixed; */
-    /* left: 0; */
-    /* bottom: 0; */
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    max-height: calc(100vh - 233px);
+    max-height: calc(100vh - 316px);
     object-fit: fill;
     z-index: 1;
   }
