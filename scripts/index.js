@@ -34,13 +34,16 @@ function setTyper(element, WORDS) {
    * metode som kalder den indbyggede setInterval metode, som igen kalder vores typeLetter metode (defineres længere nede).
    * setInterval tillader os derfor at kalde vores egen metode ved et specifikt tidsinterval (her 35 ms)
    *
+   * inde på mozilla.org, link de også til en demo, de har lavet, hvor de bruger 
+   * 
    * 1. inputsparameter: vores typeLetter funktion, som defineres længere nede
    * 2. inputsparameter: forsinkelsen ml. hvert tegn (35 ms)
    *
-   * setInterval metoden er en del af web worker api'en som muliggør at man kan køre en script operation i en baggrundstråd, som er
-   * sepereret fra hovedtråden. med andre ord kan man køre sideløbende/asynkrone funktioner, så de f.eks. ikke sløver js-baseret
+   * setInterval metoden er en del af web worker api'en. sidstnævnte muliggør at man kan køre en script operation i en baggrundstråd, som er
+   * sepereret fra hovedtråden. med andre ord at man kan køre sideløbende/asynkrone funktioner, så de f.eks. ikke sløver js-baseret
    * UI-interaktion unødigt.
    * kilde: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API
+  
    */
 
   startTyping();
@@ -82,7 +85,7 @@ function setTyper(element, WORDS) {
 
     if (letterIndex == WORD.length) {
       /*
-       * clearInterval stopper og rydder den nuværende tråd fra vores setInterval. hvis ikke vi havde den med
+       * clearInterval stopper og rydder den tråd, som er igangsat af setInterval. hvis ikke vi havde den med
        * ville der kommer flere og flere tråde og til sidst ville browseren crashe.
        */
       clearInterval(wordTypeInterval);
@@ -158,17 +161,9 @@ REVIEW_SLIDER_LEFT.addEventListener('click', (event) => {
   goPrevReview();
 });
 
-// REVIEW_SLIDER_ICON_LEFT.addEventListener('click', (event) => {
-//   goPrevReview();
-// });
-
 REVIEW_SLIDER_RIGHT.addEventListener('click', (event) => {
   goNextReview();
 });
-
-// REVIEW_SLIDER_ICON_RIGHT.addEventListener('click', (event) => {
-//   goNextReview();
-// });
 
 /*
  * ternary operators anvendes til at inkrementere og dekrementere reviewIndex'et, så vi ikke kommer 'out of bounds'.
@@ -306,7 +301,7 @@ function renderModal(element) {
     MODAL_SUBSUBHEADING.style.textTransform = 'lowercase';
     MODAL_PARAGRAPH.innerText = 'et spil hvor en gruppe deltagere i fællesskab opdager og løser gåder, opgaver og udfordringer, der ikke kræver udefrakommende viden på et fysisk sted for at nå et mål inden for en fast tidsramme';
     break;
-    case 'copenhagen':
+    case 'københavn':
     MODAL_HEADING.innerText = 'MØDESTED';
     MODAL_SUBHEADING.innerText = 'FLÆSKETORVET 68';
     MODAL_SUBHEADING.style.textTransform = 'uppercase';

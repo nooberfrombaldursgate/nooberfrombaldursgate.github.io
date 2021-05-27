@@ -28,6 +28,8 @@ hr {
   background-color: var(--light-blue);
 }
 
+
+
 /* VIEWPORT SLUT */
 
 /* MAIN SEKTION START */
@@ -61,7 +63,7 @@ hr {
 }
 
 .operation-mindfall-icons-wrapper .icon {
-  width: 335px;
+  width: 100%;
 }
 
 .participant-icon {
@@ -78,9 +80,9 @@ hr {
 }
 
 #can-you-save-the-city-article p {
-    font-size: 18px;
-    line-height: 170%;
-    letter-spacing: 0.05em;
+  font-size: 18px;
+  line-height: 170%;
+  letter-spacing: 0.05em;
 }
 
 #can-you-save-the-city-article .paragraph-wrapper {
@@ -90,19 +92,33 @@ hr {
   padding-top: 20px;
 }
 
-#can-you-save-the-city-article .paragraph-wrapper > * + * {
+.text-and-book-button-container > * + * {
   padding-top: 30px;
 }
 
-.male-spy {
-  align-self: flex-start;
+.mindfall-book-now-button {
+  padding-top: 50px;
 }
 
+.male-spy {
+  align-self: flex-end;
+}
+
+.text-and-book-button-container {
+  display: flex;
+  flex-direction: column;
+} 
+
+
+
+
 .mindfall-book-now-button {
+  /* align-self: center; */
   width: calc(175px + 1vw);
 }
 
 #can-you-save-the-city-article .photo-icon-wrapper {
+  padding: 80px 0 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,11 +137,13 @@ hr {
 }
 
 .mindfall-photo-icon {
+  width: 100%;
+  max-width: 300px;
   padding-top: 40px;
 }
 
 .photo-icon-wrapper > * + * {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 
 .photo-gallery img:last-child {
@@ -148,9 +166,14 @@ hr {
 
 .female-spy {
   padding-top: 60px;
-  width: 100%;
   max-width: 335px;
   transform: translateY(3.5px);
+  max-height: 357px;
+}
+
+.briefcase-wrapper, .vials-wrapper {
+  padding: 60px 0 60px;
+
 }
 
 .briefcase-wrapper {
@@ -158,27 +181,76 @@ hr {
 }
 
 .vials-wrapper {
-  background-color: var(--dark-blue);
+   background-color: var(--dark-blue);
 }
 
-.mindfall-briefcase, .mindfall-vials {
+.mindfall-briefcase-photo,
+.mindfall-vials-photo {
   width: 100%;
-  width: 250px;
+  height: 100%;
+  max-width: 335px;
   padding: 20px;
 }
 
-.briefcase-wrapper, .vials-wrapper {
+.mindfall-briefcase-photo {
+  min-width: 182px;
+}
+
+.mindfall-vials-photo {
+  min-width: 250px;
+}
+
+.mindfall-briefcase-photo,
+.mindfall-vials-photo {
+  padding: 20px;  
+}
+
+.mindfall-briefcase-text,
+.mindfall-vials-text {
+  padding: 10px 5px 5px;
+}
+
+.vials-wrapper {
   color: white;
 }
 
-.briefcase-container, .vials-container {
+.briefcase-container,
+.vials-container {
   display: flex;
-  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.briefcase-and-vials-aside {
+  display: grid;
+}
+
+.horizontal-text-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.horizontal-text-wrapper p {
+  max-width: 617px;
+  text-align: center;
+  color: #0AA4CA;
+}
+
+.female-spy-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 
 /* BRIEFCASE SLUT */
-
 
 /* MAIN SEKTION SLUT */
 
@@ -215,7 +287,7 @@ hr {
 }
 
 @media only screen and (min-width: 1700px) {
-  .operation-mindfall-icons-wrapper {
+  .operation-mindfall-icons-wrapper, #can-you-save-the-city-article .photo-icon-wrapper {
     flex-direction: row;
     justify-content: center;
   }
