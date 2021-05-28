@@ -178,20 +178,12 @@ hr {
 
 /* HEADER SEKTION START */
 
-/* 
-* desktop navigationen renders som udgangspunkt ikke (først ved media queries), 
-* da vi arbejder efter 'mobile first'-tankegangen 
-*/
-
-#desktop-top-nav,
-#desktop-bottom-nav {
-  display: none;
-}
-
 #main-header {
   height: 50px;
   background-color: black;
 }
+
+/* MOBIL TOP NAV START */
 
 .mobile-top-wrapper {
   display: flex;
@@ -226,6 +218,130 @@ hr {
   max-width: 25px;
 }
 
+/* MOBIL TOP NAV SLUT */
+
+/* DESKTOP TOP NAV START */
+
+/* 
+* desktop navigationen renders som udgangspunkt ikke (først ved media queries), 
+* da vi arbejder efter 'mobile first'-tankegangen 
+*/
+
+#desktop-top-nav {
+  display: none;
+}
+
+.desktop-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.dropdown-anchor {
+  padding: 0 5px 2rem;
+}
+
+.escape-games-dropdown-container {
+  margin-right: 20px;
+}
+
+.dropdown img {
+  width: 25px;
+}
+
+#top-lang-icon {
+  margin-right: 5px;
+}
+
+.lang-icon {
+  height: 5px;
+  width: 30px;
+}
+
+.drop-down-icon {
+  width: 10px;
+  height: 5.51px;
+}
+
+.lang-dropdown-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100px;
+  padding: 0 0 0.5rem;
+}
+
+.dropdown.lang {
+  left: -16px;
+  top: 42px;
+}
+
+.dropdown-lang-icon, .dropdown {
+  margin-top: 1rem;
+}
+
+#desktop-top-nav ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+#desktop-top-nav li {
+  display: block;
+  float: left;
+  position: relative;
+  padding-top: 16px;
+}
+
+.desktop-menu-wrapper ul > * + * {
+  padding-right: 20px;
+}
+
+ul li ul {
+  background: black;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 46px;
+  left: -10px;
+  display: none;
+  margin-top: 1.4rem;
+}
+
+ul.dropdown li {
+  padding: 1rem;
+  line-height: 24px;
+}
+
+ul.dropdown li a {
+  color: white;
+}
+
+ul.dropdown li a:hover {
+  color: white;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+#desktop-top-nav .logo-container {
+  padding: 11px 72px; 
+}
+
+li.lang-list-item {
+  padding-top: 10px;
+}
+
+/* DESKTOP TOP NAV SLUT */
 
 /* HEADER SEKTION SLUT */
 
@@ -377,4 +493,20 @@ hr {
 
 .lang-icon {
   height: 25px;
+}
+
+@media only screen and (min-width: 1163px) {
+  #desktop-top-nav {
+    display: flex;
+    background: black;
+    text-decoration: none;
+  }
+
+  #mobile-top-nav {
+    display: none;
+  }
+
+  #footer-wrapper {
+    max-width: 35rem;
+  }
 }

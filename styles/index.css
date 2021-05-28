@@ -886,4 +886,8 @@ som classes, fordi ikke at ramme den hvide cta knap  */
     object-fit: fill;
     z-index: 1;
   }
+
+  .video-overlay-text.mobile {
+    display: none;
+  }
 }
