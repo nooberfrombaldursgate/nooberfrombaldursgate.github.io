@@ -190,7 +190,6 @@ hr {
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 500px;
 }
 
 #mobile-top-nav {
@@ -231,52 +230,50 @@ hr {
   display: none;
 }
 
-.desktop-top-wrapper {
+#desktop-top-nav .desktop-top-wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
 
-.dropdown-anchor {
+#desktop-top-nav .dropdown-anchor {
   padding: 0 5px 2rem;
 }
 
-.escape-games-dropdown-container {
+#desktop-top-nav .escape-games-dropdown-container {
   margin-right: 20px;
 }
 
-.dropdown img {
+#desktop-top-nav .dropdown img {
   width: 25px;
 }
 
-#top-lang-icon {
+#desktop-top-nav #top-lang-icon {
   margin-right: 5px;
 }
 
-.lang-icon {
-  height: 5px;
+#desktop-top-nav .lang-icon {
   width: 30px;
 }
 
-.drop-down-icon {
+#desktop-top-nav .drop-down-icon {
   width: 10px;
   height: 5.51px;
 }
 
-.lang-dropdown-container {
+#desktop-top-nav .lang-dropdown-container {
   display: flex;
   align-items: flex-end;
   width: 100px;
   padding: 0 0 0.5rem;
 }
 
-.dropdown.lang {
+#desktop-top-nav .dropdown.lang {
   left: -16px;
-  top: 42px;
 }
 
-.dropdown-lang-icon, .dropdown {
+#desktop-top-nav .dropdown-lang-icon, .dropdown {
   margin-top: 1rem;
 }
 
@@ -292,43 +289,43 @@ hr {
   padding-top: 16px;
 }
 
-.desktop-menu-wrapper ul > * + * {
+#desktop-top-nav .desktop-menu-wrapper ul > * + * {
   padding-right: 20px;
 }
 
-ul li ul {
+#desktop-top-nav ul li ul {
   background: black;
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 46px;
+  top: 23px;
   left: -10px;
   display: none;
   margin-top: 1.4rem;
 }
 
-ul.dropdown li {
+#desktop-top-nav ul.dropdown li {
   padding: 1rem;
   line-height: 24px;
 }
 
-ul.dropdown li a {
+#desktop-top-nav ul.dropdown li a {
   color: white;
 }
 
-ul.dropdown li a:hover {
+#desktop-top-nav ul.dropdown li a:hover {
   color: white;
 }
 
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover {
+#desktop-top-nav ul li:hover > ul,
+#desktop-top-nav ul li:focus-within > ul,
+#desktop-top-nav ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
 }
 
-ul li ul li {
+#desktop-top-nav ul li ul li {
   clear: both;
   width: 100%;
 }
@@ -337,7 +334,7 @@ ul li ul li {
   padding: 11px 72px; 
 }
 
-li.lang-list-item {
+#desktop-top-nav li.lang-list-item {
   padding-top: 10px;
 }
 
