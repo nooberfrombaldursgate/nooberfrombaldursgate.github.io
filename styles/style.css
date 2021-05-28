@@ -13,13 +13,10 @@
 @font-face {
   font-family: 'City Escape';
   src: url('../fonts/321perfect/321perfect-webfont.eot');
-  src: url('../fonts/321perfect/321perfect-webfont.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/321perfect/321perfect-webfont.woff2') format('woff2'),
-    url('../fonts/321perfect/321perfect-webfont.woff') format('woff'),
+  src: url('../fonts/321perfect/321perfect-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/321perfect/321perfect-webfont.woff2') format('woff2'), url('../fonts/321perfect/321perfect-webfont.woff') format('woff'),
     url('../fonts/321perfect/321perfect-webfont.ttf') format('truetype'),
-    url('../fonts/321perfect/321perfect-webfont.svg#321perfectregular')
-      format('svg');
+    url('../fonts/321perfect/321perfect-webfont.svg#321perfectregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,9 +32,9 @@
 
 :root {
   --gold: #c99d2b;
-  --light-blue: #0E9DCF;
+  --light-blue: #0e9dcf;
   --dark-green: #1a4355;
-  --dark-blue: #00344B;
+  --dark-blue: #00344b;
   --dark-grey: #1c1c1c;
   --main-font: 'Poppins', sans-serif;
 }
@@ -174,6 +171,23 @@ hr {
   text-align: right;
 }
 
+#desktop-top-nav .desktop-menu-wrapper {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+#desktop-top-nav .desktop-book-button {
+  font-weight: 500;
+  background-color: var(--gold);
+  padding: 2px 6.5px;
+  border-radius: 5px;
+}
+
+
+
 /* GLOBAL SEKTION SLUT */
 
 /* HEADER SEKTION START */
@@ -273,7 +287,8 @@ hr {
   left: -16px;
 }
 
-#desktop-top-nav .dropdown-lang-icon, .dropdown {
+#desktop-top-nav .dropdown-lang-icon,
+.dropdown {
   margin-top: 1rem;
 }
 
@@ -286,7 +301,7 @@ hr {
   display: block;
   float: left;
   position: relative;
-  padding-top: 16px;
+  padding-top: 10px;
 }
 
 #desktop-top-nav .desktop-menu-wrapper ul > * + * {
@@ -331,7 +346,7 @@ hr {
 }
 
 #desktop-top-nav .logo-container {
-  padding: 11px 72px; 
+  padding: 11px 72px;
 }
 
 #desktop-top-nav li.lang-list-item {
@@ -409,7 +424,8 @@ hr {
 * se: https://www.youtube.com/watch?v=VvqyUUROmJw 
 */
 
-.outer-nav-ul > * + *, .inner-nav-ul > li {
+.outer-nav-ul > * + *,
+.inner-nav-ul > li {
   margin-top: 30px;
 }
 
@@ -417,11 +433,9 @@ hr {
   background-color: var(--dark-grey);
 }
 
-
 .child-anchor {
   background-color: black;
 }
-
 
 .outer-nav-ul {
   border-top: 50px;
